@@ -2,42 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ArdiCharacter : MonoBehaviour
+public class Archer : PersonajeBase
 {
-
-    bool canJump = false;
-    // Start is called before the first frame update
     void Start()
     {
-       
+        PersonajeBaseStart();
     }
 
-    // Update is called once per frame
     void Update()
     {
-         if (Input.GetKey("left")) {
-            gameObject.transform.Translate(-1f * Time.deltaTime, 0, 0);
-        }
-        if (Input.GetKey("right")) {
-            gameObject.transform.Translate(1f * Time.deltaTime, 0, 0);
-        }
+        PersonajeBaseUpdate();
 
-        ManageJump();
-    }
+        animator.SetBool("attack_1", false);
 
-    void ManageJump() {
-        if (gameObject.transform.position.y <= 0) {
-            canJump = true;
-        }
-        
-        if (Input.GetKey("up") && canJump && gameObject.transform.position.y < 5) {
-            gameObject.transform.Translate(0, 1f * Time.deltaTime, 0);
-        } else {
-            canJump = false;
-
-            if (gameObject.transform.position.y > 0) {
-                gameObject.transform.Translate(0, -1f * Time.deltaTime, 0);
-            }
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            animator.SetBool("attack_1", true);
         }
     }
 }

@@ -8,8 +8,8 @@ public class MenuComandos : MonoBehaviour
     //Atributos
     [SerializeField] private GameObject comandosMenu;
     private GameObject personajeActual;
-    
-    public bool isPaused;
+
+    public bool isPaused = false;
     public InputField inputField;
 
     public GameObject Rogue;
@@ -18,22 +18,13 @@ public class MenuComandos : MonoBehaviour
 
     void Start()
     {
-        comandosMenu.SetActive(false);
 
-        // Asegurarse de que no haya un personaje instanciado al inicio
-        if (personajeActual != null)
-        {
-            Destroy(personajeActual);
-        }
-
-        // Instanciar el personaje inicial (puedes cambiar esto según tus necesidades)
-        InstanciarPersonaje(Rogue);
     }
 
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Escape)) {
+        if (Input.GetKeyDown(KeyCode.Return)) {
             if (isPaused) {
                 ReanudarJuego();
             } else {
@@ -45,13 +36,6 @@ public class MenuComandos : MonoBehaviour
     public void PausarJuego() 
     {
         Debug.Log("Pausar Juego");
-
-        // Asegurarse de que no haya un personaje instanciado al pausar
-        if (personajeActual != null)
-        {
-            Destroy(personajeActual);
-        }
-
         comandosMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -64,11 +48,7 @@ public class MenuComandos : MonoBehaviour
         Time.timeScale = 1f;
         isPaused = false;
 
-        // Asegurarse de que no haya un personaje instanciado al reanudar
-        if (personajeActual != null)
-        {
-            Destroy(personajeActual);
-        }
+        
     }
 
     public void SetInputField(string inputText) 
@@ -87,11 +67,7 @@ public class MenuComandos : MonoBehaviour
 
     private void CambiarPersonaje(string nuevoPersonaje) 
     {
-        // Verificar si el personaje actual no es nulo antes de destruirlo
-        if (personajeActual != null)
-        {
-            Destroy(personajeActual);
-        }
+        
 
         // Instanciar el nuevo personaje según el comando
         switch (nuevoPersonaje) 
@@ -113,6 +89,10 @@ public class MenuComandos : MonoBehaviour
 
     private void InstanciarPersonaje(GameObject prefab) 
     {
+        if (personajeActual != null)
+        {
+            Destroy(personajeActual);
+        }
         // Instanciar el nuevo personaje y asignarlo a la variable personajeActual
         personajeActual = Instantiate(prefab, transform.position, Quaternion.identity);
     }

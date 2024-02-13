@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: GameView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -916,7 +916,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -967,10 +967,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 185.5
-    y: 92
-    width: 902.5
-    height: 404
+    x: 247
+    y: 73
+    width: 1204
+    height: 518
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -1006,14 +1006,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.8869448
+    - e00: 0.48101267
       e01: 0
       e02: 0
-      e03: -123.47638
+      e03: 96.772156
       e10: 0
-      e11: 0.8869448
+      e11: 0.48101267
       e12: 0
-      e13: 81.64103
+      e13: 290.00635
       e20: 0
       e21: 0
       e22: 1
@@ -1038,14 +1038,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.50464886
+    - e00: 0.8
       e01: 0
       e02: 0
-      e03: 176.91745
+      e03: -25
       e10: 0
-      e11: 0.50464886
+      e11: 0.8
       e12: 0
-      e13: 177.98831
+      e13: 131.5
       e20: 0
       e21: 0
       e22: 1
@@ -1054,14 +1054,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.91680336
+    - e00: 0.5714286
       e01: 0
       e02: 0
-      e03: -138.30975
+      e03: 112.14285
       e10: 0
-      e11: 0.91680336
+      e11: 0.5714286
       e12: 0
-      e13: 146.88794
+      e13: 216.64285
       e20: 0
       e21: 0
       e22: 1
@@ -1180,7 +1180,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 12}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -1220,7 +1220,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c623000026680000e6670000a26c0000486c0000606c0000506c0000cc610000d0610000d4610000d8610000e4610000dc610000c8610000e8610000e0610000246b0000a8690000906700004e640000c67500008c640000886400003666000046620000be6900002e6a0000
+    m_ExpandedInstanceIDs: c623000026680000e6670000a26c0000486c0000606c0000506c0000cc610000d0610000d4610000d8610000e4610000dc610000c8610000e8610000e0610000246b0000a8690000906700004e640000c67500008c640000886400003666000046620000be6900002e6a000058670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

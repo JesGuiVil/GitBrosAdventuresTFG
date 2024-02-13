@@ -103,6 +103,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 0}
   Speed: 1.5
   JumpForce: 300
+  tiempoJuego: 0
 --- !u!50 &9147875603052167799
 Rigidbody2D:
   serializedVersion: 4

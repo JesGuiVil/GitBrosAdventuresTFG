@@ -14,7 +14,7 @@ public class RecogerObjeto : MonoBehaviour
         // Mensaje de depuración para verificar si menuComandos se configuró correctamente
         if(menuComandos == null)
         {
-            Debug.LogWarning("No se encontró el objeto MenuComandos en la escena.");
+            Debug.Log("No se encontró el objeto MenuComandos en la escena.");
         }
         else
         {

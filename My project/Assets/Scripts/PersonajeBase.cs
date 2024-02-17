@@ -8,19 +8,20 @@ public class PersonajeBase : MonoBehaviour
     public float Speed;
     public float JumpForce;
     public float tiempoJuego = 0f;
-
     private Rigidbody2D Rigidbody2D;
     protected Animator animator;
     private float Horizontal;
     private bool Grounded;
     private float LastShoot;
     private bool IsJumping;
+    
 
     // Start is called before the first frame update
     protected void PersonajeBaseStart()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        
     }
     
     // Update is called once per frame
@@ -101,4 +102,6 @@ public class PersonajeBase : MonoBehaviour
     void OnApplicationQuit() {
         Debug.Log("Tiempo total de juego: " + tiempoJuego + " segundos");
     }
+    
+
 }

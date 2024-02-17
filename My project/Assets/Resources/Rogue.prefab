@@ -111,6 +111,9 @@ MonoBehaviour:
   Speed: 4
   JumpForce: 400
   tiempoJuego: 0
+  vida: 0
+  maximoVida: 10000
+  barraVida: {fileID: 0}
 --- !u!50 &6210371914702109796
 Rigidbody2D:
   serializedVersion: 4

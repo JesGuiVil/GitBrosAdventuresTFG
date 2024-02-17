@@ -1,4 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ControladorScript : MonoBehaviour
 {
@@ -20,6 +24,19 @@ public class ControladorScript : MonoBehaviour
                 PausarJuego();
             }
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+            if (currentSceneIndex == 0)
+            {
+                cambiarEscena(1);
+            }
+            else if (currentSceneIndex == 1)
+            {
+                cambiarEscena(0);
+            }
+        }
     }
 
     private void PausarJuego()
@@ -34,5 +51,9 @@ public class ControladorScript : MonoBehaviour
         Time.timeScale = 1f;
         juegoPausado = false;
         menuComandos.GetComponent<MenuComandosScript>().OcultarMenuComandos(); // Ocultar el cartel al resumir el juego
+    }
+    public void cambiarEscena(int indice)
+    {
+        SceneManager.LoadScene(indice);
     }
 }

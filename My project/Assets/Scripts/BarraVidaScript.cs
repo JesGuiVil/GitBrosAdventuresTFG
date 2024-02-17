@@ -8,7 +8,7 @@ public class BarraVidaScript : MonoBehaviour
     
     private void Start()
     {
-        slider=GetComponent<Slider>();
+        
     }
 
     public void CambiarVidaMaxima(float vidaMaxima){
@@ -18,6 +18,7 @@ public class BarraVidaScript : MonoBehaviour
         slider.value=cantidadVida;
     }
     public void InicializarBarraVida(float cantidadVida){
+        slider=GetComponent<Slider>();
         CambiarVidaMaxima(cantidadVida);
         CambiarVidaActual(cantidadVida);
     }

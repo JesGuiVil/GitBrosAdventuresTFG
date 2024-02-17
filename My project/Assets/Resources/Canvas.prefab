@@ -1199,6 +1199,7 @@ MonoBehaviour:
   objetoARecoger: {fileID: 0}
   inputField: {fileID: 0}
   inputComandos: {fileID: 1174918033780398652}
+  controlador: {fileID: 6872167171662592155, guid: 06cc10fbb9294f446bae507f1f970c1c, type: 3}
 --- !u!1 &6828300154439759648
 GameObject:
   m_ObjectHideFlags: 0

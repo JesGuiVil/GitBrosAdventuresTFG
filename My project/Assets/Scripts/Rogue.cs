@@ -21,4 +21,8 @@ public class Rogue : PersonajeBase
             animator.SetBool("attack_1", true);
         }
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       SetaScript seta = collision.collider.GetComponent<SetaScript>();
+    }
 }

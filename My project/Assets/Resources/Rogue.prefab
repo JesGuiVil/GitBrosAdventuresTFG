@@ -108,8 +108,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 0}
-  Speed: 3
-  JumpForce: 500
+  Speed: 4
+  JumpForce: 400
   tiempoJuego: 0
 --- !u!50 &6210371914702109796
 Rigidbody2D:

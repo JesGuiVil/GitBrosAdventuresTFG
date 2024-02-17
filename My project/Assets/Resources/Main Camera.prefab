@@ -66,7 +66,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 1
-  far clip plane: 1000
+  far clip plane: 200
   field of view: 60
   orthographic: 1
   orthographic size: 7
@@ -105,4 +105,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4188b1fd538e74d16bb1aea4d8285575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Rogue: {fileID: 0}
+  Rogue: {fileID: 2970939188894259234, guid: eaa751a966347854b849fa199f57997c, type: 3}

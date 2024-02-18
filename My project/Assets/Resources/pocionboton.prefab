@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7023284194176498084}
   - component: {fileID: 2891195138739543778}
   - component: {fileID: 5223465365870503649}
+  - component: {fileID: -5795437019121080660}
   m_Layer: 5
   m_Name: pocionboton
   m_TagString: Untagged
@@ -119,4 +120,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2891195138739543778}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -5795437019121080660}
+        m_TargetAssemblyTypeName: UsarPocionScript, Assembly-CSharp
+        m_MethodName: Use
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-5795437019121080660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3801616184579075058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bed38ce514207d4d9f20c381240da43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 0}

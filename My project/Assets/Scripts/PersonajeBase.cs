@@ -14,6 +14,9 @@ public class PersonajeBase : MonoBehaviour
     private bool Grounded;
     private float LastShoot;
     private bool IsJumping;
+    [SerializeField] private float vida;
+    [SerializeField] private float maximoVida;
+    [SerializeField] private BarraVidaScript barraVida;
     
 
     // Start is called before the first frame update
@@ -21,6 +24,8 @@ public class PersonajeBase : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        vida = maximoVida;
+        barraVida.InicializarBarraVida(vida);
         
     }
     
@@ -101,6 +106,23 @@ public class PersonajeBase : MonoBehaviour
 
     void OnApplicationQuit() {
         Debug.Log("Tiempo total de juego: " + tiempoJuego + " segundos");
+    }
+    public void RecibirDanio(float danio){
+        vida-=danio;
+        barraVida.CambiarVidaActual(vida);
+        if (vida<=0){
+            Destroy(gameObject);
+        }
+    }
+    public void Curar(float curacion){
+        if ((vida+curacion)>maximoVida){
+            vida=maximoVida;
+        }
+        else
+        {
+            vida+=curacion;
+        }
+        barraVida.CambiarVidaActual(vida);
     }
     
 

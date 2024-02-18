@@ -13,7 +13,7 @@ public class ControladorScript : MonoBehaviour
     private void Update()
     {
         // Detección de tecla para mostrar/ocultar el cartel y pausar/resumir el juego
-        if (Input.GetKeyDown(KeyCode.BackQuote)) // Utilizamos la tecla de coma ','
+        if (Input.GetKeyDown(KeyCode.BackQuote)) 
         {
             if (juegoPausado)
             {

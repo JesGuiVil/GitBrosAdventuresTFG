@@ -6,6 +6,8 @@ TagManager:
   tags:
   - llave
   - pocion
+  - input
+  - Ground
   layers:
   - Default
   - TransparentFX

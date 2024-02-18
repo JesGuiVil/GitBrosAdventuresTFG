@@ -17,7 +17,6 @@ public class PersonajeBase : MonoBehaviour
     [SerializeField] private float vida;
     [SerializeField] private float maximoVida;
     [SerializeField] private BarraVidaScript barraVida;
-    
 
     // Start is called before the first frame update
     protected void PersonajeBaseStart()
@@ -26,7 +25,6 @@ public class PersonajeBase : MonoBehaviour
         animator = GetComponent<Animator>();
         vida = maximoVida;
         barraVida.InicializarBarraVida(vida);
-        
     }
     
     // Update is called once per frame
@@ -40,9 +38,49 @@ public class PersonajeBase : MonoBehaviour
         else if (Horizontal > 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
 
         animator.SetBool("running", Horizontal != 0.0f);
+        
+        CheckGrounded();
+        
+        if (Input.GetKeyDown(KeyCode.W) && Grounded)
+        {
+            Jump();
+        }   
+        /*
+        if (Input.GetKey(KeyCode.E) && Time.time > LastShoot + 0.25f) {
+            Shoot();
+            LastShoot = Time.time;
+        }
+        */
+    }
+    private void OnDrawGizmos()
+{
+    // Visualizar el raycast izquierdo
+    Vector2 leftRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.left * 0.3f; // Desplazar a la izquierda
+    float raycastLength = 0.1f; // Longitud del raycast
 
-        Debug.DrawRay(transform.position, Vector3.down * 0.8f, Color.red);
-        if (Physics2D.Raycast(transform.position, Vector3.down, 0.8f))
+    Gizmos.color = Color.blue;
+    Gizmos.DrawLine(leftRaycastOrigin, leftRaycastOrigin + Vector2.down * raycastLength);
+
+    // Visualizar el raycast derecho
+    Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
+    Gizmos.DrawLine(rightRaycastOrigin, rightRaycastOrigin + Vector2.down * raycastLength);
+}
+
+    private void CheckGrounded()
+{
+    // Raycast izquierdo
+    Vector2 leftRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.left * 0.3f; // Desplazar a la izquierda
+    RaycastHit2D leftHit = Physics2D.Raycast(leftRaycastOrigin, Vector2.down, 0.1f);
+
+    // Raycast derecho
+    Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
+    RaycastHit2D rightHit = Physics2D.Raycast(rightRaycastOrigin, Vector2.down, 0.1f);
+
+    Debug.DrawRay(leftRaycastOrigin, Vector3.down * 0.1f, Color.blue); // Dibuja el raycast izquierdo
+    Debug.DrawRay(rightRaycastOrigin, Vector3.down * 0.1f, Color.blue); // Dibuja el raycast derecho
+
+    // Verifica si cualquiera de los dos raycasts toca el suelo
+    if (leftHit.collider != null || rightHit.collider != null)
     {
         Grounded = true;
 
@@ -70,18 +108,7 @@ public class PersonajeBase : MonoBehaviour
             animator.SetBool("falling", true);
         }
     }
-
-    if (Input.GetKeyDown(KeyCode.W) && Grounded)
-    {
-        Jump();
-    }   
-    /*
-    if (Input.GetKey(KeyCode.E) && Time.time > LastShoot + 0.25f) {
-        Shoot();
-        LastShoot = Time.time;
-    }
-    */
-    }
+}
 
     void Jump() {
         if (Grounded) {
@@ -101,7 +128,7 @@ public class PersonajeBase : MonoBehaviour
 
     void FixedUpdate()
     {
-       Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
+        Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
     }
 
     void OnApplicationQuit() {
@@ -125,5 +152,5 @@ public class PersonajeBase : MonoBehaviour
         barraVida.CambiarVidaActual(vida);
     }
     
-
+    
 }

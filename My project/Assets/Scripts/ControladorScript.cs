@@ -13,7 +13,7 @@ public class ControladorScript : MonoBehaviour
     private void Update()
     {
         // Detección de tecla para mostrar/ocultar el cartel y pausar/resumir el juego
-        if (Input.GetKeyDown(KeyCode.BackQuote)) 
+        if (Input.GetKeyDown(KeyCode.P)) 
         {
             if (juegoPausado)
             {

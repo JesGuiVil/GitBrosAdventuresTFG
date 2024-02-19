@@ -59,7 +59,7 @@ public class MenuComandosScript : MonoBehaviour
     {
         Debug.Log("Intentando recoger objeto: " + objeto);
         // Verificar si el jugador está sobre el objeto y el nombre coincide
-        if (objetoARecoger != null && objetoARecoger.name.Equals(objeto))
+        if (objetoARecoger != null && objetoARecoger.CompareTag(objeto))
         {
             GameObject objetoPrefab = ObtenerPrefab(objetoARecoger.tag);
             if (inventario != null && inventario.AgregarObjeto(objetoPrefab))

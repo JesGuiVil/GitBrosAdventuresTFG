@@ -8,6 +8,7 @@ public class PersonajeBase : MonoBehaviour
     public float Speed;
     public float JumpForce;
     public float tiempoJuego = 0f;
+    public float Gravedad;
     private Rigidbody2D Rigidbody2D;
     protected Animator animator;
     private float Horizontal;
@@ -70,21 +71,21 @@ public class PersonajeBase : MonoBehaviour
 {
     // Raycast izquierdo
     Vector2 leftRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.left * 0.3f; // Desplazar a la izquierda
-    RaycastHit2D leftHit = Physics2D.Raycast(leftRaycastOrigin, Vector2.down, 0.1f);
+    RaycastHit2D leftHit = Physics2D.Raycast(leftRaycastOrigin, Vector2.down, 0.15f);
 
     // Raycast derecho
     Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
-    RaycastHit2D rightHit = Physics2D.Raycast(rightRaycastOrigin, Vector2.down, 0.1f);
+    RaycastHit2D rightHit = Physics2D.Raycast(rightRaycastOrigin, Vector2.down, 0.15f);
 
-    Debug.DrawRay(leftRaycastOrigin, Vector3.down * 0.1f, Color.blue); // Dibuja el raycast izquierdo
-    Debug.DrawRay(rightRaycastOrigin, Vector3.down * 0.1f, Color.blue); // Dibuja el raycast derecho
+    Debug.DrawRay(leftRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast izquierdo
+    Debug.DrawRay(rightRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast derecho
 
     // Verifica si cualquiera de los dos raycasts toca el suelo
     if (leftHit.collider != null || rightHit.collider != null)
     {
         Grounded = true;
 
-        if (Rigidbody2D.velocity.y <= 0.0f)
+        if (Rigidbody2D.velocity.y <= 0.1f)
         {
             IsJumping = false;
             animator.SetBool("jumping", false);
@@ -127,7 +128,11 @@ public class PersonajeBase : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
+    {   
+        if (!Grounded) 
+        {
+            Rigidbody2D.velocity += Vector2.up * Gravedad * Time.fixedDeltaTime;
+        }
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
     }
 

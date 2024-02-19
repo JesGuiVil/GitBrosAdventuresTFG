@@ -40,7 +40,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.23, y: 1.12}
+  m_AnchoredPosition: {x: -4.45, y: -0.29}
   m_SizeDelta: {x: 0.45, y: 0.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &8072829569555804371
@@ -108,9 +108,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BulletPrefab: {fileID: 0}
-  Speed: 4.5
-  JumpForce: 400
+  Speed: 7
+  JumpForce: 700
   tiempoJuego: 0
+  Gravedad: -21
   vida: 0
   maximoVida: 50000
   barraVida: {fileID: 0}

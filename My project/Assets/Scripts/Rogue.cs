@@ -16,15 +16,23 @@ public class Rogue : PersonajeBase
         PersonajeBaseUpdate();
 
         animator.SetBool("attack_1", false);
+        animator.SetBool("ataqueDistancia", false);
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetBool("attack_1", true);
         }
+        if (Input.GetKeyDown(KeyCode.E)) {
+            animator.SetBool("ataqueDistancia", true);
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
        SetaScript seta = collision.collider.GetComponent<SetaScript>();
+    }
+
+    public void ataqueDistancia(){
+        animator.SetBool("ataqueDistancia", true);
     }
    
 }

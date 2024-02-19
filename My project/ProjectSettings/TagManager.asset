@@ -8,6 +8,8 @@ TagManager:
   - pocion
   - input
   - Ground
+  - cuchillo
+  - Cuchillo
   layers:
   - Default
   - TransparentFX

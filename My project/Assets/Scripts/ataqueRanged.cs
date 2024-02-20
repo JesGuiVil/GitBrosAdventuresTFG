@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SetaScript : MonoBehaviour
+public class ataqueRanged : MonoBehaviour
 {
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
@@ -13,15 +13,13 @@ public class SetaScript : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
     private PatrullaEnemiga patrulla;
-    private PersonajeBase personaje;
     private Animator anim;
-    public GameObject Player;
-    [SerializeField] private float vida;
-    [SerializeField] private float maximoVida;
+    [SerializeField] private Transform firepoint;
+    [SerializeField] private GameObject[] proyectiles;
     // Start is called before the first frame update
     void Start()
     {
-        vida = maximoVida;
+        
     }
     private void Awake()
     {
@@ -35,13 +33,14 @@ public class SetaScript : MonoBehaviour
         if (PlayerInSight())
         {
             Debug.Log("personaje Detectado");
-            
+
             if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
-                anim.SetTrigger("meleAtack");
+                anim.SetTrigger("ataqueDistancia");
             }
-        }else
+        }
+        else
         {
             Debug.Log("personaje no detectado");
         }
@@ -51,36 +50,35 @@ public class SetaScript : MonoBehaviour
         }
 
     }
-    public void RecibirDanio(float danio)
-    {
-        vida -= danio;
-        if (vida <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
     private bool PlayerInSight()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),0, Vector2.left, 0, playerLayer);
-       
-        if (hit.collider != null)
-        {
-            personaje = hit.transform.GetComponent<PersonajeBase>();
-        }
+        RaycastHit2D hit = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z), 0, Vector2.left, 0, playerLayer);
 
         return hit.collider != null;
     }
-    
+
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance, new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
-    private void DamagePlayer()
+    private void RangedAttack()
     {
-        if (PlayerInSight())
+        
+        cooldownTimer = 0;
+        anim.SetTrigger("ataqueDistancia");
+
+        proyectiles[FindProyectil()].transform.position = firepoint.position;
+        proyectiles[FindProyectil()].GetComponent<ProyectilSeta>().SetDirection(Mathf.Sign(transform.localScale.x));
+    }
+
+    private int FindProyectil()
+    {
+        for (int i = 0; i < proyectiles.Length; i++)
         {
-            personaje.RecibirDanio(damage);
+            if (!proyectiles[i].activeInHierarchy)
+                return i;
         }
+        return 0;
     }
 }

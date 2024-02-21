@@ -9,28 +9,29 @@ public class PersonajeBase : MonoBehaviour
     public float JumpForce;
     public float tiempoJuego = 0f;
     public float Gravedad;
-    private Rigidbody2D Rigidbody2D;
+    private Rigidbody2D rigidbody2D;
     protected Animator animator;
     private float Horizontal;
     private bool Grounded;
     private float LastShoot;
     private bool IsJumping;
+
+    private Collider2D collider;
     [SerializeField] public float vida;
     [SerializeField] private float maximoVida;
     [SerializeField] private BarraVidaScript barraVida;
-    private bool isDead = false;
+    public bool isDead = false;
 
     // Start is called before the first frame update
     protected void PersonajeBaseStart()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
+        rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         vida = maximoVida;
         barraVida.InicializarBarraVida(vida);
+        collider= GetComponent<Collider2D>();
     }
-    public float GetVida(){
-        return vida;
-    }
+    
     // Update is called once per frame
     protected void PersonajeBaseUpdate()
     {
@@ -56,6 +57,11 @@ public class PersonajeBase : MonoBehaviour
                 LastShoot = Time.time;
             }
             */
+            if (isDead){
+                collider.enabled=false;
+                rigidbody2D.bodyType=RigidbodyType2D.Kinematic;
+
+            }
         
     }
     private void OnDrawGizmos()
@@ -90,7 +96,7 @@ public class PersonajeBase : MonoBehaviour
         {
             Grounded = true;
 
-            if (Rigidbody2D.velocity.y <= 0.1f)
+            if (rigidbody2D.velocity.y <= 0.1f)
             {
                 IsJumping = false;
                 animator.SetBool("jumping", false);
@@ -101,7 +107,7 @@ public class PersonajeBase : MonoBehaviour
         {
             Grounded = false;
 
-            if (Rigidbody2D.velocity.y > 0.0f)
+            if (rigidbody2D.velocity.y > 0.0f)
             {
                 // Está subiendo, por lo tanto, activa la animación de salto
                 animator.SetBool("jumping", true);
@@ -118,7 +124,7 @@ public class PersonajeBase : MonoBehaviour
 
     void Jump() {
         if (Grounded) {
-            Rigidbody2D.AddForce(Vector2.up * JumpForce);
+            rigidbody2D.AddForce(Vector2.up * JumpForce);
             IsJumping = true;
         }
     }
@@ -136,9 +142,9 @@ public class PersonajeBase : MonoBehaviour
     {   
         if (!Grounded) 
         {
-            Rigidbody2D.velocity += Vector2.up * Gravedad * Time.fixedDeltaTime;
+            rigidbody2D.velocity += Vector2.up * Gravedad * Time.fixedDeltaTime;
         }
-        Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
+        rigidbody2D.velocity = new Vector2(Horizontal * Speed, rigidbody2D.velocity.y);
     }
 
     void OnApplicationQuit() {
@@ -164,7 +170,7 @@ public class PersonajeBase : MonoBehaviour
     public void Morir()
     {
         isDead = true;
-        Rigidbody2D.velocity = Vector2.zero;
+        rigidbody2D.velocity = Vector2.zero;
         animator.SetTrigger("RogueMuerte");
         
     }

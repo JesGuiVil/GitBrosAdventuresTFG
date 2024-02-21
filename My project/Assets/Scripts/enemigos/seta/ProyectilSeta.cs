@@ -43,7 +43,7 @@ public class ProyectilSeta : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit = true;
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !personaje.isDead)
         {
             personaje.RecibirDanio(Damage);
         }

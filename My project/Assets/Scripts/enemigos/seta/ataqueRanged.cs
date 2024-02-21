@@ -33,26 +33,26 @@ public class ataqueRanged : MonoBehaviour
     void Update()
     {
         cooldownTimer += Time.deltaTime;
-        Debug.Log(personajeScript.GetVida());
-        if (PlayerInSight() && personajeScript.GetVida()>0)
-        
+        if (PlayerInSight())
         {
             
-            Debug.Log("personaje Detectado");
+            Debug.Log("personaje Detectado a rango");
+            if(!personajeScript.isDead){
 
-            if (cooldownTimer >= attackCooldown)
-            {
-                cooldownTimer = 0;
-                anim.SetTrigger("ataqueDistancia");
-            }
+                if (cooldownTimer >= attackCooldown)
+                {
+                    cooldownTimer = 0;
+                    anim.SetTrigger("ataqueDistancia");
+                }
+            } 
         }
         else
         {
-            Debug.Log("personaje no detectado");
+            Debug.Log("personaje no detectado a rango");
         }
         if (patrulla != null)
         {
-            patrulla.enabled = !PlayerInSight();
+            patrulla.enabled = (!PlayerInSight() || personajeScript.isDead);
         }
 
     }

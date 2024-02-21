@@ -16,12 +16,12 @@ public class SetaScript : MonoBehaviour
     private PersonajeBase personaje;
     private Animator anim;
     public GameObject Player;
-    [SerializeField] private float vida;
-    [SerializeField] private float maximoVida;
+    [SerializeField] private float vidaSeta;
+    [SerializeField] private float maximoVidaSeta;
     // Start is called before the first frame update
     void Start()
     {
-        vida = maximoVida;
+        vidaSeta = maximoVidaSeta;
     }
     private void Awake()
     {
@@ -34,27 +34,29 @@ public class SetaScript : MonoBehaviour
         cooldownTimer += Time.deltaTime;
         if (PlayerInSight())
         {
-            Debug.Log("personaje Detectado");
-            
-            if (cooldownTimer >= attackCooldown)
-            {
-                cooldownTimer = 0;
-                anim.SetTrigger("meleAtack");
+            Debug.Log("personaje Detectado a melee");
+            if (!personaje.isDead){
+                if (cooldownTimer >= attackCooldown)
+                {
+                    cooldownTimer = 0;
+                    anim.SetTrigger("meleAtack");
+                }
             }
+            
         }else
         {
-            Debug.Log("personaje no detectado");
+            Debug.Log("personaje no detectado a melee");
         }
         if (patrulla != null)
         {
-            patrulla.enabled = !PlayerInSight();
+            patrulla.enabled = (!PlayerInSight() || personaje.isDead);
         }
 
     }
     public void RecibirDanio(float danio)
     {
-        vida -= danio;
-        if (vida <= 0)
+        vidaSeta -= danio;
+        if (vidaSeta <= 0)
         {
             Destroy(gameObject);
         }
@@ -78,7 +80,7 @@ public class SetaScript : MonoBehaviour
     }
     private void DamagePlayer()
     {
-        if (PlayerInSight())
+        if (PlayerInSight() && !personaje.isDead)
         {
             personaje.RecibirDanio(damage);
         }

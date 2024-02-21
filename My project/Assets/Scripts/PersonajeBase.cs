@@ -15,9 +15,10 @@ public class PersonajeBase : MonoBehaviour
     private bool Grounded;
     private float LastShoot;
     private bool IsJumping;
-    [SerializeField] private float vida;
+    [SerializeField] public float vida;
     [SerializeField] private float maximoVida;
     [SerializeField] private BarraVidaScript barraVida;
+    private bool isDead = false;
 
     // Start is called before the first frame update
     protected void PersonajeBaseStart()
@@ -27,89 +28,93 @@ public class PersonajeBase : MonoBehaviour
         vida = maximoVida;
         barraVida.InicializarBarraVida(vida);
     }
-    
+    public float GetVida(){
+        return vida;
+    }
     // Update is called once per frame
     protected void PersonajeBaseUpdate()
     {
-        Horizontal = Input.GetAxisRaw("Horizontal");
-
-        tiempoJuego += Time.deltaTime;
-
-        if (Horizontal < 0.0f) transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
-        else if (Horizontal > 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
-
-        animator.SetBool("running", Horizontal != 0.0f);
         
-        CheckGrounded();
+            Horizontal = Input.GetAxisRaw("Horizontal");
+
+            tiempoJuego += Time.deltaTime;
+
+            if (Horizontal < 0.0f) transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
+            else if (Horizontal > 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+
+            animator.SetBool("running", Horizontal != 0.0f);
+            
+            CheckGrounded();
+            
+            if (Input.GetKeyDown(KeyCode.W) && Grounded)
+            {
+                Jump();
+            }   
+            /*
+            if (Input.GetKey(KeyCode.E) && Time.time > LastShoot + 0.25f) {
+                Shoot();
+                LastShoot = Time.time;
+            }
+            */
         
-        if (Input.GetKeyDown(KeyCode.W) && Grounded)
-        {
-            Jump();
-        }   
-        /*
-        if (Input.GetKey(KeyCode.E) && Time.time > LastShoot + 0.25f) {
-            Shoot();
-            LastShoot = Time.time;
-        }
-        */
     }
     private void OnDrawGizmos()
-{
-    // Visualizar el raycast izquierdo
-    Vector2 leftRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.left * 0.3f; // Desplazar a la izquierda
-    float raycastLength = 0.1f; // Longitud del raycast
+    {
+        // Visualizar el raycast izquierdo
+        Vector2 leftRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.left * 0.3f; // Desplazar a la izquierda
+        float raycastLength = 0.1f; // Longitud del raycast
 
-    Gizmos.color = Color.blue;
-    Gizmos.DrawLine(leftRaycastOrigin, leftRaycastOrigin + Vector2.down * raycastLength);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(leftRaycastOrigin, leftRaycastOrigin + Vector2.down * raycastLength);
 
-    // Visualizar el raycast derecho
-    Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
-    Gizmos.DrawLine(rightRaycastOrigin, rightRaycastOrigin + Vector2.down * raycastLength);
-}
+        // Visualizar el raycast derecho
+        Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
+        Gizmos.DrawLine(rightRaycastOrigin, rightRaycastOrigin + Vector2.down * raycastLength);
+    }
 
     private void CheckGrounded()
-{
-    // Raycast izquierdo
-    Vector2 leftRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.left * 0.3f; // Desplazar a la izquierda
-    RaycastHit2D leftHit = Physics2D.Raycast(leftRaycastOrigin, Vector2.down, 0.15f);
-
-    // Raycast derecho
-    Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
-    RaycastHit2D rightHit = Physics2D.Raycast(rightRaycastOrigin, Vector2.down, 0.15f);
-
-    Debug.DrawRay(leftRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast izquierdo
-    Debug.DrawRay(rightRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast derecho
-
-    // Verifica si cualquiera de los dos raycasts toca el suelo
-    if (leftHit.collider != null || rightHit.collider != null)
     {
-        Grounded = true;
+        // Raycast izquierdo
+        Vector2 leftRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.left * 0.3f; // Desplazar a la izquierda
+        RaycastHit2D leftHit = Physics2D.Raycast(leftRaycastOrigin, Vector2.down, 0.15f);
 
-        if (Rigidbody2D.velocity.y <= 0.1f)
-        {
-            IsJumping = false;
-            animator.SetBool("jumping", false);
-            animator.SetBool("falling", false);
-        }
-    }
-    else
-    {
-        Grounded = false;
+        // Raycast derecho
+        Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
+        RaycastHit2D rightHit = Physics2D.Raycast(rightRaycastOrigin, Vector2.down, 0.15f);
 
-        if (Rigidbody2D.velocity.y > 0.0f)
+        Debug.DrawRay(leftRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast izquierdo
+        Debug.DrawRay(rightRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast derecho
+
+        // Verifica si cualquiera de los dos raycasts toca el suelo
+        if (leftHit.collider != null || rightHit.collider != null)
         {
-            // Está subiendo, por lo tanto, activa la animación de salto
-            animator.SetBool("jumping", true);
-            animator.SetBool("falling", false);
+            Grounded = true;
+
+            if (Rigidbody2D.velocity.y <= 0.1f)
+            {
+                IsJumping = false;
+                animator.SetBool("jumping", false);
+                animator.SetBool("falling", false);
+            }
         }
         else
         {
-            // Está cayendo, por lo tanto, activa la animación de caída
-            animator.SetBool("jumping", false);
-            animator.SetBool("falling", true);
+            Grounded = false;
+
+            if (Rigidbody2D.velocity.y > 0.0f)
+            {
+                // Está subiendo, por lo tanto, activa la animación de salto
+                animator.SetBool("jumping", true);
+                animator.SetBool("falling", false);
+            }
+            else
+            {
+                // Está cayendo, por lo tanto, activa la animación de caída
+                animator.SetBool("jumping", false);
+                animator.SetBool("falling", true);
+            }
         }
     }
-}
 
     void Jump() {
         if (Grounded) {
@@ -143,7 +148,7 @@ public class PersonajeBase : MonoBehaviour
         vida-=danio;
         barraVida.CambiarVidaActual(vida);
         if (vida<=0){
-            Destroy(gameObject);
+            Morir();
         }
     }
     public void Curar(float curacion){
@@ -155,6 +160,13 @@ public class PersonajeBase : MonoBehaviour
             vida+=curacion;
         }
         barraVida.CambiarVidaActual(vida);
+    }
+    public void Morir()
+    {
+        isDead = true;
+        Rigidbody2D.velocity = Vector2.zero;
+        animator.SetTrigger("RogueMuerte");
+        
     }
     
     

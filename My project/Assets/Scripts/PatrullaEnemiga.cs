@@ -53,6 +53,7 @@ public class PatrullaEnemiga : MonoBehaviour
     private void DirectionChange()
     {
         anim.SetBool("Movimiento", false);
+        anim.ResetTrigger("ataqueDistancia");
 
         idleTimer += Time.deltaTime;
         if(idleTimer > idleDuration)

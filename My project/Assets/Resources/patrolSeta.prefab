@@ -793,7 +793,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 720114116086351624}
-  - component: {fileID: 4930220913007624762}
   m_Layer: 0
   m_Name: patrolSeta
   m_TagString: Untagged
@@ -819,24 +818,6 @@ Transform:
   - {fileID: 6470778438327912912}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4930220913007624762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2709126651566440810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3807e1f8a92def24594abf077630d6ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftEdge: {fileID: 1114586984761689006}
-  rightEdge: {fileID: 6880645813380098926}
-  enemy: {fileID: 6470778438327912912}
-  speed: 2
-  idleDuration: 1
-  anim: {fileID: 8028563827427606378}
 --- !u!1 &2951372201750386369
 GameObject:
   m_ObjectHideFlags: 0

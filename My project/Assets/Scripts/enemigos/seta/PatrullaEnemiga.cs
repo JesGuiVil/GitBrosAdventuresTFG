@@ -20,9 +20,7 @@ public class PatrullaEnemiga : MonoBehaviour
         idleTimer = 0;
         anim.SetBool("Movimiento", true);
         enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, initScale.y, initScale.z);
-     
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
-            enemy.position.y, enemy.position.z);
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,enemy.position.y, enemy.position.z);
     }
     private void OnDisable()
     {
@@ -32,8 +30,9 @@ public class PatrullaEnemiga : MonoBehaviour
     {
         if (movingLeft)
         {
-            if (enemy.position.x >= leftEdge.position.x)
-            MoveInDirection(-1);
+            if (enemy.position.x >= leftEdge.position.x){
+                MoveInDirection(-1);
+            }
             else
             {
                 DirectionChange();
@@ -41,8 +40,9 @@ public class PatrullaEnemiga : MonoBehaviour
         }
         else
         {
-            if(enemy.position.x <= rightEdge.position.x)
-            MoveInDirection(1);
+            if(enemy.position.x <= rightEdge.position.x){
+                MoveInDirection(1);
+            }
             else
             {
                 DirectionChange();

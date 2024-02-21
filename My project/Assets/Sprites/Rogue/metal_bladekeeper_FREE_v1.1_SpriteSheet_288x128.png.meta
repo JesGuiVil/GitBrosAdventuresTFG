@@ -131,7 +131,7 @@ TextureImporter:
         width: 45
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
         width: 45
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
         width: 43
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
         width: 41
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
         width: 43
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
         width: 40
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
         width: 41
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
         width: 43
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,7 +299,7 @@ TextureImporter:
         width: 36
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +320,7 @@ TextureImporter:
         width: 39
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,7 +341,7 @@ TextureImporter:
         width: 44
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +362,7 @@ TextureImporter:
         width: 38
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +383,7 @@ TextureImporter:
         width: 34
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,7 +404,7 @@ TextureImporter:
         width: 36
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,7 +425,7 @@ TextureImporter:
         width: 41
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,7 +446,7 @@ TextureImporter:
         width: 37
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,7 +467,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,7 +488,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,7 +509,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,7 +530,7 @@ TextureImporter:
         width: 35
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,7 +551,7 @@ TextureImporter:
         width: 35
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,7 +572,7 @@ TextureImporter:
         width: 35
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,7 +593,7 @@ TextureImporter:
         width: 35
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,7 +614,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,7 +635,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,7 +656,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,7 +677,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,7 +698,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,7 +719,7 @@ TextureImporter:
         width: 34
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,7 +740,7 @@ TextureImporter:
         width: 35
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -761,7 +761,7 @@ TextureImporter:
         width: 44
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -782,7 +782,7 @@ TextureImporter:
         width: 35
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -803,7 +803,7 @@ TextureImporter:
         width: 35
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -824,7 +824,7 @@ TextureImporter:
         width: 35
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -845,7 +845,7 @@ TextureImporter:
         width: 35
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,7 +866,7 @@ TextureImporter:
         width: 35
         height: 54
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -887,7 +887,7 @@ TextureImporter:
         width: 35
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -908,7 +908,7 @@ TextureImporter:
         width: 35
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -929,7 +929,7 @@ TextureImporter:
         width: 35
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -950,7 +950,7 @@ TextureImporter:
         width: 40
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -971,7 +971,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -992,7 +992,7 @@ TextureImporter:
         width: 43
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1013,7 +1013,7 @@ TextureImporter:
         width: 34
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1034,7 +1034,7 @@ TextureImporter:
         width: 34
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1055,7 +1055,7 @@ TextureImporter:
         width: 64
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1076,7 +1076,7 @@ TextureImporter:
         width: 35
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1097,7 +1097,7 @@ TextureImporter:
         width: 31
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1118,7 +1118,7 @@ TextureImporter:
         width: 40
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1139,7 +1139,7 @@ TextureImporter:
         width: 40
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1160,7 +1160,7 @@ TextureImporter:
         width: 38
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1181,7 +1181,7 @@ TextureImporter:
         width: 40
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1202,7 +1202,7 @@ TextureImporter:
         width: 38
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1223,7 +1223,7 @@ TextureImporter:
         width: 70
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1244,7 +1244,7 @@ TextureImporter:
         width: 26
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1265,7 +1265,7 @@ TextureImporter:
         width: 43
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1286,7 +1286,7 @@ TextureImporter:
         width: 37
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1307,7 +1307,7 @@ TextureImporter:
         width: 46
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1328,7 +1328,7 @@ TextureImporter:
         width: 35
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1349,7 +1349,7 @@ TextureImporter:
         width: 34
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1370,7 +1370,7 @@ TextureImporter:
         width: 43
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1391,7 +1391,7 @@ TextureImporter:
         width: 39
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1412,7 +1412,7 @@ TextureImporter:
         width: 31
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1433,7 +1433,7 @@ TextureImporter:
         width: 34
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1454,7 +1454,7 @@ TextureImporter:
         width: 33
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1475,7 +1475,7 @@ TextureImporter:
         width: 33
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1496,7 +1496,7 @@ TextureImporter:
         width: 55
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1517,7 +1517,7 @@ TextureImporter:
         width: 51
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1538,7 +1538,7 @@ TextureImporter:
         width: 43
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1559,7 +1559,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1580,7 +1580,7 @@ TextureImporter:
         width: 34
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1601,7 +1601,7 @@ TextureImporter:
         width: 49
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1622,7 +1622,7 @@ TextureImporter:
         width: 39
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1643,7 +1643,7 @@ TextureImporter:
         width: 32
         height: 71
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1664,7 +1664,7 @@ TextureImporter:
         width: 40
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1685,7 +1685,7 @@ TextureImporter:
         width: 40
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1706,7 +1706,7 @@ TextureImporter:
         width: 49
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1727,7 +1727,7 @@ TextureImporter:
         width: 46
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1748,7 +1748,7 @@ TextureImporter:
         width: 47
         height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1769,7 +1769,7 @@ TextureImporter:
         width: 33
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1790,7 +1790,7 @@ TextureImporter:
         width: 34
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1811,7 +1811,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1832,7 +1832,7 @@ TextureImporter:
         width: 62
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1853,7 +1853,7 @@ TextureImporter:
         width: 58
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1874,7 +1874,7 @@ TextureImporter:
         width: 41
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1895,7 +1895,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1916,7 +1916,7 @@ TextureImporter:
         width: 34
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1937,7 +1937,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1958,7 +1958,7 @@ TextureImporter:
         width: 62
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1979,7 +1979,7 @@ TextureImporter:
         width: 58
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2000,7 +2000,7 @@ TextureImporter:
         width: 41
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2021,7 +2021,7 @@ TextureImporter:
         width: 69
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2042,7 +2042,7 @@ TextureImporter:
         width: 37
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2063,7 +2063,7 @@ TextureImporter:
         width: 37
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2084,7 +2084,7 @@ TextureImporter:
         width: 34
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2105,7 +2105,7 @@ TextureImporter:
         width: 33
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2126,7 +2126,7 @@ TextureImporter:
         width: 62
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2147,7 +2147,7 @@ TextureImporter:
         width: 58
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2168,7 +2168,7 @@ TextureImporter:
         width: 41
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2189,7 +2189,7 @@ TextureImporter:
         width: 69
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2210,7 +2210,7 @@ TextureImporter:
         width: 37
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2231,7 +2231,7 @@ TextureImporter:
         width: 37
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2252,7 +2252,7 @@ TextureImporter:
         width: 37
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2273,7 +2273,7 @@ TextureImporter:
         width: 74
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2294,7 +2294,7 @@ TextureImporter:
         width: 34
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2315,7 +2315,7 @@ TextureImporter:
         width: 34
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2336,7 +2336,7 @@ TextureImporter:
         width: 31
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2357,7 +2357,7 @@ TextureImporter:
         width: 50
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2378,7 +2378,7 @@ TextureImporter:
         width: 29
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2399,7 +2399,7 @@ TextureImporter:
         width: 65
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2420,7 +2420,7 @@ TextureImporter:
         width: 68
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2441,7 +2441,7 @@ TextureImporter:
         width: 29
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2462,7 +2462,7 @@ TextureImporter:
         width: 46
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2483,7 +2483,7 @@ TextureImporter:
         width: 77
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2504,7 +2504,7 @@ TextureImporter:
         width: 76
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2525,7 +2525,7 @@ TextureImporter:
         width: 33
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2546,7 +2546,7 @@ TextureImporter:
         width: 33
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2567,7 +2567,7 @@ TextureImporter:
         width: 38
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2588,7 +2588,7 @@ TextureImporter:
         width: 51
         height: 43
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2609,7 +2609,7 @@ TextureImporter:
         width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2630,7 +2630,7 @@ TextureImporter:
         width: 18
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2651,7 +2651,7 @@ TextureImporter:
         width: 73
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2672,7 +2672,7 @@ TextureImporter:
         width: 31
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2693,7 +2693,7 @@ TextureImporter:
         width: 39
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2714,7 +2714,7 @@ TextureImporter:
         width: 33
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2735,7 +2735,7 @@ TextureImporter:
         width: 112
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2756,7 +2756,7 @@ TextureImporter:
         width: 44
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2777,7 +2777,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2798,7 +2798,7 @@ TextureImporter:
         width: 39
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2819,7 +2819,7 @@ TextureImporter:
         width: 33
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2840,7 +2840,7 @@ TextureImporter:
         width: 55
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2861,7 +2861,7 @@ TextureImporter:
         width: 57
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2882,7 +2882,7 @@ TextureImporter:
         width: 44
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2903,7 +2903,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2924,7 +2924,7 @@ TextureImporter:
         width: 39
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2945,7 +2945,7 @@ TextureImporter:
         width: 33
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2966,7 +2966,7 @@ TextureImporter:
         width: 54
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2987,7 +2987,7 @@ TextureImporter:
         width: 57
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3008,7 +3008,7 @@ TextureImporter:
         width: 44
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3029,7 +3029,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3050,7 +3050,7 @@ TextureImporter:
         width: 39
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3071,7 +3071,7 @@ TextureImporter:
         width: 33
         height: 52
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3092,7 +3092,7 @@ TextureImporter:
         width: 55
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3113,7 +3113,7 @@ TextureImporter:
         width: 57
         height: 58
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3134,7 +3134,7 @@ TextureImporter:
         width: 44
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3155,7 +3155,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3176,7 +3176,7 @@ TextureImporter:
         width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3197,7 +3197,7 @@ TextureImporter:
         width: 18
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3218,7 +3218,7 @@ TextureImporter:
         width: 65
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3239,7 +3239,7 @@ TextureImporter:
         width: 31
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3260,7 +3260,7 @@ TextureImporter:
         width: 42
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3281,7 +3281,7 @@ TextureImporter:
         width: 35
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3302,7 +3302,7 @@ TextureImporter:
         width: 37
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3323,7 +3323,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3344,7 +3344,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3365,7 +3365,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3386,7 +3386,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3407,7 +3407,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3428,7 +3428,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3449,7 +3449,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3470,7 +3470,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3491,7 +3491,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3512,7 +3512,7 @@ TextureImporter:
         width: 37
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3533,7 +3533,7 @@ TextureImporter:
         width: 34
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3554,7 +3554,7 @@ TextureImporter:
         width: 44
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3575,7 +3575,7 @@ TextureImporter:
         width: 42
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3596,7 +3596,7 @@ TextureImporter:
         width: 44
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3617,7 +3617,7 @@ TextureImporter:
         width: 42
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3638,7 +3638,7 @@ TextureImporter:
         width: 44
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3659,7 +3659,7 @@ TextureImporter:
         width: 43
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3675,12 +3675,12 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_169
       rect:
         serializedVersion: 2
-        x: 124
+        x: 99
         y: 1
-        width: 43
+        width: 84
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3696,12 +3696,12 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_170
       rect:
         serializedVersion: 2
-        x: 415
+        x: 386
         y: 1
-        width: 32
-        height: 40
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3717,12 +3717,12 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_171
       rect:
         serializedVersion: 2
-        x: 694
+        x: 675
         y: 1
-        width: 37
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 84
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5154409, y: 0.4910262}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3738,12 +3738,12 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_172
       rect:
         serializedVersion: 2
-        x: 972
+        x: 967
         y: 1
-        width: 41
-        height: 38
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3756,57 +3756,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_173
-      rect:
-        serializedVersion: 2
-        x: 1011
-        y: 25
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 057f6f2b27bf84279bbb021ccdfe6d79
-      internalID: -1745670085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_174
-      rect:
-        serializedVersion: 2
-        x: 1302
-        y: 21
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6eb6a5c35c16a43d398bf2ae13fe708c
-      internalID: -1913977731
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_175
       rect:
         serializedVersion: 2
         x: 1252
         y: 1
-        width: 48
-        height: 19
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3824,10 +3782,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1541
         y: 1
-        width: 48
-        height: 12
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3840,57 +3798,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_177
-      rect:
-        serializedVersion: 2
-        x: 1585
-        y: 12
-        width: 10
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dff8ad8f8e0744d379bfe3f094aa049f
-      internalID: 670852779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_178
-      rect:
-        serializedVersion: 2
-        x: 1871
-        y: 6
-        width: 12
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40a1e22204fb54bf18bc4bbab58e47a9
-      internalID: -996010502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_179
       rect:
         serializedVersion: 2
         x: 1825
         y: 1
-        width: 52
-        height: 10
+        width: 84
+        height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3908,10 +3824,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2113
         y: 1
-        width: 52
-        height: 10
+        width: 84
+        height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3924,36 +3840,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_181
-      rect:
-        serializedVersion: 2
-        x: 2166
-        y: 1
-        width: 5
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98c6bdf27f29d456aa16bc748c8b18c1
-      internalID: 1774230712
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_182
       rect:
         serializedVersion: 2
         x: 2401
         y: 1
-        width: 52
-        height: 10
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -3966,36 +3861,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_183
-      rect:
-        serializedVersion: 2
-        x: 2451
-        y: 1
-        width: 5
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d3e46f9ba4bc4fb7baaa868d063fbc5
-      internalID: 373525452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_184
       rect:
         serializedVersion: 2
         x: 2689
         y: 1
-        width: 56
-        height: 10
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4013,10 +3887,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2977
         y: 1
-        width: 55
-        height: 10
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4034,10 +3908,10 @@ TextureImporter:
         serializedVersion: 2
         x: 3265
         y: 1
-        width: 55
-        height: 10
+        width: 84
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -4062,191 +3936,191 @@ TextureImporter:
     nameFileIdTable:
       metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_0: -1542777408
       metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_1: -132976110
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_10: 183742540
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_100: -1692937141
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_101: -1120982628
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_102: -1098796226
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_103: -1098084372
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_104: 1175513593
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_105: -131129470
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_106: 2144340917
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_107: 1982582812
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_108: -2130956282
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_109: -2075565534
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_11: -1786957272
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_110: 249315187
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_111: -1563370047
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_112: 1160303081
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_113: -1505837277
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_114: 1345698254
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_115: 1459634180
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_116: 521400506
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_117: 588038560
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_118: 1662021421
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_119: -1912313768
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_12: -1141394037
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_120: -1880597989
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_121: 101757574
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_122: 1255185928
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_123: -1655176292
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_124: -1342734653
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_125: -1755225336
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_126: 2128867841
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_127: 197722980
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_128: -275376384
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_129: -1361861009
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_13: 2135283171
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_130: -1267095817
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_131: -299093652
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_132: 903551223
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_133: 2062927439
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_134: 631549801
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_135: 32332177
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_136: -1063440922
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_137: 66173813
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_138: -2005682404
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_139: 1852312376
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_14: 587636142
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_140: -1597090976
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_141: -81873227
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_142: -710605364
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_143: 1007060171
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_144: 1171402724
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_145: -1807847300
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_146: 267234012
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_147: -956543427
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_148: -1358692820
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_149: -835156898
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_15: -457336402
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_150: -1998893628
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_151: 1802898113
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_152: -1732084156
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_153: 219088394
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_154: 1340074664
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_155: 927015046
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_156: -919808209
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_157: 1264468143
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_158: -1892419064
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_159: -2003578354
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_16: -1821601685
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_160: -1774162635
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_161: 18415724
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_162: 1867963994
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_163: 753531656
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_164: -727052386
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_165: 1923955498
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_166: 2103470469
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_167: 1193524094
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_168: -37700772
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_169: -631721433
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_17: -956731878
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_170: 1370903874
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_171: 1842482880
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_172: 1022582410
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_173: -1745670085
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_174: -1913977731
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_175: 654207362
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_176: -552211612
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_177: 670852779
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_178: -996010502
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_179: 1087353074
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_18: 77571884
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_180: 506326096
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_181: 1774230712
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_182: -1907673185
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_183: 373525452
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_184: -2057508119
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_185: -821721710
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_186: 22078285
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_19: -1890250069
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_2: 1290025190
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_20: 861847408
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_21: -1183262308
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_22: 1983564770
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_23: -681262420
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_24: -352109615
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_25: 1816724764
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_26: 1553921482
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_27: 1824245255
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_28: -1279957926
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_29: 35658170
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_3: -1255752753
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_30: 716849507
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_31: -287646727
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_32: 1406531764
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_33: -1174359063
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_34: 1467148031
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_35: 311623253
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_36: -1746165315
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_37: 660032080
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_38: 1217308393
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_39: -313955119
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_4: -322575115
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_40: 372364798
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_41: -654652116
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_42: -1093775573
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_43: -739809098
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_44: -1826581796
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_45: -1362018946
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_46: 1960375422
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_47: -1646194693
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_48: 45560019
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_49: -147130035
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_5: 2108127610
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_50: -2072928958
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_51: 2105960966
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_52: 1180012362
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_53: 871249406
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_54: -1382363301
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_55: -376352497
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_56: -305158659
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_57: -835876732
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_58: -507032618
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_59: -850864780
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_6: 1268552144
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_60: -143099746
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_61: -1531370152
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_62: 1048542770
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_63: -1028415336
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_64: 1560460982
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_65: -377966796
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_66: 19405833
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_67: -1965304902
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_68: -1036753950
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_69: 1330362490
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_7: -403710262
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_70: 1601007146
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_71: 1305720927
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_72: 600148692
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_73: 1655713562
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_74: 108007206
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_75: 997304230
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_76: 1216475178
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_77: 257129145
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_78: 2072343293
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_79: 226908054
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_8: 668296586
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_80: 593054567
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_81: -1643082638
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_82: -46017118
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_83: 1069337116
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_84: -977028640
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_85: 152521722
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_86: 1630271038
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_87: 523920801
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_88: 853498791
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_89: -1935456405
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_9: 493121852
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_90: -1041668260
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_91: 1351857673
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_92: -462940988
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_93: -1603651065
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_94: 2088284061
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_95: -884054704
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_96: -909145243
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_97: 1256442298
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_98: 1512538947
-      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_99: 785296748
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_10: 1290025190
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_100: -1255752753
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_101: -322575115
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_102: 2108127610
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_103: 1268552144
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_104: -403710262
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_105: 668296586
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_106: 493121852
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_107: 183742540
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_108: -1786957272
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_109: -1141394037
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_11: 2135283171
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_110: 587636142
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_111: -457336402
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_112: -1821601685
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_113: -956731878
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_114: 77571884
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_115: -1890250069
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_116: 861847408
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_117: -1183262308
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_118: 1983564770
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_119: -681262420
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_12: -352109615
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_120: 1816724764
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_121: 1553921482
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_122: 1824245255
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_123: -1279957926
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_124: 35658170
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_125: 716849507
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_126: -287646727
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_127: 1406531764
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_128: -1174359063
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_129: 1467148031
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_13: 311623253
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_130: -1746165315
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_131: 660032080
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_132: 1217308393
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_133: -313955119
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_134: 372364798
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_135: -654652116
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_136: -1093775573
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_137: -739809098
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_138: -1826581796
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_139: -1362018946
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_14: 1960375422
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_140: -1646194693
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_141: 45560019
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_142: -147130035
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_143: -2072928958
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_144: 2105960966
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_145: 1180012362
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_146: 871249406
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_147: -1382363301
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_148: -376352497
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_149: -305158659
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_15: -835876732
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_150: -507032618
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_151: -850864780
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_152: -143099746
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_153: -1531370152
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_154: 1048542770
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_155: -1028415336
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_156: 1560460982
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_157: -377966796
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_158: 19405833
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_159: -1965304902
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_16: -1036753950
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_160: 1330362490
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_161: 1601007146
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_162: 1305720927
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_163: 600148692
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_164: 1655713562
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_165: 108007206
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_166: 997304230
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_167: 1216475178
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_168: 257129145
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_169: 2072343293
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_17: 226908054
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_170: 593054567
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_171: -1643082638
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_172: -46017118
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_173: 1069337116
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_174: -977028640
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_175: 152521722
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_176: 1630271038
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_177: 523920801
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_178: 853498791
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_179: -1935456405
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_18: -1041668260
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_180: 1351857673
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_181: -462940988
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_182: -1603651065
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_183: 2088284061
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_184: -884054704
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_185: -909145243
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_186: 1256442298
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_19: 1512538947
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_2: 785296748
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_20: -1692937141
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_21: -1120982628
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_22: -1098796226
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_23: -1098084372
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_24: 1175513593
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_25: -131129470
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_26: 2144340917
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_27: 1982582812
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_28: -2130956282
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_29: -2075565534
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_3: 249315187
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_30: -1563370047
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_31: 1160303081
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_32: -1505837277
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_33: 1345698254
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_34: 1459634180
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_35: 521400506
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_36: 588038560
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_37: 1662021421
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_38: -1912313768
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_39: -1880597989
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_4: 101757574
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_40: 1255185928
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_41: -1655176292
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_42: -1342734653
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_43: -1755225336
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_44: 2128867841
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_45: 197722980
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_46: -275376384
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_47: -1361861009
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_48: -1267095817
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_49: -299093652
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_5: 903551223
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_50: 2062927439
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_51: 631549801
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_52: 32332177
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_53: -1063440922
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_54: 66173813
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_55: -2005682404
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_56: 1852312376
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_57: -1597090976
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_58: -81873227
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_59: -710605364
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_6: 1007060171
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_60: 1171402724
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_61: -1807847300
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_62: 267234012
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_63: -956543427
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_64: -1358692820
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_65: -835156898
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_66: -1998893628
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_67: 1802898113
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_68: -1732084156
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_69: 219088394
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_7: 1340074664
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_70: 927015046
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_71: -919808209
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_72: 1264468143
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_73: -1892419064
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_74: -2003578354
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_75: -1774162635
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_76: 18415724
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_77: 1867963994
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_78: 753531656
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_79: -727052386
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_8: 1923955498
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_80: 2103470469
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_81: 1193524094
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_82: -37700772
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_83: -631721433
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_84: 1370903874
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_85: 1842482880
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_86: 1022582410
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_87: -1745670085
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_88: -1913977731
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_89: 654207362
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_9: -552211612
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_90: 670852779
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_91: -996010502
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_92: 1087353074
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_93: 506326096
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_94: 1774230712
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_95: -1907673185
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_96: 373525452
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_97: -2057508119
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_98: -821721710
+      metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_99: 22078285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

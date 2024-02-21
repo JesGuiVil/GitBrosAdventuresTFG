@@ -16,9 +16,12 @@ public class ataqueRanged : MonoBehaviour
     private Animator anim;
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject[] proyectiles;
+    [SerializeField] private GameObject personaje;
+    private PersonajeBase personajeScript;
     // Start is called before the first frame update
     void Start()
     {
+        personajeScript = personaje.GetComponent<PersonajeBase>();
         
     }
     private void Awake()
@@ -30,8 +33,11 @@ public class ataqueRanged : MonoBehaviour
     void Update()
     {
         cooldownTimer += Time.deltaTime;
-        if (PlayerInSight())
+        Debug.Log(personajeScript.GetVida());
+        if (PlayerInSight() && personajeScript.GetVida()>0)
+        
         {
+            
             Debug.Log("personaje Detectado");
 
             if (cooldownTimer >= attackCooldown)

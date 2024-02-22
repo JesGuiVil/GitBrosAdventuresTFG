@@ -550,6 +550,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2970939188894259234, guid: eaa751a966347854b849fa199f57997c, type: 3}
   m_PrefabInstance: {fileID: 2080283855}
   m_PrefabAsset: {fileID: 0}
+--- !u!70 &1490331589 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3995391983289189839, guid: eaa751a966347854b849fa199f57997c, type: 3}
+  m_PrefabInstance: {fileID: 2080283855}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1577385413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,6 +894,38 @@ PrefabInstance:
       propertyPath: barraVida
       value: 
       objectReference: {fileID: 8800719730024410990}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: danioCerca
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: rangeCerca
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: cooldownCerca
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: rangeDistancia
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: capsuleCollider
+      value: 
+      objectReference: {fileID: 1490331589}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: cooldownDistancia
+      value: -1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: enemyLayer.m_Bits
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993119786539255536, guid: eaa751a966347854b849fa199f57997c, type: 3}
+      propertyPath: colliderDistanceCerca
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 6575271580443407978, guid: eaa751a966347854b849fa199f57997c, type: 3}
       propertyPath: ranuras.Array.data[0]
       value: 
@@ -953,6 +990,10 @@ PrefabInstance:
     - target: {fileID: 499443453401344840, guid: da1445e561f568b42843e4ed50f8d75b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 816247320386131130, guid: da1445e561f568b42843e4ed50f8d75b, type: 3}
+      propertyPath: maximoVidaEnemigo
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 889528832172061378, guid: da1445e561f568b42843e4ed50f8d75b, type: 3}
       propertyPath: m_Name

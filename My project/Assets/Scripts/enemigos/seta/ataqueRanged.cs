@@ -19,6 +19,7 @@ public class ataqueRanged : MonoBehaviour
     [SerializeField] private GameObject personaje;
     private PersonajeBase personajeScript;
     // Start is called before the first frame update
+
     void Start()
     {
         personajeScript = personaje.GetComponent<PersonajeBase>();

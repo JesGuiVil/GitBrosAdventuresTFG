@@ -28,6 +28,7 @@ public class Inventario : MonoBehaviour
     public bool AgregarObjeto(GameObject objetoPrefab)
     {
         // Buscar una ranura vacía para agregar el objeto al inventario
+
         for (int i = 0; i < ranuras.Length; i++)
         {
             if (!estaLleno[i])

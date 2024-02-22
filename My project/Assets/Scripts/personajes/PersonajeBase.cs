@@ -35,7 +35,8 @@ public class PersonajeBase : MonoBehaviour
     // Update is called once per frame
     protected void PersonajeBaseUpdate()
     {
-        
+        if(!isDead)
+        {
             Horizontal = Input.GetAxisRaw("Horizontal");
 
             tiempoJuego += Time.deltaTime;
@@ -44,25 +45,19 @@ public class PersonajeBase : MonoBehaviour
             else if (Horizontal > 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
 
             animator.SetBool("running", Horizontal != 0.0f);
-            
+
             CheckGrounded();
-            
+
             if (Input.GetKeyDown(KeyCode.W) && Grounded)
             {
                 Jump();
-            }   
-            /*
-            if (Input.GetKey(KeyCode.E) && Time.time > LastShoot + 0.25f) {
-                Shoot();
-                LastShoot = Time.time;
             }
-            */
-            if (isDead){
-                collider.enabled=false;
-                rigidbody2D.bodyType=RigidbodyType2D.Kinematic;
-
-            }
-        
+        }
+        else
+        {
+            rigidbody2D.velocity = new Vector2(0f, rigidbody2D.velocity.y);
+            collider.isTrigger = true;
+        }
     }
     private void OnDrawGizmos()
     {
@@ -170,9 +165,7 @@ public class PersonajeBase : MonoBehaviour
     public void Morir()
     {
         isDead = true;
-        rigidbody2D.velocity = Vector2.zero;
         animator.SetTrigger("RogueMuerte");
-        
     }
     
     

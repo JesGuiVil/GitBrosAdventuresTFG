@@ -15,6 +15,7 @@ public class PatrullaEnemiga : MonoBehaviour
     [SerializeField] private Animator anim;
 
     // Start is called before the first frame update
+
     private void MoveInDirection(int _direction)
     {
         idleTimer = 0;

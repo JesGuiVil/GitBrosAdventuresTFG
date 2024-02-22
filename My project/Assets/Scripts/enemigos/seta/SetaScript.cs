@@ -15,7 +15,6 @@ public class SetaScript : MonoBehaviour
     private PatrullaEnemiga patrulla;
     private PersonajeBase personaje;
     private Animator anim;
-    public GameObject Player;
     [SerializeField] private float vidaSeta;
     [SerializeField] private float maximoVidaSeta;
     // Start is called before the first frame update
@@ -27,6 +26,8 @@ public class SetaScript : MonoBehaviour
     {
         patrulla = GetComponentInParent<PatrullaEnemiga>();
         anim = GetComponent<Animator>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        personaje = player.GetComponent<PersonajeBase>();
     }
     // Update is called once per frame
 

@@ -35,6 +35,7 @@ public class PersonajeBase : MonoBehaviour
     // Update is called once per frame
     protected void PersonajeBaseUpdate()
     {
+        CheckGrounded();
         if(!isDead)
         {
             Horizontal = Input.GetAxisRaw("Horizontal");
@@ -46,8 +47,6 @@ public class PersonajeBase : MonoBehaviour
 
             animator.SetBool("running", Horizontal != 0.0f);
 
-            CheckGrounded();
-
             if (Input.GetKeyDown(KeyCode.W) && Grounded)
             {
                 Jump();
@@ -56,7 +55,6 @@ public class PersonajeBase : MonoBehaviour
         else
         {
             rigidbody2D.velocity = new Vector2(0f, rigidbody2D.velocity.y);
-            collider.isTrigger = true;
         }
     }
     private void OnDrawGizmos()
@@ -135,11 +133,13 @@ public class PersonajeBase : MonoBehaviour
 
     void FixedUpdate()
     {   
-        if (!Grounded) 
-        {
-            rigidbody2D.velocity += Vector2.up * Gravedad * Time.fixedDeltaTime;
+        if(!isDead){
+            if (!Grounded) 
+            {
+                rigidbody2D.velocity += Vector2.up * Gravedad * Time.fixedDeltaTime;
+            }
+            rigidbody2D.velocity = new Vector2(Horizontal * Speed, rigidbody2D.velocity.y);    
         }
-        rigidbody2D.velocity = new Vector2(Horizontal * Speed, rigidbody2D.velocity.y);
     }
 
     void OnApplicationQuit() {
@@ -166,6 +166,7 @@ public class PersonajeBase : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("RogueMuerte");
+        gameObject.layer=LayerMask.NameToLayer("playermuerto");
     }
     
     

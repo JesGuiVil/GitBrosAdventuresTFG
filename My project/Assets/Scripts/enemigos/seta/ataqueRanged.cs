@@ -16,13 +16,14 @@ public class ataqueRanged : MonoBehaviour
     private Animator anim;
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject[] proyectiles;
-    [SerializeField] private GameObject personaje;
-    private PersonajeBase personajeScript;
+    
+    private PersonajeBase personaje;
     // Start is called before the first frame update
 
     void Start()
     {
-        personajeScript = personaje.GetComponent<PersonajeBase>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        personaje = player.GetComponent<PersonajeBase>();
         
     }
     private void Awake()
@@ -38,7 +39,7 @@ public class ataqueRanged : MonoBehaviour
         {
             
             Debug.Log("personaje Detectado a rango");
-            if(!personajeScript.isDead){
+            if(!personaje.isDead){
 
                 if (cooldownTimer >= attackCooldown)
                 {
@@ -53,7 +54,7 @@ public class ataqueRanged : MonoBehaviour
         }
         if (patrulla != null)
         {
-            patrulla.enabled = (!PlayerInSight() || personajeScript.isDead);
+            patrulla.enabled = (!PlayerInSight() || personaje.isDead);
         }
 
     }

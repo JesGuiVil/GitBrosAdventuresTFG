@@ -5,14 +5,34 @@ using UnityEngine.UI;
 
 public class Pinchos : MonoBehaviour
 {
+    private PersonajeBase personajeScript;
+    [SerializeField] private float danio;
+
+    private void Start()
+    {
+        // Busca el GameObject del personaje por su etiqueta
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        
+        if (player != null)
+        {
+            // Obtén el componente PersonajeBase del GameObject del personaje
+            personajeScript = player.GetComponent<PersonajeBase>();
+        }
+        else
+        {
+            Debug.LogError("No se pudo encontrar el GameObject del personaje con la etiqueta 'Player'.");
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("Enemigo"))
+        if (collision.CompareTag("Player"))
         {
-            Rogue rogue = collision.GetComponent<Rogue>(); // Obtén el componente Rogue en lugar de Salud
-            if (rogue != null)
+            // Asegúrate de que el personajeScript no sea nulo y no esté muerto
+            if (personajeScript != null && !personajeScript.isDead)
             {
-                rogue.RecibirDanio(10000); // Llama al método RecibirDanio del Rogue para infligir daño
+                // Llama al método RecibirDanio del personaje para infligir daño
+                personajeScript.RecibirDanio(danio);
             }
         }
     }

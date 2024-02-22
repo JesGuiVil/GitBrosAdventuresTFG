@@ -10,12 +10,14 @@ public class ProyectilSeta : MonoBehaviour
     private Animator anim;
     private float direction;
     private float lifetime;
-    [SerializeField] PersonajeBase personaje;
+    private PersonajeBase personaje;
     [SerializeField] private float Damage;
     private void Awake()
     {
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        personaje = player.GetComponent<PersonajeBase>();
     }
 
     // Start is called before the first frame update

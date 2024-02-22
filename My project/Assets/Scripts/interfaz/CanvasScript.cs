@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class CanvasScript : MonoBehaviour
 {
-   public GameObject Rogue;
-    
-    void Update()
+    private GameObject Rogue;
+    private void Start(){
+        Rogue = GameObject.FindGameObjectWithTag("Player");
+    }
+    private void Update()
     {
         Vector3 position = transform.position;
         position.x = Rogue.transform.position.x;

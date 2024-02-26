@@ -188,7 +188,7 @@ public class PersonajeBase : MonoBehaviour
 
        cooldownTimer = 0;
         proyectiles[FindProyectil()].transform.position = firepoint.position;
-        proyectiles[FindProyectil()].GetComponent<ProyectilEnemigo>().SetDirection(Mathf.Sign(transform.localScale.x));
+        proyectiles[FindProyectil()].GetComponent<ProyectilPersonaje>().SetDirection(Mathf.Sign(transform.localScale.x));
         
     }
     private int FindProyectil()

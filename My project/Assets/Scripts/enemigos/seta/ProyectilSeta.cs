@@ -11,13 +11,14 @@ public class ProyectilSeta : MonoBehaviour
     private float direction;
     private float lifetime;
     private PersonajeBase personaje;
-    [SerializeField] private float Damage;
+    private EnemigoBase enemigoScript;
     private void Awake()
     {
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
+        enemigoScript = GetComponentInParent<EnemigoBase>();
     }
 
     // Start is called before the first frame update
@@ -48,7 +49,7 @@ public class ProyectilSeta : MonoBehaviour
         hit = true;
         if (collision.CompareTag("Player") && !personaje.isDead)
         {
-            personaje.RecibirDanio(Damage);
+            enemigoScript.DamageDistanciaPlayer();
         }
         boxCollider.enabled = false;
         

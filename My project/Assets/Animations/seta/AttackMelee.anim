@@ -86,9 +86,9 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.33333334
-    functionName: DamagePlayer
+    functionName: DamageMeleePlayer
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 11500000, guid: fb45c3d1ae4ead949b79ea16532d6359, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

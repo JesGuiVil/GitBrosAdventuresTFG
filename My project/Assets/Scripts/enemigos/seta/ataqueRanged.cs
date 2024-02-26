@@ -38,7 +38,7 @@ public class ataqueRanged : MonoBehaviour
         if (PlayerInSight())
         {
             
-            Debug.Log("personaje Detectado a rango");
+            
             if(!personaje.isDead){
 
                 if (cooldownTimer >= attackCooldown)
@@ -48,10 +48,7 @@ public class ataqueRanged : MonoBehaviour
                 }
             } 
         }
-        else
-        {
-            Debug.Log("personaje no detectado a rango");
-        }
+        
         if (patrulla != null)
         {
             patrulla.enabled = (!PlayerInSight() || personaje.isDead);

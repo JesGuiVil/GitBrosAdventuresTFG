@@ -4,7 +4,17 @@ using UnityEngine;
 
 public class PersonajeBase : MonoBehaviour
 {
-    public GameObject BulletPrefab;
+    private float cooldownTimer = Mathf.Infinity;
+    [SerializeField] private float danioCerca;
+    [SerializeField] private float cooldownCerca;
+    [SerializeField] private float rangeCerca;
+    [SerializeField] private float colliderDistanceCerca;
+    [SerializeField] private float danioDistancia;
+    [SerializeField] private float cooldownDistancia;
+    [SerializeField] private float rangeDistancia;
+    [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private CapsuleCollider2D capsuleCollider;
+    private EnemigoBase enemigo;
     public float Speed;
     public float JumpForce;
     public float tiempoJuego = 0f;
@@ -15,7 +25,6 @@ public class PersonajeBase : MonoBehaviour
     private bool Grounded;
     private float LastShoot;
     private bool IsJumping;
-
     private Collider2D collider;
     [SerializeField] public float vida;
     [SerializeField] private float maximoVida;
@@ -23,7 +32,7 @@ public class PersonajeBase : MonoBehaviour
     public bool isDead = false;
 
     // Start is called before the first frame update
-    protected void PersonajeBaseStart()
+    protected void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -33,8 +42,9 @@ public class PersonajeBase : MonoBehaviour
     }
     
     // Update is called once per frame
-    protected void PersonajeBaseUpdate()
+    protected void Update()
     {
+        cooldownTimer += Time.deltaTime;
         CheckGrounded();
         if(!isDead)
         {
@@ -50,6 +60,15 @@ public class PersonajeBase : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W) && Grounded)
             {
                 Jump();
+            }
+            if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer >= cooldownCerca)
+            {
+                animator.SetTrigger("ataquemelee");
+                cooldownTimer = 0f;
+            }
+            if (Input.GetKeyDown(KeyCode.E) && cooldownTimer >= cooldownDistancia) {
+                animator.SetTrigger("ataquedistancia");
+                cooldownTimer = 0f;
             }
         }
         else
@@ -69,6 +88,9 @@ public class PersonajeBase : MonoBehaviour
         // Visualizar el raycast derecho
         Vector2 rightRaycastOrigin = transform.position + Vector3.down * 0.75f + Vector3.right * 0.3f; // Desplazar a la derecha
         Gizmos.DrawLine(rightRaycastOrigin, rightRaycastOrigin + Vector2.down * raycastLength);
+        //gizmo del rango de ataque
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y, capsuleCollider.bounds.size.z));
     }
 
     private void CheckGrounded()
@@ -83,7 +105,7 @@ public class PersonajeBase : MonoBehaviour
 
         Debug.DrawRay(leftRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast izquierdo
         Debug.DrawRay(rightRaycastOrigin, Vector3.down * 0.15f, Color.blue); // Dibuja el raycast derecho
-
+        
         // Verifica si cualquiera de los dos raycasts toca el suelo
         if (leftHit.collider != null || rightHit.collider != null)
         {
@@ -120,15 +142,6 @@ public class PersonajeBase : MonoBehaviour
             rigidbody2D.AddForce(Vector2.up * JumpForce);
             IsJumping = true;
         }
-    }
-
-    void Shoot() {
-        Vector3 direction;
-        if (transform.localScale.x == 1.0f) direction = Vector2.right;
-        else direction = Vector2.left;
-
-        GameObject bullet = Instantiate(BulletPrefab, transform.position + direction * 0.2f, Quaternion.identity);
-        bullet.GetComponent<Bullet>().SetDirection(direction);
     }
 
     void FixedUpdate()
@@ -168,6 +181,18 @@ public class PersonajeBase : MonoBehaviour
         animator.SetTrigger("RogueMuerte");
         gameObject.layer=LayerMask.NameToLayer("playermuerto");
     }
-    
-    
+    public void ataqueDistancia(){
+        
+    }
+    public void ataqueCerca(){
+        
+        RaycastHit2D hit = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y, capsuleCollider.bounds.size.z),0, Vector2.left, 0, enemyLayer);
+        if (hit.collider != null)
+        {
+            enemigo = hit.transform.GetComponent<EnemigoBase>();
+            if(enemigo!=null){
+                enemigo.enemigoRecibirDanio(danioCerca);
+            }
+        }
+    }
 }

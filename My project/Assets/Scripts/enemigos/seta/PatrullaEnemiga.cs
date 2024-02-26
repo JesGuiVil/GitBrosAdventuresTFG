@@ -13,6 +13,7 @@ public class PatrullaEnemiga : MonoBehaviour
     private Vector3 initScale;
     private bool movingLeft;
     [SerializeField] private Animator anim;
+    private EnemigoBase enemigoScript;
 
     // Start is called before the first frame update
 
@@ -29,24 +30,26 @@ public class PatrullaEnemiga : MonoBehaviour
     }
     private void Update()
     {
-        if (movingLeft)
-        {
-            if (enemy.position.x >= leftEdge.position.x){
-                MoveInDirection(-1);
+        if(!enemigoScript.enemyDead){
+            if (movingLeft)
+            {
+                if (enemy.position.x >= leftEdge.position.x){
+                    MoveInDirection(-1);
+                }
+                else
+                {
+                    DirectionChange();
+                }
             }
             else
             {
-                DirectionChange();
-            }
-        }
-        else
-        {
-            if(enemy.position.x <= rightEdge.position.x){
-                MoveInDirection(1);
-            }
-            else
-            {
-                DirectionChange();
+                if(enemy.position.x <= rightEdge.position.x){
+                    MoveInDirection(1);
+                }
+                else
+                {
+                    DirectionChange();
+                }
             }
         }
         
@@ -62,6 +65,7 @@ public class PatrullaEnemiga : MonoBehaviour
     }
     private void Awake()
     {
+        enemigoScript = GetComponentInChildren<EnemigoBase>();
         initScale = enemy.localScale;
     }
 }

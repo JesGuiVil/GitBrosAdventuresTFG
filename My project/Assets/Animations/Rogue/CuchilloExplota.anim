@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AtaqueDistanciaRogue
+  m_Name: CuchilloExplota
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,19 +21,15 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1028415336, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - time: 0.083333336
-      value: {fileID: 1560460982, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
+      value: {fileID: 21300000, guid: 19a26435368ffd14d85f5baf1a1f0503, type: 3}
     - time: 0.16666667
-      value: {fileID: -377966796, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - time: 0.25
-      value: {fileID: 19405833, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
+      value: {fileID: 21300000, guid: 8ca6afa084d1bc24aa1dba2741413cd3, type: 3}
     - time: 0.33333334
-      value: {fileID: -1965304902, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
+      value: {fileID: 21300000, guid: d87e483bb7a03dc488442720c30d2fb3, type: 3}
     - time: 0.41666666
-      value: {fileID: -1036753950, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
+      value: {fileID: 21300000, guid: 8588e3d02e27a684f89be3b0cc6102b7, type: 3}
     - time: 0.5
-      value: {fileID: 1330362490, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
+      value: {fileID: 21300000, guid: 315e105d8bec51549b88b4e9f69b1fc1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -56,13 +52,11 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1028415336, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - {fileID: 1560460982, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - {fileID: -377966796, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - {fileID: 19405833, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - {fileID: -1965304902, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - {fileID: -1036753950, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
-    - {fileID: 1330362490, guid: 0a1c43ce5bdf548138f5fb7c4443e10e, type: 3}
+    - {fileID: 21300000, guid: 19a26435368ffd14d85f5baf1a1f0503, type: 3}
+    - {fileID: 21300000, guid: 8ca6afa084d1bc24aa1dba2741413cd3, type: 3}
+    - {fileID: 21300000, guid: d87e483bb7a03dc488442720c30d2fb3, type: 3}
+    - {fileID: 21300000, guid: 8588e3d02e27a684f89be3b0cc6102b7, type: 3}
+    - {fileID: 21300000, guid: 315e105d8bec51549b88b4e9f69b1fc1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -88,10 +82,10 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.16666667
-    functionName: ataqueDistancia
+  - time: 0.5833333
+    functionName: Desactivate
     data: 
-    objectReferenceParameter: {fileID: 11500000, guid: 17eff0356a1ab432d97b9961d4aacd4f, type: 3}
+    objectReferenceParameter: {fileID: 11500000, guid: b32530d8c6e17844c818a18f72868153, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

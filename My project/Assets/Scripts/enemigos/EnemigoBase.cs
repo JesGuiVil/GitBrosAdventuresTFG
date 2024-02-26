@@ -100,10 +100,8 @@ public class EnemigoBase : MonoBehaviour
     {
         
         cooldownTimer = 0;
-        anim.SetTrigger("ataqueDistancia");
-
         proyectiles[FindProyectil()].transform.position = firepoint.position;
-        proyectiles[FindProyectil()].GetComponent<ProyectilSeta>().SetDirection(Mathf.Sign(transform.localScale.x));
+        proyectiles[FindProyectil()].GetComponent<ProyectilEnemigo>().SetDirection(Mathf.Sign(transform.localScale.x));
     }
 
     private int FindProyectil()

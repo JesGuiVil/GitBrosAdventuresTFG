@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProyectilSeta : MonoBehaviour
+public class ProyectilPersonaje : MonoBehaviour
 {
     [SerializeField] private float velocidad;
     private bool hit;
@@ -10,19 +10,16 @@ public class ProyectilSeta : MonoBehaviour
     private Animator anim;
     private float direction;
     private float lifetime;
-    private PersonajeBase personaje;
+    private PersonajeBase personajeScript;
     private EnemigoBase enemigoScript;
     private void Awake()
     {
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        personaje = player.GetComponent<PersonajeBase>();
-        enemigoScript = GetComponentInParent<EnemigoBase>();
+        personajeScript = GetComponentInParent<PersonajeBase>();
     }
 
     // Start is called before the first frame update
-
     void Start()
     {
         
@@ -47,25 +44,31 @@ public class ProyectilSeta : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit = true;
-        if (collision.CompareTag("Player") && !personaje.isDead)
-        {
-            enemigoScript.DamageDistanciaPlayer();
+        if (collision.CompareTag("Enemigo")){
+
+            enemigoScript = collision.GetComponent<EnemigoBase>();
+            if(!enemigoScript.enemyDead)
+            {
+                enemigoScript.enemigoRecibirDanio(personajeScript.danioDistancia);
+            }
         }
         boxCollider.enabled = false;
-        
         anim.SetTrigger("Explota");
     }
-    public void SetDirection(float Direction)
+    
+     public void SetDirection(float Direction)
     {
         lifetime = 0;
         direction = Direction;
         gameObject.SetActive(true);
         hit = false;
         boxCollider.enabled = true;
+
         float localScaleX = transform.localScale.x;
         if (Mathf.Sign(localScaleX) != Direction)
+        {
             localScaleX = -localScaleX;
-
+        }
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
     private void Desactivate()

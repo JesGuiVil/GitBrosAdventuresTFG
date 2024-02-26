@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - cuchillo
   - Cuchillo
+  - Enemigo
   layers:
   - Default
   - TransparentFX

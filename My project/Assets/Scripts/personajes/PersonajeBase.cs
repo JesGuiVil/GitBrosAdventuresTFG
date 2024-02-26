@@ -9,11 +9,13 @@ public class PersonajeBase : MonoBehaviour
     [SerializeField] private float cooldownCerca;
     [SerializeField] private float rangeCerca;
     [SerializeField] private float colliderDistanceCerca;
-    [SerializeField] private float danioDistancia;
+    [SerializeField] public float danioDistancia;
     [SerializeField] private float cooldownDistancia;
     [SerializeField] private float rangeDistancia;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
+    [SerializeField] private Transform firepoint;
+    [SerializeField] private GameObject[] proyectiles;
     private EnemigoBase enemigo;
     public float Speed;
     public float JumpForce;
@@ -66,7 +68,8 @@ public class PersonajeBase : MonoBehaviour
                 animator.SetTrigger("ataquemelee");
                 cooldownTimer = 0f;
             }
-            if (Input.GetKeyDown(KeyCode.E) && cooldownTimer >= cooldownDistancia) {
+            if (Input.GetKeyDown(KeyCode.E) && cooldownTimer >= cooldownDistancia)
+            {
                 animator.SetTrigger("ataquedistancia");
                 cooldownTimer = 0f;
             }
@@ -90,7 +93,7 @@ public class PersonajeBase : MonoBehaviour
         Gizmos.DrawLine(rightRaycastOrigin, rightRaycastOrigin + Vector2.down * raycastLength);
         //gizmo del rango de ataque
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y, capsuleCollider.bounds.size.z));
+        Gizmos.DrawWireCube(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z));
     }
 
     private void CheckGrounded()
@@ -182,11 +185,25 @@ public class PersonajeBase : MonoBehaviour
         gameObject.layer=LayerMask.NameToLayer("playermuerto");
     }
     public void ataqueDistancia(){
+
+       cooldownTimer = 0;
+        proyectiles[FindProyectil()].transform.position = firepoint.position;
+        proyectiles[FindProyectil()].GetComponent<ProyectilEnemigo>().SetDirection(Mathf.Sign(transform.localScale.x));
         
     }
+    private int FindProyectil()
+    {
+        for (int i = 0; i < proyectiles.Length; i++)
+        {
+            if (!proyectiles[i].activeInHierarchy)
+                return i;
+        }
+        return 0;
+    }
+
     public void ataqueCerca(){
         
-        RaycastHit2D hit = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y, capsuleCollider.bounds.size.z),0, Vector2.left, 0, enemyLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z),0, Vector2.left, 0, enemyLayer);
         if (hit.collider != null)
         {
             enemigo = hit.transform.GetComponent<EnemigoBase>();

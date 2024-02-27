@@ -12,6 +12,7 @@ public class ProyectilPersonaje : MonoBehaviour
     private float lifetime;
     private PersonajeBase personajeScript;
     private EnemigoBase enemigoScript;
+    private PalancaBase palanca;
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -50,6 +51,13 @@ public class ProyectilPersonaje : MonoBehaviour
             if(!enemigoScript.enemyDead)
             {
                 enemigoScript.enemigoRecibirDanio(personajeScript.danioDistancia);
+            }
+        }
+        if (collision.CompareTag("Palanca"))
+        {
+            palanca = collision.GetComponent<PalancaBase>();
+            if(palanca!=null){
+                palanca.ActivatePalanca();
             }
         }
         boxCollider.enabled = false;

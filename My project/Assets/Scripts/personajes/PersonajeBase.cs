@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class PersonajeBase : MonoBehaviour
 {
-    private float cooldownTimer = Mathf.Infinity;
+    public float cooldownTimer = Mathf.Infinity;
     [SerializeField] private float danioCerca;
     [SerializeField] private float cooldownCerca;
     [SerializeField] private float rangeCerca;
     [SerializeField] private float colliderDistanceCerca;
     [SerializeField] public float danioDistancia;
-    [SerializeField] private float cooldownDistancia;
+    [SerializeField] public float cooldownDistancia;
     [SerializeField] private float rangeDistancia;
     [SerializeField] private LayerMask enemyLayer;
+    [SerializeField] private LayerMask palancaLayer;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject[] proyectiles;
     private EnemigoBase enemigo;
+    private PalancaBase palanca;
     public float Speed;
     public float JumpForce;
     public float tiempoJuego = 0f;
     public float Gravedad;
     private Rigidbody2D rigidbody2D;
-    protected Animator animator;
+    public Animator animator;
     private float Horizontal;
     private bool Grounded;
     private float LastShoot;
@@ -68,11 +70,7 @@ public class PersonajeBase : MonoBehaviour
                 animator.SetTrigger("ataquemelee");
                 cooldownTimer = 0f;
             }
-            if (Input.GetKeyDown(KeyCode.E) && cooldownTimer >= cooldownDistancia)
-            {
-                animator.SetTrigger("ataquedistancia");
-                cooldownTimer = 0f;
-            }
+            
         }
         else
         {
@@ -164,10 +162,14 @@ public class PersonajeBase : MonoBehaviour
     public void RecibirDanio(float danio){
         vida-=danio;
         barraVida.CambiarVidaActual(vida);
+        if(vida>0)  {
+            animator.SetTrigger("Hurt");
+        }
         if (vida<=0){
             Morir();
         }
     }
+
     public void Curar(float curacion){
         if ((vida+curacion)>maximoVida){
             vida=maximoVida;
@@ -203,12 +205,20 @@ public class PersonajeBase : MonoBehaviour
 
     public void ataqueCerca(){
         
-        RaycastHit2D hit = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z),0, Vector2.left, 0, enemyLayer);
-        if (hit.collider != null)
+        RaycastHit2D hitEnemigo = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z),0, Vector2.left, 0, enemyLayer);
+        RaycastHit2D hitPalanca = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z),0, Vector2.left, 0, palancaLayer);
+        if (hitEnemigo.collider != null)
         {
-            enemigo = hit.transform.GetComponent<EnemigoBase>();
+            enemigo = hitEnemigo.transform.GetComponent<EnemigoBase>();
             if(enemigo!=null){
                 enemigo.enemigoRecibirDanio(danioCerca);
+            }
+        }
+        if (hitPalanca.collider != null)
+        {
+            palanca = hitPalanca.transform.GetComponent<PalancaBase>();
+            if(palanca!=null){
+                palanca.ActivatePalanca();
             }
         }
     }

@@ -12,6 +12,7 @@ public class ProyectilEnemigo : MonoBehaviour
     private float lifetime;
     private PersonajeBase personaje;
     private EnemigoBase enemigoScript;
+    private bool directionbool;
     private void Awake()
     {
         anim = GetComponent<Animator>();

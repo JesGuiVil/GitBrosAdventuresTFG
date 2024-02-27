@@ -38,11 +38,12 @@ public class ProyectilEnemigo : MonoBehaviour
     void Update()
     {
         if (hit) return;
-        float movementSpeed = velocidad * Time.deltaTime* direction;
-        transform.Translate(movementSpeed, 0, 0);
+            float movementSpeed = velocidad * Time.deltaTime * direction;
+            transform.Translate(movementSpeed, 0, 0);
 
-        lifetime += Time.deltaTime;
-        if (lifetime > 3) gameObject.SetActive(false);
+            lifetime += Time.deltaTime;
+            if (lifetime > 3) gameObject.SetActive(false);
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -64,7 +65,6 @@ public class ProyectilEnemigo : MonoBehaviour
         else
         {
             hit = true;
-            
             if (otherGameObject.CompareTag("Player") && !personaje.isDead)
             {
                 enemigoScript.DamageDistanciaPlayer();

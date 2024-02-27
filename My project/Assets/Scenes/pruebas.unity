@@ -1284,9 +1284,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1762648075867530797, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105777976687409930, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2208342779596761591, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
       propertyPath: m_Name
       value: patrolGoblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 2516906534506038621, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3184605046682886698, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3824223237835304484, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3984035800806480024, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1327,6 +1347,26 @@ PrefabInstance:
     - target: {fileID: 3984035800806480024, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502323030958224557, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428239050510232463, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6721073283351089491, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8390258578606503103, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8444050878726319095, guid: cfcb72d46b20dd242ba300f6d65662e7, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -19,7 +19,9 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject[] proyectiles;
     private float cooldownTimer = Mathf.Infinity;
-    
+    [SerializeField] private float dashDistance;
+    [SerializeField] private float dashSpeed;
+    private bool isDashing = false;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
 
@@ -38,7 +40,7 @@ public class EnemigoBase : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -137,7 +139,7 @@ public class EnemigoBase : MonoBehaviour
     }
     public void DamageDistanciaPlayer()
     {
-        if (PlayerInSightDistancia() && !personaje.isDead)
+        if (!personaje.isDead)
         {
             personaje.RecibirDanio(damageDistancia);
         }

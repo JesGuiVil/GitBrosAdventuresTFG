@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &211702416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 568171750751467941, guid: 85a19a38e652a0245b6240a2fd3308a8, type: 3}
+  m_PrefabInstance: {fileID: 8825174060273376949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &332859857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -299,6 +304,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &611613030 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8627375547773660302, guid: 85a19a38e652a0245b6240a2fd3308a8, type: 3}
+  m_PrefabInstance: {fileID: 8825174060273376949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &766238388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -387,6 +397,14 @@ PrefabInstance:
     - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
       propertyPath: m_Name
       value: palanca2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
+      propertyPath: m_TagString
+      value: Palanca
       objectReference: {fileID: 0}
     - target: {fileID: 3591667568284531684, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
       propertyPath: m_Enabled
@@ -650,6 +668,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c10d3f73a9624746a20264ed1e466ec, type: 3}
+--- !u!1 &1716050048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5272298454534644831, guid: 85a19a38e652a0245b6240a2fd3308a8, type: 3}
+  m_PrefabInstance: {fileID: 8825174060273376949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1820064051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -738,6 +761,14 @@ PrefabInstance:
     - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
       propertyPath: m_Name
       value: palanca3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
+      propertyPath: m_TagString
+      value: Palanca
       objectReference: {fileID: 0}
     - target: {fileID: 3591667568284531684, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
       propertyPath: m_Enabled
@@ -1104,14 +1135,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1420882169277207235, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
+      propertyPath: ranuras.Array.data[0]
+      value: 
+      objectReference: {fileID: 611613030}
+    - target: {fileID: 1420882169277207235, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
+      propertyPath: ranuras.Array.data[1]
+      value: 
+      objectReference: {fileID: 211702416}
+    - target: {fileID: 1420882169277207235, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
+      propertyPath: ranuras.Array.data[2]
+      value: 
+      objectReference: {fileID: 1716050048}
     - target: {fileID: 5190834608768440715, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
       propertyPath: m_Name
       value: Rogue
       objectReference: {fileID: 0}
     - target: {fileID: 7530506318532783701, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 8030956308901969294}
+    - target: {fileID: 7530506318532783701, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
       propertyPath: barraVida
       value: 
       objectReference: {fileID: 8800719730024410990}
+    - target: {fileID: 7530506318532783701, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
+      propertyPath: palancaLayer.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 9084417810819151080, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1277,6 +1328,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5190834608768440715, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
   m_PrefabInstance: {fileID: 5779284521993094320}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &8030956308901969294 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8003311142274853299, guid: af0d4a56b5a39fb4da52b0ba3359fa0a, type: 3}
+  m_PrefabInstance: {fileID: 5779284521993094320}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8434304511665381604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1292,6 +1348,14 @@ PrefabInstance:
     - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
       propertyPath: m_Name
       value: palanca1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2942585315283607944, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
+      propertyPath: m_TagString
+      value: Palanca
       objectReference: {fileID: 0}
     - target: {fileID: 3591667568284531684, guid: 50cc6332e8f3a1d48b82c8a294d5601f, type: 3}
       propertyPath: m_Enabled

@@ -126,9 +126,9 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_0
       rect:
         serializedVersion: 2
-        x: 124
+        x: 122
         y: 1921
-        width: 45
+        width: 47
         height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -147,9 +147,9 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_1
       rect:
         serializedVersion: 2
-        x: 412
+        x: 410
         y: 1921
-        width: 45
+        width: 47
         height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -168,9 +168,9 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_2
       rect:
         serializedVersion: 2
-        x: 700
+        x: 698
         y: 1921
-        width: 43
+        width: 45
         height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -189,10 +189,10 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_3
       rect:
         serializedVersion: 2
-        x: 989
+        x: 986
         y: 1921
-        width: 41
-        height: 41
+        width: 45
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_4
       rect:
         serializedVersion: 2
-        x: 1276
+        x: 1275
         y: 1921
-        width: 43
-        height: 41
+        width: 45
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_5
       rect:
         serializedVersion: 2
-        x: 1563
+        x: 1562
         y: 1921
-        width: 40
-        height: 41
+        width: 45
+        height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,9 +252,9 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_6
       rect:
         serializedVersion: 2
-        x: 1852
+        x: 1850
         y: 1921
-        width: 41
+        width: 45
         height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -273,9 +273,9 @@ TextureImporter:
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_7
       rect:
         serializedVersion: 2
-        x: 2140
+        x: 2137
         y: 1921
-        width: 43
+        width: 47
         height: 42
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1052,7 +1052,7 @@ TextureImporter:
         serializedVersion: 2
         x: 700
         y: 1285
-        width: 64
+        width: 82
         height: 45
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1068,54 +1068,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_45
-      rect:
-        serializedVersion: 2
-        x: 746
-        y: 1315
-        width: 35
-        height: 12
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 137839f07e60d48a5a22589657cd0edc
-      internalID: -1362018946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_46
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 1306
-        width: 31
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad89e6d8fd1d841c7a22625e88aa395e
-      internalID: 1960375422
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_47
       rect:
         serializedVersion: 2
         x: 990
         y: 1285
-        width: 40
+        width: 85
         height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1131,54 +1089,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_48
-      rect:
-        serializedVersion: 2
-        x: 1035
-        y: 1306
-        width: 40
-        height: 10
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 417b429748e23408b87c83c8cdad2337
-      internalID: 45560019
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_49
-      rect:
-        serializedVersion: 2
-        x: 1036
-        y: 1317
-        width: 38
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e6c53112a62954d0d8ed0fbd0814cf35
-      internalID: -147130035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_50
       rect:
         serializedVersion: 2
         x: 1278
         y: 1285
-        width: 40
+        width: 82
         height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1189,27 +1105,6 @@ TextureImporter:
       bones: []
       spriteID: e97daa55328e746ef9e12ba34a1aee1b
       internalID: -2072928958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_51
-      rect:
-        serializedVersion: 2
-        x: 1322
-        y: 1309
-        width: 38
-        height: 18
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0bd7801e00ce40dd91cfa508a4ef111
-      internalID: 2105960966
       vertices: []
       indices: 
       edges: []
@@ -1231,27 +1126,6 @@ TextureImporter:
       bones: []
       spriteID: d88b082f03f7941c7bd1cf830094dd71
       internalID: 1180012362
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_53
-      rect:
-        serializedVersion: 2
-        x: 1609
-        y: 1309
-        width: 26
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 43cd1738fcd734215bcab9b8c64a740f
-      internalID: 871249406
       vertices: []
       indices: 
       edges: []
@@ -2333,8 +2207,8 @@ TextureImporter:
         serializedVersion: 2
         x: 3291
         y: 513
-        width: 31
-        height: 28
+        width: 73
+        height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2349,34 +2223,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_106
-      rect:
-        serializedVersion: 2
-        x: 3314
-        y: 522
-        width: 50
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3261d42df33b1499cae1a49619d8731e
-      internalID: 2144340917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_107
       rect:
         serializedVersion: 2
         x: 3579
         y: 513
-        width: 29
-        height: 28
+        width: 72
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2386,27 +2239,6 @@ TextureImporter:
       bones: []
       spriteID: b794d6949a5214c71bebb213f756ca12
       internalID: 1982582812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_108
-      rect:
-        serializedVersion: 2
-        x: 3586
-        y: 514
-        width: 65
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e80fe436908a4a00bab9332075bfede
-      internalID: -2130956282
       vertices: []
       indices: 
       edges: []
@@ -2438,7 +2270,7 @@ TextureImporter:
         serializedVersion: 2
         x: 4155
         y: 513
-        width: 29
+        width: 78
         height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2449,27 +2281,6 @@ TextureImporter:
       bones: []
       spriteID: a861644538f4b4e0b85cd2d0db6d30ca
       internalID: 249315187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_111
-      rect:
-        serializedVersion: 2
-        x: 4187
-        y: 520
-        width: 46
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9af58df6364b84b04b1e08ca3056c363
-      internalID: -1563370047
       vertices: []
       indices: 
       edges: []
@@ -2601,55 +2412,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_118
-      rect:
-        serializedVersion: 2
-        x: 962
-        y: 385
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6282b1504e1d84c80ad944b179cfdb92
-      internalID: 1662021421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_119
-      rect:
-        serializedVersion: 2
-        x: 964
-        y: 385
-        width: 18
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01491ec400816402eab2246ee717ac90
-      internalID: -1912313768
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_120
       rect:
         serializedVersion: 2
-        x: 970
-        y: 385
-        width: 73
-        height: 52
+        x: 962
+        y: 386
+        width: 106
+        height: 51
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2664,76 +2433,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_121
-      rect:
-        serializedVersion: 2
-        x: 1037
-        y: 385
-        width: 31
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0c8cd52f607d3499fb1abbaebf080ae6
-      internalID: 101757574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_122
-      rect:
-        serializedVersion: 2
-        x: 1215
-        y: 385
-        width: 39
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a2f12ebb2e1f4bf2baefc20c8fe872f
-      internalID: 1255185928
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_123
-      rect:
-        serializedVersion: 2
-        x: 1240
-        y: 385
-        width: 33
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9fcf4c73e9b7471c97476d51f9bc895
-      internalID: -1655176292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_124
       rect:
         serializedVersion: 2
-        x: 1265
-        y: 385
-        width: 112
-        height: 58
+        x: 1215
+        y: 386
+        width: 189
+        height: 57
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2748,96 +2454,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_125
-      rect:
-        serializedVersion: 2
-        x: 1349
-        y: 385
-        width: 44
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2407d3bc3b3ba45a4b43562d5e1a62ee
-      internalID: -1755225336
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_126
-      rect:
-        serializedVersion: 2
-        x: 1393
-        y: 385
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5b7ee439ac0944989c4b96092ac9381
-      internalID: 2128867841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_127
+      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_129
       rect:
         serializedVersion: 2
         x: 1503
         y: 385
-        width: 39
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a521a6a55031b4c38b3f724639151bb7
-      internalID: 197722980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_128
-      rect:
-        serializedVersion: 2
-        x: 1528
-        y: 385
-        width: 33
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ada090b33e51145d1a284b4cc6c71f2e
-      internalID: -275376384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_129
-      rect:
-        serializedVersion: 2
-        x: 1553
-        y: 385
-        width: 55
+        width: 189
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2853,117 +2475,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_130
-      rect:
-        serializedVersion: 2
-        x: 1608
-        y: 385
-        width: 57
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e33a4b19ea82641ecab5058a389f9de6
-      internalID: -1267095817
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_131
-      rect:
-        serializedVersion: 2
-        x: 1637
-        y: 385
-        width: 44
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f028b3bca3c4a4129b15502500d15fb2
-      internalID: -299093652
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_132
-      rect:
-        serializedVersion: 2
-        x: 1681
-        y: 385
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c72cce090c5e489daad0e4e8803b9a7
-      internalID: 903551223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_133
-      rect:
-        serializedVersion: 2
-        x: 1791
-        y: 385
-        width: 39
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b594cd0061c4439a8728af8ea67c6d9
-      internalID: 2062927439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_134
-      rect:
-        serializedVersion: 2
-        x: 1816
-        y: 385
-        width: 33
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 68bda85c1fee24f0f82dcf6a56bd9a53
-      internalID: 631549801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_135
       rect:
         serializedVersion: 2
-        x: 1841
+        x: 1790
         y: 385
-        width: 54
+        width: 190
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -2979,117 +2496,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_136
-      rect:
-        serializedVersion: 2
-        x: 1896
-        y: 385
-        width: 57
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cbc8a461272f9483097b09fc81a1fa4a
-      internalID: -1063440922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_137
-      rect:
-        serializedVersion: 2
-        x: 1925
-        y: 385
-        width: 44
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9de1b5ab0d574551bab06f608b9a09b
-      internalID: 66173813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_138
-      rect:
-        serializedVersion: 2
-        x: 1969
-        y: 385
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c317eefd218a4cac87f729061452325
-      internalID: -2005682404
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_139
+      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_141
       rect:
         serializedVersion: 2
         x: 2079
         y: 385
-        width: 39
-        height: 39
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd0187ad552c24104b45d27d09b42cd8
-      internalID: 1852312376
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_140
-      rect:
-        serializedVersion: 2
-        x: 2104
-        y: 385
-        width: 33
-        height: 52
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6042ec57e1514c82a9fea86e3151599
-      internalID: -1597090976
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_141
-      rect:
-        serializedVersion: 2
-        x: 2129
-        y: 385
-        width: 55
+        width: 188
         height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3105,117 +2517,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_142
-      rect:
-        serializedVersion: 2
-        x: 2184
-        y: 385
-        width: 57
-        height: 58
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c01a14cee75814dc0abb896eed4c662e
-      internalID: -710605364
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_143
-      rect:
-        serializedVersion: 2
-        x: 2213
-        y: 385
-        width: 44
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 343d7aca95354428fa51116fe3bd2106
-      internalID: 1007060171
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_144
-      rect:
-        serializedVersion: 2
-        x: 2257
-        y: 385
-        width: 11
-        height: 11
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ed7c57ee71ca4905a5080694e175b3f
-      internalID: 1171402724
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_145
+      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_147
       rect:
         serializedVersion: 2
         x: 2402
         y: 385
-        width: 5
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dfed3c8231e54437781d1fd2d7299208
-      internalID: -1807847300
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_146
-      rect:
-        serializedVersion: 2
-        x: 2404
-        y: 385
-        width: 18
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e63c95f937b6b41c5ac0b4b486bbd44b
-      internalID: 267234012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_147
-      rect:
-        serializedVersion: 2
-        x: 2410
-        y: 385
-        width: 65
+        width: 106
         height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -3226,27 +2533,6 @@ TextureImporter:
       bones: []
       spriteID: 8fcaa4bff98ce4a9d8b298e6368ce399
       internalID: -956543427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: metal_bladekeeper_FREE_v1.1_SpriteSheet_288x128_148
-      rect:
-        serializedVersion: 2
-        x: 2477
-        y: 385
-        width: 31
-        height: 33
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cf84dd79de2d4b48b5557f865af5f4c
-      internalID: -1358692820
       vertices: []
       indices: 
       edges: []

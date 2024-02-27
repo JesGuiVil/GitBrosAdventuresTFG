@@ -54,6 +54,25 @@ public class ProyectilEnemigo : MonoBehaviour
         boxCollider.enabled = false;
         anim.SetTrigger("Explota");
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject otherGameObject = collision.gameObject;
+        if (otherGameObject.layer == LayerMask.NameToLayer("Default"))
+        {
+            hit = false;
+        }
+        else
+        {
+            hit = true;
+            
+            if (otherGameObject.CompareTag("Player") && !personaje.isDead)
+            {
+                enemigoScript.DamageDistanciaPlayer();
+            }
+            boxCollider.enabled = false;
+            anim.SetTrigger("Explota");
+        }
+    }
     public void SetDirection(float Direction)
     {
         lifetime = 0;

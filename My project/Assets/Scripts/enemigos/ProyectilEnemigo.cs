@@ -13,11 +13,8 @@ public class ProyectilEnemigo : MonoBehaviour
     private PersonajeBase personaje;
     private EnemigoBase enemigoScript;
     private float tiempo = 0;
-    private GameObject enemigo;
-    private void Awake()
-    {
-        
-    }
+    private GameObject lanzador;
+    
 
     // Start is called before the first frame update
 
@@ -27,7 +24,6 @@ public class ProyectilEnemigo : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
-        enemigoScript = GetComponentInParent<EnemigoBase>();
         if (direction == -1)
         {
             Vector3 escalaTemp = transform.localScale;
@@ -52,7 +48,7 @@ public class ProyectilEnemigo : MonoBehaviour
         hit = true;
         if (collision.CompareTag("Player") && !personaje.isDead)
         {
-            enemigo.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
+            lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
         }
         anim.SetTrigger("Explota");
     }
@@ -69,15 +65,15 @@ public class ProyectilEnemigo : MonoBehaviour
 
             if (otherGameObject.CompareTag("Player") && !personaje.isDead)
             {
-                enemigo.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
+                lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
             }
             boxCollider.enabled = false;
             anim.SetTrigger("Explota");
         }
     }
-    public void SetLanzador(GameObject lanzador)
+    public void SetLanzador(GameObject Lanzador)
     {
-        enemigo = lanzador;
+        lanzador = Lanzador;
     }
     private void Desactivate()
     {

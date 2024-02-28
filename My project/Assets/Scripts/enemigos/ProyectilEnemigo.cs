@@ -13,12 +13,6 @@ public class ProyectilEnemigo : MonoBehaviour
     private PersonajeBase personaje;
     private float tiempo = 0;
     private GameObject lanzador;
-<<<<<<< HEAD
-    
-
-    // Start is called before the first frame update
-=======
->>>>>>> kike17
 
     void Start()
     {
@@ -26,11 +20,8 @@ public class ProyectilEnemigo : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
-<<<<<<< HEAD
-        if (direction == -1)
-=======
+
         if (direction > 0)
->>>>>>> kike17
         {
             Vector3 escalaTemp = transform.localScale;
             escalaTemp.x *= -1;

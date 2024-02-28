@@ -8,42 +8,43 @@ public class ProyectilEnemigo : MonoBehaviour
     private bool hit;
     private BoxCollider2D boxCollider;
     private Animator anim;
-    private float direction;
-    private float lifetime;
+    public float direction=1;
+    [SerializeField] private float tiempoProyectil;
     private PersonajeBase personaje;
     private EnemigoBase enemigoScript;
-    private bool directionbool;
+    private float tiempo = 0;
+    private GameObject enemigo;
     private void Awake()
     {
-        anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        personaje = player.GetComponent<PersonajeBase>();
-        enemigoScript = GetComponentInParent<EnemigoBase>();
+        
     }
 
     // Start is called before the first frame update
 
     void Start()
     {
-        
-    }
-    public void ActivateProjectile()
-    {
-        hit = false;
-        lifetime = 0;
-        gameObject.SetActive(true);
-        boxCollider.enabled = true;
+        anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        personaje = player.GetComponent<PersonajeBase>();
+        enemigoScript = GetComponentInParent<EnemigoBase>();
+        if (direction == -1)
+        {
+            Vector3 escalaTemp = transform.localScale;
+            escalaTemp.x -= -1;
+            transform.localScale = escalaTemp;
+        }
     }
     // Update is called once per frame
     void Update()
     {
         if (hit) return;
-            float movementSpeed = velocidad * Time.deltaTime * direction;
-            transform.Translate(movementSpeed, 0, 0);
-
-            lifetime += Time.deltaTime;
-            if (lifetime > 3) gameObject.SetActive(false);
+        transform.position = new Vector3(transform.position.x + (velocidad * Time.deltaTime * direction), transform.position.y, transform.position.z);
+        tiempo += Time.deltaTime;
+        if (tiempo >= tiempoProyectil)
+        {
+            anim.SetTrigger("Explota");
+        }
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,13 +52,13 @@ public class ProyectilEnemigo : MonoBehaviour
         hit = true;
         if (collision.CompareTag("Player") && !personaje.isDead)
         {
-            enemigoScript.DamageDistanciaPlayer();
+            enemigo.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
         }
-        boxCollider.enabled = false;
         anim.SetTrigger("Explota");
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        hit = true;
         GameObject otherGameObject = collision.gameObject;
         if (otherGameObject.layer == LayerMask.NameToLayer("Default"))
         {
@@ -65,30 +66,21 @@ public class ProyectilEnemigo : MonoBehaviour
         }
         else
         {
-            hit = true;
+
             if (otherGameObject.CompareTag("Player") && !personaje.isDead)
             {
-                enemigoScript.DamageDistanciaPlayer();
+                enemigo.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
             }
             boxCollider.enabled = false;
             anim.SetTrigger("Explota");
         }
     }
-    public void SetDirection(float Direction)
+    public void SetLanzador(GameObject lanzador)
     {
-        lifetime = 0;
-        direction = Direction;
-        gameObject.SetActive(true);
-        hit = false;
-        boxCollider.enabled = true;
-        float localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != Direction)
-            localScaleX = -localScaleX;
-
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+        enemigo = lanzador;
     }
     private void Desactivate()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

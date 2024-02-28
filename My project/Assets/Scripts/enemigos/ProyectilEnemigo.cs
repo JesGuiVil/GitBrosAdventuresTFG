@@ -11,15 +11,8 @@ public class ProyectilEnemigo : MonoBehaviour
     public float direction=1;
     [SerializeField] private float tiempoProyectil;
     private PersonajeBase personaje;
-    private EnemigoBase enemigoScript;
     private float tiempo = 0;
-    private GameObject enemigo;
-    private void Awake()
-    {
-        
-    }
-
-    // Start is called before the first frame update
+    private GameObject lanzador;
 
     void Start()
     {
@@ -27,11 +20,10 @@ public class ProyectilEnemigo : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
-        enemigoScript = GetComponentInParent<EnemigoBase>();
-        if (direction == -1)
+        if (direction > 0)
         {
             Vector3 escalaTemp = transform.localScale;
-            escalaTemp.x -= -1;
+            escalaTemp.x *= -1;
             transform.localScale = escalaTemp;
         }
     }
@@ -39,6 +31,8 @@ public class ProyectilEnemigo : MonoBehaviour
     void Update()
     {
         if (hit) return;
+        
+ 
         transform.position = new Vector3(transform.position.x + (velocidad * Time.deltaTime * direction), transform.position.y, transform.position.z);
         tiempo += Time.deltaTime;
         if (tiempo >= tiempoProyectil)
@@ -52,7 +46,7 @@ public class ProyectilEnemigo : MonoBehaviour
         hit = true;
         if (collision.CompareTag("Player") && !personaje.isDead)
         {
-            enemigo.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
+            lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
         }
         anim.SetTrigger("Explota");
     }
@@ -69,15 +63,15 @@ public class ProyectilEnemigo : MonoBehaviour
 
             if (otherGameObject.CompareTag("Player") && !personaje.isDead)
             {
-                enemigo.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
+                lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
             }
             boxCollider.enabled = false;
             anim.SetTrigger("Explota");
         }
     }
-    public void SetLanzador(GameObject lanzador)
+    public void SetLanzador(GameObject Lanzador)
     {
-        enemigo = lanzador;
+        lanzador = Lanzador;
     }
     private void Desactivate()
     {

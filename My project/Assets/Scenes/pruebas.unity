@@ -1115,13 +1115,37 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 235414091838834660, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 235414091838834660, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205261953689942558, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6205261953689942558, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152867513703317223, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152867513703317223, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.44
+      objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 15.62
       objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.86
+      value: -23.93
       objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1282,17 +1306,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5358521608613473131, guid: e2d9441a714c7434894529840a0dab00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.18
+      objectReference: {fileID: 0}
     - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_Name
       value: patrullaGoblin
       objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.62
+      value: -5.95
       objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -23.86
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.z

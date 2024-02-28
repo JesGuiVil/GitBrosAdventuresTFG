@@ -16,8 +16,9 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private float rangeDistancia;
     [SerializeField] public int damageDistancia;
     [SerializeField] private float colliderDistanceDistancia;
-    [SerializeField] private Transform firepoint;
-    [SerializeField] private GameObject[] proyectiles;
+    [SerializeField] private Transform puntoProyectil;
+    [SerializeField] private GameObject proyectil;
+    
     private float cooldownTimer = Mathf.Infinity;
     [SerializeField] private float dashDistance;
     [SerializeField] private float dashSpeed;
@@ -98,23 +99,14 @@ public class EnemigoBase : MonoBehaviour
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * rangeDistancia * transform.localScale.x * colliderDistanceDistancia, new Vector3(boxCollider.bounds.size.x * rangeDistancia, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     
     }
-    private void RangedAttack()
+
+    private void LanzaProyectil()
     {
-        
-        cooldownTimer = 0;
-        proyectiles[FindProyectil()].transform.position = firepoint.position;
-        proyectiles[FindProyectil()].GetComponent<ProyectilEnemigo>().SetDirection(Mathf.Sign(transform.localScale.x));
+        GameObject Proyec = Instantiate(proyectil,puntoProyectil.position,Quaternion.identity);
+        Proyec.GetComponent<ProyectilEnemigo>().direction = transform.localScale.x;
+        Proyec.GetComponent<ProyectilEnemigo>().SetLanzador(gameObject);
     }
 
-    private int FindProyectil()
-    {
-        for (int i = 0; i < proyectiles.Length; i++)
-        {
-            if (!proyectiles[i].activeInHierarchy)
-                return i;
-        }
-        return 0;
-    }
     public void enemigoRecibirDanio(float danio)
     {
         vidaEnemigo -= danio;

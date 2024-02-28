@@ -8,39 +8,36 @@ public class ProyectilPersonaje : MonoBehaviour
     private bool hit;
     private BoxCollider2D boxCollider;
     private Animator anim;
-    private float direction;
-    private float lifetime;
+    public float direction=1;
+    [SerializeField] private float tiempoProyectil;
     private PersonajeBase personajeScript;
     private EnemigoBase enemigoScript;
     private PalancaBase palanca;
-    private void Awake()
-    {
-        anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        personajeScript = GetComponentInParent<PersonajeBase>();
-    }
-
+    private float tiempo = 0;
+    private GameObject lanzador;
     // Start is called before the first frame update
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        if (direction < 0)
+        {
+            Vector3 escalaTemp = transform.localScale;
+            escalaTemp.x *= -1;
+            transform.localScale = escalaTemp;
+        }
     }
-    public void ActivateProjectile()
-    {
-        hit = false;
-        lifetime = 0;
-        gameObject.SetActive(true);
-        boxCollider.enabled = true;
-    }
+    
     // Update is called once per frame
     void Update()
     {
         if (hit) return;
-        float movementSpeed = velocidad * Time.deltaTime* direction;
-        transform.Translate(movementSpeed, 0, 0);
-
-        lifetime += Time.deltaTime;
-        if (lifetime > 3) gameObject.SetActive(false);
+        transform.position = new Vector3(transform.position.x + (velocidad * Time.deltaTime * direction), transform.position.y, transform.position.z);
+        tiempo += Time.deltaTime;
+        if (tiempo >= tiempoProyectil)
+        {
+            anim.SetTrigger("Explota");
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -50,7 +47,7 @@ public class ProyectilPersonaje : MonoBehaviour
             enemigoScript = collision.GetComponent<EnemigoBase>();
             if(!enemigoScript.enemyDead)
             {
-                enemigoScript.enemigoRecibirDanio(personajeScript.danioDistancia);
+                enemigoScript.enemigoRecibirDanio(lanzador.GetComponent<PersonajeBase>().danioDistancia);
             }
         }
         if (collision.CompareTag("Palanca"))
@@ -63,22 +60,11 @@ public class ProyectilPersonaje : MonoBehaviour
         boxCollider.enabled = false;
         anim.SetTrigger("Explota");
     }
-    
-     public void SetDirection(float Direction)
+    public void SetLanzador(GameObject Lanzador)
     {
-        lifetime = 0;
-        direction = Direction;
-        gameObject.SetActive(true);
-        hit = false;
-        boxCollider.enabled = true;
-
-        float localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != Direction)
-        {
-            localScaleX = -localScaleX;
-        }
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
+        lanzador = Lanzador;
     }
+
     private void Desactivate()
     {
         gameObject.SetActive(false);

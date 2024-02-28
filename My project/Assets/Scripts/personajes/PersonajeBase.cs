@@ -16,7 +16,7 @@ public class PersonajeBase : MonoBehaviour
     [SerializeField] private LayerMask palancaLayer;
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private Transform firepoint;
-    [SerializeField] private GameObject[] proyectiles;
+    [SerializeField] private GameObject proyectil;
     private EnemigoBase enemigo;
     private PalancaBase palanca;
     public float Speed;
@@ -27,7 +27,6 @@ public class PersonajeBase : MonoBehaviour
     public Animator animator;
     private float Horizontal;
     private bool Grounded;
-    private float LastShoot;
     private bool IsJumping;
     private Collider2D collider;
     [SerializeField] public float vida;
@@ -188,20 +187,11 @@ public class PersonajeBase : MonoBehaviour
     }
     public void ataqueDistancia(){
 
-       cooldownTimer = 0;
-        proyectiles[FindProyectil()].transform.position = firepoint.position;
-        proyectiles[FindProyectil()].GetComponent<ProyectilPersonaje>().SetDirection(Mathf.Sign(transform.localScale.x));
-        
+        GameObject Proyec = Instantiate(proyectil,firepoint.position,Quaternion.identity);
+        Proyec.GetComponent<ProyectilPersonaje>().direction = transform.localScale.x;
+        Proyec.GetComponent<ProyectilPersonaje>().SetLanzador(gameObject);
     }
-    private int FindProyectil()
-    {
-        for (int i = 0; i < proyectiles.Length; i++)
-        {
-            if (!proyectiles[i].activeInHierarchy)
-                return i;
-        }
-        return 0;
-    }
+   
 
     public void ataqueCerca(){
         

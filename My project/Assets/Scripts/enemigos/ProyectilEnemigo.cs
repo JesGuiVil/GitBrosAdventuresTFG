@@ -11,12 +11,14 @@ public class ProyectilEnemigo : MonoBehaviour
     public float direction=1;
     [SerializeField] private float tiempoProyectil;
     private PersonajeBase personaje;
-    private EnemigoBase enemigoScript;
     private float tiempo = 0;
     private GameObject lanzador;
+<<<<<<< HEAD
     
 
     // Start is called before the first frame update
+=======
+>>>>>>> kike17
 
     void Start()
     {
@@ -24,10 +26,14 @@ public class ProyectilEnemigo : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
+<<<<<<< HEAD
         if (direction == -1)
+=======
+        if (direction > 0)
+>>>>>>> kike17
         {
             Vector3 escalaTemp = transform.localScale;
-            escalaTemp.x -= -1;
+            escalaTemp.x *= -1;
             transform.localScale = escalaTemp;
         }
     }
@@ -35,6 +41,8 @@ public class ProyectilEnemigo : MonoBehaviour
     void Update()
     {
         if (hit) return;
+        
+ 
         transform.position = new Vector3(transform.position.x + (velocidad * Time.deltaTime * direction), transform.position.y, transform.position.z);
         tiempo += Time.deltaTime;
         if (tiempo >= tiempoProyectil)

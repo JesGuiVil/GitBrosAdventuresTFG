@@ -18,11 +18,16 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private float colliderDistanceDistancia;
     [SerializeField] private Transform puntoProyectil;
     [SerializeField] private GameObject proyectil;
-    
+    private Rigidbody2D rb;
+    private float baseGravity;
+    [SerializeField] private float dashingTime = 0.2F;
+    [SerializeField] private float dashForce = 20f;
+    [SerializeField] private float timeCanDash = 1f;
+    private bool isDashing;
+    private bool canDash = true;
+    private float direction;
+
     private float cooldownTimer = Mathf.Infinity;
-    [SerializeField] private float dashDistance;
-    [SerializeField] private float dashSpeed;
-    private bool isDashing = false;
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
 
@@ -36,6 +41,9 @@ public class EnemigoBase : MonoBehaviour
     }
     private void Awake()
     {
+        
+        rb = GetComponent<Rigidbody2D>();
+        baseGravity = rb.gravityScale;
         patrulla = GetComponentInParent<PatrullaEnemiga>();
         anim = GetComponent<Animator>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
@@ -45,6 +53,7 @@ public class EnemigoBase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        direction = transform.localScale.x;
         cooldownTimer += Time.deltaTime;
         if (PlayerInSightMelee())
         {
@@ -74,6 +83,19 @@ public class EnemigoBase : MonoBehaviour
         {
             patrulla.enabled = (!PlayerInSightMelee() && !PlayerInSightDistancia() || personaje.isDead);
         } 
+    }
+    private IEnumerator Dash()
+    {
+        isDashing = true;
+        canDash = false;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2 (direction * dashForce, 0f);
+        yield return new WaitForSeconds(dashingTime);
+        isDashing= false;
+        rb.gravityScale = baseGravity;
+        yield return new WaitForSeconds(timeCanDash);
+        canDash= true;
+
     }
     private bool PlayerInSightMelee()
     {

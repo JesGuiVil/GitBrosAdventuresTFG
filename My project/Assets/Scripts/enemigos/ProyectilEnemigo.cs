@@ -45,6 +45,7 @@ public class ProyectilEnemigo : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         hit = true;
+
         if (collision.CompareTag("Player") && !personaje.isDead)
         {
             lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
@@ -55,7 +56,7 @@ public class ProyectilEnemigo : MonoBehaviour
     {
         hit = true;
         GameObject otherGameObject = collision.gameObject;
-        if (otherGameObject.layer == LayerMask.NameToLayer("Default"))
+        if (otherGameObject.layer == LayerMask.NameToLayer("Default")||otherGameObject.layer == LayerMask.NameToLayer("suelo"))
         {
             hit = false;
         }

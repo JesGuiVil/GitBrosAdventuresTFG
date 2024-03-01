@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class PersonajeBase : MonoBehaviour
@@ -92,7 +93,15 @@ public class PersonajeBase : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z));
     }
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject otherGameObject = collision.gameObject;
+        if (otherGameObject.layer == LayerMask.NameToLayer("suelo"))
+        {
+            Grounded = true;
+            IsJumping = false;
+        }
+    }
     private void CheckGrounded()
     {
         // Raycast izquierdo

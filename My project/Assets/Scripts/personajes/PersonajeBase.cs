@@ -28,6 +28,7 @@ public class PersonajeBase : MonoBehaviour
     public Animator animator;
     private float Horizontal;
     private bool Grounded;
+    private bool estaAgua = false;
     private bool IsJumping;
     private Collider2D collider;
     [SerializeField] public float vida;
@@ -48,6 +49,7 @@ public class PersonajeBase : MonoBehaviour
     // Update is called once per frame
     protected void Update()
     {
+
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
         if(!isDead)
@@ -61,7 +63,7 @@ public class PersonajeBase : MonoBehaviour
 
             animator.SetBool("running", Horizontal != 0.0f);
 
-            if (Input.GetKeyDown(KeyCode.W) && Grounded)
+            if (Input.GetKeyDown(KeyCode.W) && Grounded && !estaAgua)
             {
                 Jump();
             }
@@ -92,6 +94,20 @@ public class PersonajeBase : MonoBehaviour
         //gizmo del rango de ataque
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("agua"))
+        {
+            estaAgua=true;
+            rigidbody2D.drag = 25f;
+        }
+        else
+        {   
+            estaAgua = false;
+            rigidbody2D.drag = 0f;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

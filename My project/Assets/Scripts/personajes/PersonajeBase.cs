@@ -18,6 +18,7 @@ public class PersonajeBase : MonoBehaviour
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject proyectil;
+    private ControladorScript controladorScript;
     private EnemigoBase enemigo;
     private PalancaBase palanca;
     public float Speed;
@@ -44,15 +45,15 @@ public class PersonajeBase : MonoBehaviour
         vida = maximoVida;
         barraVida.InicializarBarraVida(vida);
         collider= GetComponent<Collider2D>();
+        controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
     }
-    
     // Update is called once per frame
     protected void Update()
     {
 
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
-        if(!isDead)
+        if(!isDead && !controladorScript.juegoPausado)
         {
             Horizontal = Input.GetAxisRaw("Horizontal");
 

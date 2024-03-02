@@ -6,9 +6,12 @@ using UnityEngine.UI;
 
 public class ControladorScript : MonoBehaviour
 {
-    public GameObject menuComandos;
+    private MenuComandosScript menuComandos;
 
-    private bool juegoPausado = false;
+    public bool juegoPausado = false;
+    private void Start(){
+        menuComandos = GameObject.FindGameObjectWithTag("Consola").GetComponent<MenuComandosScript>();
+    }
 
     private void Update()
     {
@@ -43,14 +46,14 @@ public class ControladorScript : MonoBehaviour
     {
         Time.timeScale = 0f;
         juegoPausado = true;
-        menuComandos.GetComponent<MenuComandosScript>().MostrarMenuComandos(); // Mostrar el cartel al pausar el juego
+        menuComandos.MostrarMenuComandos(); // Mostrar el cartel al pausar el juego
     }
 
     private void ResumirJuego()
     {
         Time.timeScale = 1f;
         juegoPausado = false;
-        menuComandos.GetComponent<MenuComandosScript>().OcultarMenuComandos(); // Ocultar el cartel al resumir el juego
+        menuComandos.OcultarMenuComandos(); // Ocultar el cartel al resumir el juego
     }
     public void cambiarEscena(int indice)
     {

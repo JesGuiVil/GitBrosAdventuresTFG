@@ -13,6 +13,9 @@ TagManager:
   - Enemigo
   - Palanca
   - agua
+  - Consola
+  - Interfaz
+  - Controlador
   layers:
   - Default
   - TransparentFX

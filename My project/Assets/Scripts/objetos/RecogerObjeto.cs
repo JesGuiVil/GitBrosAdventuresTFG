@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 public class RecogerObjeto : MonoBehaviour
 {
-    public GameObject menuComandos;
+   
+    private MenuComandosScript menuComandos;
 
     
     private void Start()
     {
-        
+        menuComandos = GameObject.FindGameObjectWithTag("Consola").GetComponent<MenuComandosScript>();
         // Mensaje de depuración para verificar si menuComandos se configuró correctamente
         if(menuComandos == null)
         {
@@ -28,7 +29,7 @@ public class RecogerObjeto : MonoBehaviour
         {
             // Mostrar mensaje para pedir al jugador que introduzca el comando
             Debug.Log("Introduce 'git add nombreobjeto' en la consola para recoger el objeto.");
-            menuComandos.GetComponent<MenuComandosScript>().SetRecogerObjeto(gameObject); // Enviar la señal al script MenuComandos
+            menuComandos.SetRecogerObjeto(gameObject); // Enviar la señal al script MenuComandos
         }
     }
 }

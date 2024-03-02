@@ -25,17 +25,20 @@ public class MenuComandosScript : MonoBehaviour
         {
             Debug.LogError("No se encontró el objeto del personaje.");
         }
-        gameObject.SetActive(false);
+        OcultarMenuComandos();
+        
     }
 
     public void MostrarMenuComandos()
     {
-        gameObject.SetActive(true);
+        transform.localScale = new Vector3(2f, 2f, 2f);
+        inputComandos.SetActive(true);
     }
 
     public void OcultarMenuComandos()
     {
-        gameObject.SetActive(false);
+        transform.localScale = Vector3.zero;
+        inputComandos.SetActive(false);
     }
 
     public void SetInputField(string inputText)

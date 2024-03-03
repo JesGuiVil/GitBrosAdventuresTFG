@@ -17,6 +17,11 @@ TagManager:
   - Interfaz
   - Controlador
   - Mecanicas
+  - Barravida
+  - Slot1
+  - Slot2
+  - Slot3
+  - Consumible
   layers:
   - Default
   - TransparentFX

@@ -34,7 +34,8 @@ public class PersonajeBase : MonoBehaviour
     private Collider2D collider;
     [SerializeField] public float vida;
     [SerializeField] private float maximoVida;
-    [SerializeField] private BarraVidaScript barraVida;
+    private GameObject BarraVida;
+    private BarraVidaScript barraVida;
     public bool isDead = false;
 
     // Start is called before the first frame update
@@ -43,6 +44,8 @@ public class PersonajeBase : MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         vida = maximoVida;
+        BarraVida=GameObject.FindGameObjectWithTag("Barravida");
+        barraVida=BarraVida.GetComponent<BarraVidaScript>();
         barraVida.InicializarBarraVida(vida);
         collider= GetComponent<Collider2D>();
         controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();

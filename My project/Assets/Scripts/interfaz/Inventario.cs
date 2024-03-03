@@ -5,8 +5,19 @@ using UnityEngine.UI;
 
 public class Inventario : MonoBehaviour
 {
-    public GameObject[] ranuras;
+    private GameObject[] ranuras = new GameObject[3];
+    private GameObject slot1;
+    private GameObject slot2;
+    private GameObject slot3;
     public bool[] estaLleno;
+    private void Start(){
+        slot1=GameObject.FindGameObjectWithTag("Slot1");
+        slot2=GameObject.FindGameObjectWithTag("Slot2");
+        slot3=GameObject.FindGameObjectWithTag("Slot3");
+        ranuras[0]=slot1;
+        ranuras[1]=slot2;
+        ranuras[2]=slot3;
+    }
 
     private void Update()
     {
@@ -62,8 +73,20 @@ public class Inventario : MonoBehaviour
             Button boton = ranuras[indiceRanura].GetComponentInChildren<Button>();
             if (boton != null)
             {
+                GameObject objetoEnRanura = ranuras[indiceRanura].transform.GetChild(1).gameObject;
+                if (objetoEnRanura != null)
+                {
+                // Obtener el tag del GameObject hijo en la ranura
+                    string tagObjeto = objetoEnRanura.tag;
+                    if (tagObjeto == "Consumible")
+                    {
+                    // Si el objeto es consumible, marcar la ranura como vacía
+                        estaLleno[indiceRanura] = false;
+                    }
+                }
                 // Simular el evento OnClick del botón
                 boton.onClick.Invoke();
+                
             }
             else
             {

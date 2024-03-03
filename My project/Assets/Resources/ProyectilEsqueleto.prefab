@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8403288089973424807}
   - component: {fileID: 1756714185496353589}
   - component: {fileID: 5934998903378491517}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ProyectilEsqueleto
   m_TagString: Untagged
   m_Icon: {fileID: 0}

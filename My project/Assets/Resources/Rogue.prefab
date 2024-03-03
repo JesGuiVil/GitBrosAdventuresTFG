@@ -140,11 +140,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldownTimer: Infinity
-  danioCerca: 25
+  danioCerca: 10
   cooldownCerca: 0.5
   rangeCerca: 1.2
   colliderDistanceCerca: 0.13
-  danioDistancia: 15
+  danioDistancia: 2
   cooldownDistancia: 0.7
   rangeDistancia: -0.02
   enemyLayer:

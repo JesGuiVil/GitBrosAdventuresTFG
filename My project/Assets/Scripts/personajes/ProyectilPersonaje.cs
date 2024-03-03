@@ -67,6 +67,6 @@ public class ProyectilPersonaje : MonoBehaviour
 
     private void Desactivate()
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 }

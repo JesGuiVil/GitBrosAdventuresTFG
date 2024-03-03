@@ -127,6 +127,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Esqueleto
       objectReference: {fileID: 0}
+    - target: {fileID: 6861452127627669853, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
+      propertyPath: damageMelee
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861452127627669853, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
+      propertyPath: alturaDistancia
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6861452127627669853, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
+      propertyPath: damageDistancia
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8712623830113327929, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.22

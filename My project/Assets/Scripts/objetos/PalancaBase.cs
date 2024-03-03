@@ -6,7 +6,7 @@ public class PalancaBase : MonoBehaviour
 {
     public GameObject muro; // Asigna el GameObject del muro en el editor de Unity
 
-    private bool isActivated = false;
+    public bool isActivated = false;
     private Animator animator;
 
     private void Start()

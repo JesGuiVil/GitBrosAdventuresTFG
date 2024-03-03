@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7552603746064956456}
   - component: {fileID: 8971344397113226255}
   - component: {fileID: 2459565261847331547}
-  m_Layer: 6
+  m_Layer: 13
   m_Name: ProyectilSeta
   m_TagString: Untagged
   m_Icon: {fileID: 0}

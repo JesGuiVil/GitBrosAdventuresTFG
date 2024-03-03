@@ -203,6 +203,8 @@ MonoBehaviour:
   colliderDistanceMelee: 0.27
   attackCooldownDistancia: 1
   rangeDistancia: 6.24
+  alturaDistancia: 1
+  posicionDistancia: 0
   damageDistancia: 20
   colliderDistanceDistancia: 0.28
   puntoProyectil: {fileID: 5706043455617038438}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7252710396690645178}
   - component: {fileID: 4385104921588978570}
   - component: {fileID: 1370744751024916451}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: bomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,6 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de8a52636fbb054492ed15c847c9e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 1
+  velocidad: 1.5
   direction: 1
   tiempoProyectil: 5

@@ -14,6 +14,8 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private float colliderDistanceMelee;
     [SerializeField] private float attackCooldownDistancia;
     [SerializeField] private float rangeDistancia;
+    [SerializeField] private float alturaDistancia;
+    [SerializeField] private float posicionDistancia;
     [SerializeField] public int damageDistancia;
     [SerializeField] private float colliderDistanceDistancia;
     [SerializeField] private Transform puntoProyectil;
@@ -33,6 +35,7 @@ public class EnemigoBase : MonoBehaviour
 
     private PatrullaEnemiga patrulla;
     private PersonajeBase personaje;
+    private MecanicasBase mecanicasBase;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,9 @@ public class EnemigoBase : MonoBehaviour
         anim = GetComponent<Animator>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
+        GameObject Mecanicas = GameObject.FindGameObjectWithTag("Mecanicas");
+        mecanicasBase = Mecanicas.GetComponent<MecanicasBase>();
+
     }
     
     // Update is called once per frame
@@ -109,16 +115,20 @@ public class EnemigoBase : MonoBehaviour
     }
     private bool PlayerInSightDistancia()
     {
-        RaycastHit2D hitDistancia = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * rangeDistancia * transform.localScale.x * colliderDistanceDistancia, new Vector3(boxCollider.bounds.size.x * rangeDistancia, boxCollider.bounds.size.y, boxCollider.bounds.size.z), 0, Vector2.left, 0, playerLayer);
+        Vector3 center = boxCollider.bounds.center;
+        center.y += posicionDistancia;
+        RaycastHit2D hitDistancia = Physics2D.BoxCast(center + transform.right * rangeDistancia * transform.localScale.x * colliderDistanceDistancia, new Vector3(boxCollider.bounds.size.x * rangeDistancia, boxCollider.bounds.size.y * alturaDistancia, boxCollider.bounds.size.z), 0, Vector2.left, 0, playerLayer);
 
         return hitDistancia.collider != null;
     }
     private void OnDrawGizmos()
     {
+        Vector3 center = boxCollider.bounds.center;
+        center.y += posicionDistancia;
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * rangeMelee * transform.localScale.x * colliderDistanceMelee,new Vector3(boxCollider.bounds.size.x * rangeMelee, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * rangeDistancia * transform.localScale.x * colliderDistanceDistancia, new Vector3(boxCollider.bounds.size.x * rangeDistancia, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+        Gizmos.DrawWireCube(center + transform.right * rangeDistancia * transform.localScale.x * colliderDistanceDistancia, new Vector3(boxCollider.bounds.size.x * rangeDistancia, boxCollider.bounds.size.y * alturaDistancia, boxCollider.bounds.size.z));
     
     }
 
@@ -138,6 +148,7 @@ public class EnemigoBase : MonoBehaviour
             enemyDead=true;
             anim.SetTrigger("Die");
             gameObject.layer=LayerMask.NameToLayer("playermuerto");
+            mecanicasBase.AumentarContadorEnemigos();
         }else{
             anim.SetTrigger("Hurt");
         }

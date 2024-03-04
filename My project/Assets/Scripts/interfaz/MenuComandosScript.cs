@@ -92,7 +92,7 @@ public class MenuComandosScript : MonoBehaviour
     private GameObject ObtenerPrefab(string tagObjeto)
     {
         // Construir la ruta relativa al prefab correspondiente al tag del objeto con el sufijo "boton"
-        string rutaPrefab = tagObjeto + "boton";
+        string rutaPrefab = "Objetos/" + tagObjeto + "boton";
         GameObject prefab = Resources.Load<GameObject>(rutaPrefab); // Buscar en la carpeta Resources
 
         // Si se encontró el prefab, devolverlo

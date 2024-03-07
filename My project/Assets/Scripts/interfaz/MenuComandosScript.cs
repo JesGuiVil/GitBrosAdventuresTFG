@@ -31,7 +31,7 @@ public class MenuComandosScript : MonoBehaviour
 
     public void MostrarMenuComandos()
     {
-        transform.localScale = new Vector3(2f, 2f, 2f);
+        transform.localScale = new Vector3(1.5f, 1.5f, 2f);
         inputComandos.SetActive(true);
     }
 
@@ -62,8 +62,9 @@ public class MenuComandosScript : MonoBehaviour
     {
         Debug.Log("Intentando recoger objeto: " + objeto);
         // Verificar si el jugador está sobre el objeto y el nombre coincide
-        if (objetoARecoger != null && objetoARecoger.CompareTag(objeto))
+        if (objetoARecoger != null && objetoARecoger.tag == objeto)
         {
+             
             GameObject objetoPrefab = ObtenerPrefab(objetoARecoger.tag);
             if (inventario != null && inventario.AgregarObjeto(objetoPrefab))
             {
@@ -79,7 +80,7 @@ public class MenuComandosScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("No puedes recoger este objeto.");
+            Debug.Log("Nombre incorrecto u objeto no disponible.");
         }
     }
 

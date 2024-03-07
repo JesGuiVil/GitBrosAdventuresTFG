@@ -7,7 +7,7 @@ public class PersonajeBase : MonoBehaviour
 {
     public float cooldownTimer = Mathf.Infinity;
     [SerializeField] private float danioCerca;
-    [SerializeField] private float cooldownCerca;
+    [SerializeField] public float cooldownCerca;
     [SerializeField] private float rangeCerca;
     [SerializeField] private float colliderDistanceCerca;
     [SerializeField] public float danioDistancia;
@@ -51,7 +51,7 @@ public class PersonajeBase : MonoBehaviour
         controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
     }
     // Update is called once per frame
-    protected void Update()
+    protected virtual void Update()
     {
 
         cooldownTimer += Time.deltaTime;
@@ -70,11 +70,6 @@ public class PersonajeBase : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W) && Grounded && !estaAgua)
             {
                 Jump();
-            }
-            if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer >= cooldownCerca)
-            {
-                animator.SetTrigger("ataquemelee");
-                cooldownTimer = 0f;
             }
             
         }

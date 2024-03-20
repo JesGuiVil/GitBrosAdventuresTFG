@@ -71,7 +71,6 @@ public class EnemigoBase : MonoBehaviour
                     anim.SetTrigger("meleAtack");
                 }
             }
-            
         }
         if (PlayerInSightDistancia())
         {

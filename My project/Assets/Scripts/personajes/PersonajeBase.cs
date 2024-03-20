@@ -71,6 +71,8 @@ public class PersonajeBase : MonoBehaviour
             {
                 Jump();
             }
+
+            
             
         }
         else
@@ -206,7 +208,7 @@ public class PersonajeBase : MonoBehaviour
     public void Morir()
     {
         isDead = true;
-        animator.SetTrigger("RogueMuerte");
+        animator.SetTrigger("Muerte");
         gameObject.layer=LayerMask.NameToLayer("playermuerto");
     }
     public void ataqueDistancia(){

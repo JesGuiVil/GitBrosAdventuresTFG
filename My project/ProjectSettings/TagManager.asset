@@ -22,6 +22,7 @@ TagManager:
   - Slot2
   - Slot3
   - Consumible
+  - PlataformaMovil
   layers:
   - Default
   - TransparentFX

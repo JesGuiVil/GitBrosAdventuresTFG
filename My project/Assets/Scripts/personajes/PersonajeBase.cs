@@ -118,6 +118,17 @@ public class PersonajeBase : MonoBehaviour
             Grounded = true;
             IsJumping = false;
         }
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {
+            transform.parent = null;
+        }
     }
     private void CheckGrounded()
     {

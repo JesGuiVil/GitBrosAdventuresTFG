@@ -8,11 +8,14 @@ public class Assassin : PersonajeBase
     protected override void Update()
     {
         base.Update();
-
-        if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer >= cooldownCerca)
+        if (!isDead)
         {
-            animator.SetTrigger("ataquemelee");
-            cooldownTimer = 0f;
+            if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer >= cooldownCerca)
+            {
+                animator.SetTrigger("ataquemelee");
+                cooldownTimer = 0f;
+            }
         }
+        
     }
 }

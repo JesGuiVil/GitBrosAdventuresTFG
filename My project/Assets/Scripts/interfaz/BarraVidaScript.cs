@@ -6,6 +6,7 @@ public class BarraVidaScript : MonoBehaviour
 {
     private Slider slider;
     
+    
     private void Start()
     {
         

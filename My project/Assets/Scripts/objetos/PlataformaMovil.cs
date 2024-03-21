@@ -15,10 +15,7 @@ public class NewBehaviourScript : MonoBehaviour
     void Start()
     {
         palanca= GameObject.FindGameObjectWithTag("Palanca").GetComponent<PalancaPlataforma>();
-        if (palanca.isActivated)
-        {
-            moverhacia = dos.position;
-        }
+        moverhacia = dos.position;
     }
 
     // Update is called once per frame
@@ -28,7 +25,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             PlataformasMoviles.transform.position = Vector3.MoveTowards(PlataformasMoviles.transform.position, moverhacia, velocidad * Time.deltaTime);
 
-
+            
             if (PlataformasMoviles.transform.position == dos.position)
             {
                 moverhacia = uno.position;

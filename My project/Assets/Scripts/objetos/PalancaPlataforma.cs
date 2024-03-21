@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PalancaPlataforma : MonoBehaviour
 {
-    public GameObject plataforma; // Asigna el GameObject del muro en el editor de Unity
 
     public bool isActivated = false;
     private Animator animator;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
     }
 
     public void ActivatePalanca()

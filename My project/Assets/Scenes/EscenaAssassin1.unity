@@ -294,7 +294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942585315283607944, guid: 4e13092bf9806874da20125ddf71a0c4, type: 3}
       propertyPath: m_Layer
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2942585315283607944, guid: 4e13092bf9806874da20125ddf71a0c4, type: 3}
       propertyPath: m_TagString
@@ -351,7 +351,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2942585315283607944, guid: 4e13092bf9806874da20125ddf71a0c4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2142716104}
   m_SourcePrefab: {fileID: 100100000, guid: 4e13092bf9806874da20125ddf71a0c4, type: 3}
 --- !u!1 &386095610
 GameObject:
@@ -1113,7 +1116,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.78
+      value: 4.4
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2272,6 +2275,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 26.989407, y: 0.5896888}
   m_EdgeRadius: 0
+--- !u!1 &2142716099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2942585315283607944, guid: 4e13092bf9806874da20125ddf71a0c4, type: 3}
+  m_PrefabInstance: {fileID: 332063453}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2142716104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142716099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8b8037b46ce64a40bb9b9ae67a37473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActivated: 0
 --- !u!1001 &3945051232582199384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2323,6 +2344,10 @@ PrefabInstance:
     - target: {fileID: 3336767584348630284, guid: 2569d8c217276a645985366139b5246b, type: 3}
       propertyPath: m_Name
       value: PlataformaMovil
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570367644664038365, guid: 2569d8c217276a645985366139b5246b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.68
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

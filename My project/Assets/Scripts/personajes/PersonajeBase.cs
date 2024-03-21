@@ -21,6 +21,7 @@ public class PersonajeBase : MonoBehaviour
     private ControladorScript controladorScript;
     private EnemigoBase enemigo;
     private PalancaBase palanca;
+    private PalancaPlataforma palancaP;
     public float Speed;
     public float JumpForce;
     public float tiempoJuego = 0f;
@@ -242,8 +243,13 @@ public class PersonajeBase : MonoBehaviour
             }
         }
         if (hitPalanca.collider != null)
-        {
+        {   
+            palancaP = hitPalanca.transform.GetComponent<PalancaPlataforma>();
             palanca = hitPalanca.transform.GetComponent<PalancaBase>();
+            if (palancaP != null)
+            {
+                palancaP.ActivatePalanca();
+            }
             if(palanca!=null){
                 palanca.ActivatePalanca();
             }

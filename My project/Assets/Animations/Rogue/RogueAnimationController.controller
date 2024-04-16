@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: RogueMuerte
+    m_ConditionEvent: Muerte
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5775970120597693531}
@@ -216,10 +216,10 @@ AnimatorStateMachine:
     m_Position: {x: -400, y: -340, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5775970120597693531}
-    m_Position: {x: -610, y: -130, z: 0}
+    m_Position: {x: -640, y: -160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2996227290172708373}
-    m_Position: {x: -610, y: -290, z: 0}
+    m_Position: {x: -400, y: -440, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -8461416736047685573}
@@ -445,7 +445,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
-  - m_Name: RogueMuerte
+  - m_Name: Muerte
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

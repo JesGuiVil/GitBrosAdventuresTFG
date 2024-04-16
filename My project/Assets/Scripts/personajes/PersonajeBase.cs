@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
@@ -6,6 +7,7 @@ using UnityEngine;
 public class PersonajeBase : MonoBehaviour
 {
     public float cooldownTimer = Mathf.Infinity;
+    private Dash dash;
     [SerializeField] private float danioCerca;
     [SerializeField] public float cooldownCerca;
     [SerializeField] private float rangeCerca;
@@ -21,6 +23,7 @@ public class PersonajeBase : MonoBehaviour
     private ControladorScript controladorScript;
     private EnemigoBase enemigo;
     private PalancaBase palanca;
+    private PalancaPlataforma palancaP;
     public float Speed;
     public float JumpForce;
     public float tiempoJuego = 0f;
@@ -28,6 +31,7 @@ public class PersonajeBase : MonoBehaviour
     private Rigidbody2D rigidbody2D;
     public Animator animator;
     private float Horizontal;
+    public float direction => Horizontal;
     private bool Grounded;
     private bool estaAgua = false;
     private bool IsJumping;
@@ -37,7 +41,6 @@ public class PersonajeBase : MonoBehaviour
     private GameObject BarraVida;
     private BarraVidaScript barraVida;
     public bool isDead = false;
-
     // Start is called before the first frame update
     protected void Start()
     {
@@ -49,11 +52,11 @@ public class PersonajeBase : MonoBehaviour
         barraVida.InicializarBarraVida(vida);
         collider= GetComponent<Collider2D>();
         controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
+        dash = GetComponent<Dash>();
     }
     // Update is called once per frame
     protected virtual void Update()
     {
-
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
         if(!isDead && !controladorScript.juegoPausado)
@@ -67,11 +70,10 @@ public class PersonajeBase : MonoBehaviour
 
             animator.SetBool("running", Horizontal != 0.0f);
 
-            if (Input.GetKeyDown(KeyCode.W) && Grounded && !estaAgua)
+            if (Input.GetKeyDown(KeyCode.W) && Grounded && !estaAgua && !dash.IsDashing)
             {
                 Jump();
             }
-            
         }
         else
         {
@@ -115,6 +117,17 @@ public class PersonajeBase : MonoBehaviour
         {
             Grounded = true;
             IsJumping = false;
+        }
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlataformaMovil")
+        {
+            transform.parent = null;
         }
     }
     private void CheckGrounded()
@@ -170,11 +183,12 @@ public class PersonajeBase : MonoBehaviour
 
     void FixedUpdate()
     {   
-        if(!isDead){
+        if(!isDead && !dash.IsDashing){
             if (!Grounded) 
             {
                 rigidbody2D.velocity += Vector2.up * Gravedad * Time.fixedDeltaTime;
             }
+
             rigidbody2D.velocity = new Vector2(Horizontal * Speed, rigidbody2D.velocity.y);    
         }
     }
@@ -206,7 +220,7 @@ public class PersonajeBase : MonoBehaviour
     public void Morir()
     {
         isDead = true;
-        animator.SetTrigger("RogueMuerte");
+        animator.SetTrigger("Muerte");
         gameObject.layer=LayerMask.NameToLayer("playermuerto");
     }
     public void ataqueDistancia(){
@@ -229,8 +243,13 @@ public class PersonajeBase : MonoBehaviour
             }
         }
         if (hitPalanca.collider != null)
-        {
+        {   
+            palancaP = hitPalanca.transform.GetComponent<PalancaPlataforma>();
             palanca = hitPalanca.transform.GetComponent<PalancaBase>();
+            if (palancaP != null)
+            {
+                palancaP.ActivatePalanca();
+            }
             if(palanca!=null){
                 palanca.ActivatePalanca();
             }

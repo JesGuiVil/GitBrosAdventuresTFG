@@ -6,6 +6,7 @@ public class CameraScript : MonoBehaviour
 {
     private GameObject Personaje;
 
+
     private void Start(){
         Personaje=GameObject.FindGameObjectWithTag("Player");
     }

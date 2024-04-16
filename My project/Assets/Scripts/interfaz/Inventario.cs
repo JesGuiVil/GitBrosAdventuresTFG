@@ -73,7 +73,7 @@ public class Inventario : MonoBehaviour
             Button boton = ranuras[indiceRanura].GetComponentInChildren<Button>();
             if (boton != null)
             {
-                GameObject objetoEnRanura = ranuras[indiceRanura].transform.GetChild(1).gameObject;
+                GameObject objetoEnRanura = ranuras[indiceRanura].transform.GetChild(0).gameObject;
                 if (objetoEnRanura != null)
                 {
                 // Obtener el tag del GameObject hijo en la ranura

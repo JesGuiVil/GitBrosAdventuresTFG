@@ -4,12 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - llave
-  - pocion
   - input
   - Ground
-  - cuchillo
-  - Cuchillo
   - Enemigo
   - Palanca
   - agua
@@ -22,6 +18,10 @@ TagManager:
   - Slot2
   - Slot3
   - Consumible
+  - key
+  - knife
+  - potion
+  - PlataformaMovil
   layers:
   - Default
   - TransparentFX

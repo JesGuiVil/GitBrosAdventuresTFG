@@ -16,7 +16,8 @@ public class UsarCuchilloScript : MonoBehaviour
 
     public void Use()
     {
-        if (personajeScript.cooldownTimer >= personajeScript.cooldownDistancia)
+
+        if (!personajeScript.isDead && personajeScript.cooldownTimer >= personajeScript.cooldownDistancia)
             {
                 personajeScript.animator.SetTrigger("ataquedistancia");
                 personajeScript.cooldownTimer = 0f;

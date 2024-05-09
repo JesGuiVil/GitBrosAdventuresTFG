@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2184532288717405444}
   - component: {fileID: 2092892393327502233}
-  - component: {fileID: 2270943873336851074}
   - component: {fileID: 9029180971668572058}
   - component: {fileID: 8225061705380543846}
   - component: {fileID: 8746482695044451914}
@@ -127,44 +126,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2270943873336851074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8869663977289347593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d99d1d38f09842af82ab75567bf31c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cooldownTimer: Infinity
-  danioCerca: 25
-  cooldownCerca: 0.5
-  rangeCerca: 1.2
-  colliderDistanceCerca: 0.13
-  danioDistancia: 15
-  cooldownDistancia: 0.7
-  rangeDistancia: -0.02
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  palancaLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  capsuleCollider: {fileID: 8225061705380543846}
-  firepoint: {fileID: 4226447054513228185}
-  proyectil: {fileID: 2855421066467106689, guid: afe93dfb3d2ddc74d9a786cbb93f2f9d, type: 3}
-  Speed: 7
-  JumpForce: 700
-  tiempoJuego: 0
-  Gravedad: -21
-  animator: {fileID: 4684537206845410353}
-  vida: 0
-  maximoVida: 100
-  barraVida: {fileID: 0}
-  isDead: 0
 --- !u!50 &9029180971668572058
 Rigidbody2D:
   serializedVersion: 4
@@ -300,8 +261,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688b75f770d87354aaff2299d36cbf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ranuras:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   estaLleno: 000000

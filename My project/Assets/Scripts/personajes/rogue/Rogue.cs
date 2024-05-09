@@ -9,12 +9,15 @@ public class Rogue : PersonajeBase
     {
         // Llama al método Update de la clase base
         base.Update();
-
-        // Agrega la lógica específica del Rogue aquí
-        if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer >= cooldownCerca)
+        if (!isDead)
         {
-            animator.SetTrigger("ataquemelee");
-            cooldownTimer = 0f;
+            // Agrega la lógica específica del Rogue aquí
+            if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer >= cooldownCerca)
+            {
+                animator.SetTrigger("ataquemelee");
+                cooldownTimer = 0f;
+            }
         }
+
     }
 }

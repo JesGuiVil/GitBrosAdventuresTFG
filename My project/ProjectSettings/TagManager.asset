@@ -22,6 +22,8 @@ TagManager:
   - knife
   - potion
   - PlataformaMovil
+  - llave
+  - dialogos
   layers:
   - Default
   - TransparentFX

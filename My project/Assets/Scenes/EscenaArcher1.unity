@@ -5092,6 +5092,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8836459630164831811, guid: b64085d7a07708e458e1f709c018c826, type: 3}
       propertyPath: m_Name
       value: Interfaz

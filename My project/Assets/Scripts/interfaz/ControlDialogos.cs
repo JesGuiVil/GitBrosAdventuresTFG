@@ -7,7 +7,7 @@ public class ControlDialogos : MonoBehaviour
 {
     private Animator anim;
     private Queue <string> colaDialogos;
-    Textos texto;
+    private Textos texto;
     [SerializeField] TextMeshProUGUI textoPantalla;
     // Start is called before the first frame update
     void Start()
@@ -26,12 +26,20 @@ public class ControlDialogos : MonoBehaviour
         texto=textoObjeto;
     }
     public void ActivaTexto(){
-        colaDialogos.Clear();
-        foreach (string textoGuardar in texto.arrayTextos){
-            colaDialogos.Enqueue(textoGuardar);
-        }
-        SiguienteFrase();
+    colaDialogos.Clear();
+
+    // Comprobación de nulidad para texto
+    if (texto != null){
+        // Comprobación de nulidad para texto.arrayTextos
+        if (texto.arrayTextos != null){
+            foreach (string textoGuardar in texto.arrayTextos){
+                colaDialogos.Enqueue(textoGuardar);
+            }
+            SiguienteFrase();
+        }    
+    }  
     }
+
     public void SiguienteFrase(){
         if(colaDialogos.Count==0){
             cierraCartel();
@@ -42,5 +50,6 @@ public class ControlDialogos : MonoBehaviour
     }
     public void cierraCartel(){
         anim.SetBool("mostrar",false);
+        textoPantalla.text = "";
     }
 }

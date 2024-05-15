@@ -10,8 +10,15 @@ public class ObjetoInteractable : MonoBehaviour
     private ControlDialogos controlDialogos; // Variable para almacenar el controlador de diálogos
     private bool cartelMostrado = false; // Variable para seguir el estado del cartel
 
+    public Textos textosConLlave;
+
+    public Textos textoFinal;
+
+    private PersonajeBase personajeBase; // Person
+
     void Start()
     {
+        personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
         GameObject dialogos = GameObject.FindGameObjectWithTag("dialogos");
         if (dialogos != null)
         {
@@ -58,11 +65,20 @@ public class ObjetoInteractable : MonoBehaviour
                 if (cartelMostrado)
                 {
                     controlDialogos.SiguienteFrase();
-                }
-                else
+                }else if (personajeBase.tieneLlave && personajeBase.yaHeHablado && personajeBase.llaveEntregada)
                 {
+                    controlDialogos.ActivarCartel(textoFinal);
+                    cartelMostrado = true;
+                }
+                else if (personajeBase.tieneLlave && personajeBase.yaHeHablado)
+                {
+                    controlDialogos.ActivarCartel(textosConLlave);
+                    cartelMostrado = true;
+                }
+                else{
                     controlDialogos.ActivarCartel(textos);
                     cartelMostrado = true;
+                    personajeBase.yaHeHablado=true;
                 }
             }
         }

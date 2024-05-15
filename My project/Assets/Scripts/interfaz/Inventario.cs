@@ -10,6 +10,7 @@ public class Inventario : MonoBehaviour
     private GameObject slot2;
     private GameObject slot3;
     public bool[] estaLleno;
+    private PersonajeBase personajeBase;
     private void Start(){
         slot1=GameObject.FindGameObjectWithTag("Slot1");
         slot2=GameObject.FindGameObjectWithTag("Slot2");
@@ -17,6 +18,7 @@ public class Inventario : MonoBehaviour
         ranuras[0]=slot1;
         ranuras[1]=slot2;
         ranuras[2]=slot3;
+        personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
     }
 
     private void Update()
@@ -62,6 +64,9 @@ public class Inventario : MonoBehaviour
         GameObject botonObjeto = Instantiate(objetoPrefab, ranura.transform, false);
         // Asigna la ranura del inventario como padre del botón para que esté dentro de la ranura
         botonObjeto.transform.SetParent(ranura.transform, false);
+        if ( objetoPrefab.CompareTag("key")){
+            personajeBase.tieneLlave=true;
+        }
     }
 
     private void ActivarRanura(int indiceRanura)

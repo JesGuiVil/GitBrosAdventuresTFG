@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ControlDialogos : MonoBehaviour
 {
     private Animator anim;
     private Queue <string> colaDialogos;
     private Textos texto;
+
+    private PersonajeBase personajeBase;
     [SerializeField] TextMeshProUGUI textoPantalla;
     // Start is called before the first frame update
     void Start()
     {
         anim=gameObject.GetComponent<Animator>();
         colaDialogos = new Queue<string>();
+        personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,11 @@ public class ControlDialogos : MonoBehaviour
     public void SiguienteFrase(){
         if(colaDialogos.Count==0){
             cierraCartel();
+            if (personajeBase.llaveEntregada)
+            {
+                SceneManager.LoadScene("EscenaAssassin1");
+            }
+            
             return;
         }
         string fraseActual = colaDialogos.Dequeue();

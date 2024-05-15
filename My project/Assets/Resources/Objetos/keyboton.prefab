@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8619801943295329797}
   - component: {fileID: 6945695412919221074}
   - component: {fileID: 1659601629306375465}
+  - component: {fileID: 4562490424935881982}
   m_Layer: 5
   m_Name: keyboton
-  m_TagString: Untagged
+  m_TagString: key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -119,4 +120,28 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6945695412919221074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4562490424935881982}
+        m_TargetAssemblyTypeName: UsarLlaveScript, Assembly-CSharp
+        m_MethodName: Use
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4562490424935881982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320258358506729459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b87c636a5802440a83d9ff5b2752bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

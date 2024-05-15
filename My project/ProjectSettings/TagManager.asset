@@ -24,6 +24,7 @@ TagManager:
   - PlataformaMovil
   - llave
   - dialogos
+  - Npc
   layers:
   - Default
   - TransparentFX

@@ -41,6 +41,12 @@ public class PersonajeBase : MonoBehaviour
     private GameObject BarraVida;
     private BarraVidaScript barraVida;
     public bool isDead = false;
+    public bool cercaDelNpc = false;
+
+    public bool yaHeHablado=false;
+    public bool llaveEntregada=false;
+
+    public bool tieneLlave = false;
     // Start is called before the first frame update
     protected void Start()
     {
@@ -104,12 +110,19 @@ public class PersonajeBase : MonoBehaviour
             estaAgua=true;
             rigidbody2D.drag = 25f;
         }
-        else
+        else if (collision.CompareTag("Npc"))
         {   
+            cercaDelNpc = true;
+        }
+        else
+        {
             estaAgua = false;
             rigidbody2D.drag = 0f;
         }
+        
+        
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject otherGameObject = collision.gameObject;
@@ -129,6 +142,11 @@ public class PersonajeBase : MonoBehaviour
         {
             transform.parent = null;
         }
+        else if (collision.gameObject.tag == "Npc")
+        {
+            cercaDelNpc = false;
+        }
+        
     }
     private void CheckGrounded()
     {

@@ -41,6 +41,7 @@ public class ObjetoInteractable : MonoBehaviour
             cercaDelObjeto = true;
         }
     }
+    
 
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -53,6 +54,27 @@ public class ObjetoInteractable : MonoBehaviour
                 cartelMostrado = false;
             }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            cercaDelObjeto = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            cercaDelObjeto = false;
+            if (controlDialogos != null && cartelMostrado)
+            {
+                controlDialogos.cierraCartel();
+                cartelMostrado = false;
+            }
+        }
+        
     }
 
     void Update()

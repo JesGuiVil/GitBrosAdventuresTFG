@@ -75,6 +75,5 @@ My project/UserSettings/EditorUserSettings.asset
 
 My project/UserSettings/._EditorUserSettings.asset
 
-*.asset
-!/Assets/Sprites/
-My project/
+My project/*
+!My project/Assets/

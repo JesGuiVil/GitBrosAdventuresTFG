@@ -7016,6 +7016,34 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_fontSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 61747669cbd7a364c8e1a5aad6c8c048, type: 2}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1197196305940900409, guid: 61747669cbd7a364c8e1a5aad6c8c048, type: 2}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8836459630164831811, guid: b64085d7a07708e458e1f709c018c826, type: 3}
       propertyPath: m_Name
       value: Interfaz
@@ -45110,6 +45138,16 @@ MonoBehaviour:
   vida: 100
   maximoVida: 100
   isDead: 0
+  cercaDelNpc: 0
+  yaHeHablado: 0
+  llaveEntregada: 0
+  tieneLlave: 0
+  controlDialogos: {fileID: 0}
+  textoInicial:
+    arrayTextos:
+    - '"Ese asesino del desierto la intenta conquistar haciendo volteretas, jaja!.
+      Esta noche preparo su hidromiel favorita y le canto ''si te inviiito a una
+      copa y me aceeerco a tu boca...'' Cae fijo.'
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -45117,3 +45155,5 @@ SceneRoots:
   - {fileID: 1708562260}
   - {fileID: 5815177319466168243}
   - {fileID: 1298188596}
+  - {fileID: 16761346}
+  - {fileID: 57365174}

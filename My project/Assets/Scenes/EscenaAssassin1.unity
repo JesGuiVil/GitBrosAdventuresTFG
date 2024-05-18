@@ -498,6 +498,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_fontSize
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 61747669cbd7a364c8e1a5aad6c8c048, type: 2}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1197196305940900409, guid: 61747669cbd7a364c8e1a5aad6c8c048, type: 2}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8836459630164831811, guid: b64085d7a07708e458e1f709c018c826, type: 3}
       propertyPath: m_Name
       value: Interfaz
@@ -1236,6 +1268,16 @@ PrefabInstance:
     - target: {fileID: 4216437040145977399, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: colliderDistanceCerca
       value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216437040145977399, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
+      propertyPath: textoInicial.arrayTextos.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4216437040145977399, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
+      propertyPath: textoInicial.arrayTextos.Array.data[0]
+      value: '"El camello por estos increibles sables, dijo. Menudo estafador. Encima
+        ni cortan. ahora me duelen los pies y tengo arena hasta en el cu... que diablos
+        es eso que viene por ahi!?!?'
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalScale.x

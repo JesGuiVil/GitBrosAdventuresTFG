@@ -61,4 +61,5 @@ public class ControlDialogos : MonoBehaviour
         anim.SetBool("mostrar",false);
         textoPantalla.text = "";
     }
+
 }

@@ -47,6 +47,11 @@ public class PersonajeBase : MonoBehaviour
     public bool llaveEntregada=false;
 
     public bool tieneLlave = false;
+
+    public ControlDialogos controlDialogos;
+    public Textos textoInicial;
+
+    private bool iniciado=true;
     // Start is called before the first frame update
     protected void Start()
     {
@@ -59,12 +64,22 @@ public class PersonajeBase : MonoBehaviour
         collider= GetComponent<Collider2D>();
         controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
         dash = GetComponent<Dash>();
+        controlDialogos = GameObject.FindGameObjectWithTag("dialogos").GetComponent<ControlDialogos>();
     }
     // Update is called once per frame
     protected virtual void Update()
     {
+              
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
+        if (iniciado){
+                controlDialogos.ActivarCartel(textoInicial);
+            if(Input.GetKeyDown(KeyCode.E)){
+                controlDialogos.SiguienteFrase();
+                iniciado=false;
+            }
+            
+        }
         if(!isDead && !controladorScript.juegoPausado)
         {
             Horizontal = Input.GetAxisRaw("Horizontal");

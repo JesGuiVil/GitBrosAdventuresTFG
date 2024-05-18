@@ -885,7 +885,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     arrayTextos:
-    - '"There must be some mechanism that allows me to reach the other side."'
+    - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
   distanciaInteraccion: 2
   textosConLlave:
     arrayTextos: []
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     arrayTextos:
-    - '"There must be some mechanism that allows me to reach the other side."'
+    - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
   distanciaInteraccion: 2
   textosConLlave:
     arrayTextos: []
@@ -2033,7 +2033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     arrayTextos:
-    - '"Probably I can use some git command to take this item..."'
+    - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
   distanciaInteraccion: 2
   textosConLlave:
     arrayTextos: []
@@ -2499,7 +2499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     arrayTextos:
-    - '"Probably I can use some git command to take this item..."'
+    - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
   distanciaInteraccion: 2
   textosConLlave:
     arrayTextos: []
@@ -2824,7 +2824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     arrayTextos:
-    - '"Probably I can use some git command to take this item..."'
+    - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
   distanciaInteraccion: 2
   textosConLlave:
     arrayTextos: []
@@ -2849,7 +2849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     arrayTextos:
-    - '"Probably I can use some git command to take this item..."'
+    - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
   distanciaInteraccion: 2
   textosConLlave:
     arrayTextos: []
@@ -2980,6 +2980,16 @@ PrefabInstance:
     - target: {fileID: 2672981322429167955, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: danioDistancia
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672981322429167955, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
+      propertyPath: textoInicial.arrayTextos.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2672981322429167955, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
+      propertyPath: textoInicial.arrayTextos.Array.data[0]
+      value: Menudo dolor de cabeza...  como he llegado aqui? No volvere a probar
+        la hidromiel de ese elfo, a saber que le echa. Bueno, voy a dar una vuelta
+        a ver si me encuentro a Dracula y le pido un ibuprofeno...
       objectReference: {fileID: 0}
     - target: {fileID: 6292995220618750380, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: m_Name
@@ -3492,8 +3502,28 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 61747669cbd7a364c8e1a5aad6c8c048, type: 2}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
       propertyPath: m_fontSizeBase
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1197196305940900409, guid: 61747669cbd7a364c8e1a5aad6c8c048, type: 2}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5132127119994766383, guid: b64085d7a07708e458e1f709c018c826, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8032183469982868834, guid: b64085d7a07708e458e1f709c018c826, type: 3}
       propertyPath: m_TagString
@@ -3614,13 +3644,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[0]
-      value: '"Fear not, stranger.  I''m but a simple messenger... My name? I don''t
-        even remember it myself, but everyone calls me Main."'
+      value: '"No temas, forastero. Soy un simple mensajero... Mi nombre? Ni siquiera
+        yo lo recuerdo, pero todos me llaman Main."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[1]
-      value: '"By the way, it seems your friends are in trouble. I can try to help
-        them if you bring me the key... I''m too old for those jumps."'
+      value: "\"Por cierto, parece que tus amigos est\xE1n en problemas. Puedo echarles
+        una mano si encuentras la llave que ando buscando... Yo estoy muy viejo para
+        estos trotes.\""
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[2]
@@ -3632,8 +3663,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
-      value: '"Ah, you''ve been of great help, stranger. In gratitude, I''ll get
-        you out of this foul dungeon."'
+      value: "\"Has sido de gran ayuda, forastero. En agradecimiento, te sacar\xE9
+        de este castillo apestoso. Esos goblins deberian ducharse de vez en cuando.\""
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textosConLlave.arrayTextos.Array.size
@@ -3641,12 +3672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textosConLlave.arrayTextos.Array.data[0]
-      value: "\"OOOH!... it seems you've obtained the key. \nGIVE IT TO ME RIGHT
-        NOW!!\""
+      value: "\"OOOH!... parece que has conseguido la llave. \nDAMELA AHORA MISMO!!\""
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textosConLlave.arrayTextos.Array.data[1]
-      value: '"Cough,  cough... Sorry I mean... could you please give it to me??"'
+      value: '"Ejem... quise decir... puedes darmela, por favor??"'
       objectReference: {fileID: 0}
     - target: {fileID: 8177776709438380236, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3745,7 +3775,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textos:
     arrayTextos:
-    - '"There must be some mechanism that allows me to reach the other side."'
+    - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
   distanciaInteraccion: 2
   textosConLlave:
     arrayTextos: []

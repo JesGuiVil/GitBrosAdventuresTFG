@@ -6,15 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuInicial.unity
+    guid: 4bf4bf7518885fa42a9c64a080ef39a8
+  - enabled: 1
     path: Assets/Scenes/EscenaRogue1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EscenaAssassin1.unity
+    guid: a353da26c61777148ba9369a0954c4c6
+  - enabled: 1
+    path: Assets/Scenes/EscenaArcher1.unity
+    guid: 54edbfc14aa491445812dc4f0638c9ad
   - enabled: 0
     path: Assets/Scenes/Enemigos.unity
     guid: 40ceec5bba00e1542be56f27a7e71de6
   - enabled: 0
     path: Assets/Scenes/pruebas.unity
-    guid: de7a4bf8b221e674b9ab944948b070fc
-  - enabled: 1
-    path: Assets/Scenes/EscenaAssassin1.unity
-    guid: a353da26c61777148ba9369a0954c4c6
+    guid: 4363ea319c34560488a5fdd0d6556856
   m_configObjects: {}

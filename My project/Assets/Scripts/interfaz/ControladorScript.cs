@@ -27,19 +27,7 @@ public class ControladorScript : MonoBehaviour
                 PausarJuego();
             }
         }
-        if (!juegoPausado && Input.GetKeyDown(KeyCode.Comma))
-        {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-
-            if (currentSceneIndex == 0)
-            {
-                cambiarEscena(1);
-            }
-            else if (currentSceneIndex == 1)
-            {
-                cambiarEscena(0);
-            }
-        }
+        
     }
 
     private void PausarJuego()

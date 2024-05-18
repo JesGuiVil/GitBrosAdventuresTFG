@@ -22,11 +22,6 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private GameObject proyectil;
     private Rigidbody2D rb;
     private float baseGravity;
-    [SerializeField] private float dashingTime = 0.2F;
-    [SerializeField] private float dashForce = 20f;
-    [SerializeField] private float timeCanDash = 1f;
-    private bool isDashing;
-    private bool canDash = true;
     private float direction;
 
     private float cooldownTimer = Mathf.Infinity;
@@ -88,19 +83,6 @@ public class EnemigoBase : MonoBehaviour
         {
             patrulla.enabled = (!PlayerInSightMelee() && !PlayerInSightDistancia() || personaje.isDead);
         } 
-    }
-    private IEnumerator Dash()
-    {
-        isDashing = true;
-        canDash = false;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2 (direction * dashForce, 0f);
-        yield return new WaitForSeconds(dashingTime);
-        isDashing= false;
-        rb.gravityScale = baseGravity;
-        yield return new WaitForSeconds(timeCanDash);
-        canDash= true;
-
     }
     private bool PlayerInSightMelee()
     {

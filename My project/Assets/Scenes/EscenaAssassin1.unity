@@ -2183,6 +2183,8 @@ GameObject:
   - component: {fileID: 1876780698}
   - component: {fileID: 1876780697}
   - component: {fileID: 1876780701}
+  - component: {fileID: 1876780702}
+  - component: {fileID: 1876780703}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -2323,7 +2325,7 @@ Transform:
   m_GameObject: {fileID: 1876780696}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.06, y: 7.69, z: 1}
+  m_LocalPosition: {x: -20.66, y: 14.98, z: 1}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2350,6 +2352,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1876780702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876780696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca5d54321c081348a06601f60e7cfae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 0}
+  speed: 4
+--- !u!114 &1876780703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876780696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cc638d3ecec24c488f66232a479734c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaEnemigo: 100
+  maximoVidaEnemigo: 100
+  enemyDead: 0
+  attackCooldownMelee: 0
+  rangeMelee: 0
+  damageMelee: 0
+  colliderDistanceMelee: 0
+  attackCooldownDistancia: 0
+  rangeDistancia: 0
+  alturaDistancia: 0
+  posicionDistancia: 0
+  damageDistancia: 0
+  colliderDistanceDistancia: 0
+  puntoProyectil: {fileID: 0}
+  proyectil: {fileID: 0}
+  boxCollider: {fileID: 1876780697}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1001 &2068841843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33528,6 +33575,10 @@ PrefabInstance:
     - target: {fileID: 8690969730100044548, guid: 7d6d053a7b0e24f41a9e911f0412197d, type: 3}
       propertyPath: m_Tiles.Array.data[4125].second.m_TileObjectToInstantiateIndex
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 9071634220184222702, guid: 7d6d053a7b0e24f41a9e911f0412197d, type: 3}
+      propertyPath: m_SortingOrder
+      value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

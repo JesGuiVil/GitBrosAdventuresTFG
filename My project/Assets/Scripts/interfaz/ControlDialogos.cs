@@ -44,7 +44,7 @@ public class ControlDialogos : MonoBehaviour
         if(colaDialogos.Count==0){
             cierraCartel();
             
-            if (personajeBase.llaveEntregada)
+            if (personajeBase.espadasEntregada)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
             }

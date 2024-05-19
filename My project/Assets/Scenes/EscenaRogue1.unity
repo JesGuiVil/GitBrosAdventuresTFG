@@ -887,7 +887,7 @@ MonoBehaviour:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
   distanciaInteraccion: 2
-  textosConLlave:
+  textosConEspadas:
     arrayTextos: []
   textoFinal:
     arrayTextos: []
@@ -1172,77 +1172,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2d9441a714c7434894529840a0dab00, type: 3}
---- !u!1001 &766238388
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 298548646773978898, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_Name
-      value: key
-      objectReference: {fileID: 0}
-    - target: {fileID: 2407695511958101350, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: menuComandos
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3596500677870535949, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -11.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.61
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8237385198299722605, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 298548646773978898, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1492431021}
-    - targetCorrespondingSourceObject: {fileID: 2529883244492633873, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
 --- !u!114 &784028787 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3708911294892924132, guid: 2dfe506bf9ec0f3478d3c2b495bd6658, type: 3}
@@ -1647,7 +1576,7 @@ MonoBehaviour:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
   distanciaInteraccion: 2
-  textosConLlave:
+  textosConEspadas:
     arrayTextos: []
   textoFinal:
     arrayTextos: []
@@ -1942,31 +1871,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2d9441a714c7434894529840a0dab00, type: 3}
---- !u!1 &1492431015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 298548646773978898, guid: a0d342ddf790f0c4aa6de05d3e3b8bb1, type: 3}
-  m_PrefabInstance: {fileID: 766238388}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1492431021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492431015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textos:
-    arrayTextos:
-    - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
-  distanciaInteraccion: 2
-  textosConLlave:
-    arrayTextos: []
-  textoFinal:
-    arrayTextos: []
 --- !u!1001 &1543393115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2429,7 +2333,7 @@ MonoBehaviour:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
   distanciaInteraccion: 2
-  textosConLlave:
+  textosConEspadas:
     arrayTextos: []
   textoFinal:
     arrayTextos: []
@@ -2754,7 +2658,7 @@ MonoBehaviour:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
   distanciaInteraccion: 2
-  textosConLlave:
+  textosConEspadas:
     arrayTextos: []
   textoFinal:
     arrayTextos: []
@@ -2779,7 +2683,7 @@ MonoBehaviour:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
   distanciaInteraccion: 2
-  textosConLlave:
+  textosConEspadas:
     arrayTextos: []
   textoFinal:
     arrayTextos: []
@@ -3001,11 +2905,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702912103408802909, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.88
+      value: -10.91
       objectReference: {fileID: 0}
     - target: {fileID: 7702912103408802909, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.34
+      value: 9.14
       objectReference: {fileID: 0}
     - target: {fileID: 7702912103408802909, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3206,6 +3110,94 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d90c003ec1628344ab7e193d4b847e44, type: 3}
+--- !u!1001 &4259183853291396053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 739270526563551961, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_Name
+      value: espadas
+      objectReference: {fileID: 0}
+    - target: {fileID: 3305772382751879966, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 14ea0fbb4f2299f40b3da2fecea29d7c, type: 2}
+    - target: {fileID: 3576946850767918775, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 5.833
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576946850767918775, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 2.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576946850767918775, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.862
+      objectReference: {fileID: 0}
+    - target: {fileID: 3576946850767918775, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 6.515
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7928675592198681494, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545978737334248798, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545978737334248798, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4987678357888018781, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 48261e0bfa0f00d4db0638e3618d20bf, type: 3}
 --- !u!1001 &4655729893190027762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3670,7 +3662,7 @@ MonoBehaviour:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
   distanciaInteraccion: 2
-  textosConLlave:
+  textosConEspadas:
     arrayTextos: []
   textoFinal:
     arrayTextos: []
@@ -3685,7 +3677,7 @@ SceneRoots:
   - {fileID: 399607429}
   - {fileID: 7349788022431016249}
   - {fileID: 2386401849915426360}
-  - {fileID: 766238388}
+  - {fileID: 4259183853291396053}
   - {fileID: 1820064051}
   - {fileID: 1999558154}
   - {fileID: 1838180996}

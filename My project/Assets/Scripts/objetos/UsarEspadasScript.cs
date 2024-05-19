@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UsarLlaveScript : MonoBehaviour
+public class UsarEspadasScript : MonoBehaviour
 {
     private GameObject player; // Cambié el tipo de variable para hacer referencia al script del jugador
     private PersonajeBase personajeBase;
@@ -19,7 +19,7 @@ public class UsarLlaveScript : MonoBehaviour
     {
         if(personajeBase.cercaDelNpc) 
         {
-            personajeBase.llaveEntregada=true;
+            personajeBase.espadasEntregada=true;
             Destroy(gameObject);
         }
         

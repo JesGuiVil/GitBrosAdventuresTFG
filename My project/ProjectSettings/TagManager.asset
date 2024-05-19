@@ -25,6 +25,7 @@ TagManager:
   - llave
   - dialogos
   - Npc
+  - espadas
   layers:
   - Default
   - TransparentFX

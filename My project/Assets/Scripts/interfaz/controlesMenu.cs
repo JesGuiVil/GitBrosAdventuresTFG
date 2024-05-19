@@ -4,18 +4,17 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class ControlControles : MonoBehaviour
+public class ControlesMenu : MonoBehaviour
 {
 
     private Animator animControles;
     private Queue <string> colaControles;
     public Textos texto;
-    private ControladorScript controladorScript;
     [SerializeField] TextMeshProUGUI textoControles;
     // Start is called before the first frame update
     void Start()
     {
-        controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
+
         animControles=gameObject.GetComponent<Animator>();
         colaControles = new Queue<string>();
     }
@@ -36,7 +35,6 @@ public class ControlControles : MonoBehaviour
             SiguienteFraseControles();
         }    
     }  
-    Time.timeScale = 0f;
     }
 
     public void SiguienteFraseControles(){
@@ -45,23 +43,6 @@ public class ControlControles : MonoBehaviour
         }
         string fraseActual = colaControles.Dequeue();
         textoControles.text=fraseActual;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C) && !controladorScript.juegoPausado)
-        {
-        // Comprobar si se presiona la tecla 'C'
-        if (animControles.GetBool("mostrarGrande"))
-            {
-                CerrarCartelGrande();
-            }
-            else
-            {
-                animControles.SetBool("mostrarGrande", true);
-                //Time.timeScale = 0f;
-            }
-        }
     }
     
      public void MostrarTextoControles()
@@ -81,6 +62,5 @@ public class ControlControles : MonoBehaviour
     {
         animControles.SetBool("mostrarGrande", false);
         textoControles.text = "";
-        Time.timeScale = 1f;
     }
 }

@@ -44,9 +44,9 @@ public class PersonajeBase : MonoBehaviour
     public bool cercaDelNpc = false;
 
     public bool yaHeHablado=false;
-    public bool llaveEntregada=false;
+    public bool espadasEntregada=false;
 
-    public bool tieneLlave = false;
+    public bool tieneEspadas = false;
 
     public ControlDialogos controlDialogos;
     public Textos textoInicial;
@@ -136,6 +136,14 @@ public class PersonajeBase : MonoBehaviour
         }
         
         
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        
+        if (collision.CompareTag("Npc"))
+        {   
+            cercaDelNpc = false;
+        }  
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

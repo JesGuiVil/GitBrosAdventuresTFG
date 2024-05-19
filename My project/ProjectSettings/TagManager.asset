@@ -28,6 +28,7 @@ TagManager:
   - cuchillo
   - Portal1
   - Portal2
+  - espadas
   layers:
   - Default
   - TransparentFX

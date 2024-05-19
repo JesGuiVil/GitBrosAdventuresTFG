@@ -10,7 +10,7 @@ public class ObjetoInteractable : MonoBehaviour
     private ControlDialogos controlDialogos; // Variable para almacenar el controlador de diálogos
     private bool cartelMostrado = false; // Variable para seguir el estado del cartel
 
-    public Textos textosConLlave;
+    public Textos textosConEspadas;
 
     public Textos textoFinal;
 
@@ -87,14 +87,14 @@ public class ObjetoInteractable : MonoBehaviour
                 if (cartelMostrado)
                 {
                     controlDialogos.SiguienteFrase();
-                }else if (personajeBase.tieneLlave && personajeBase.yaHeHablado && personajeBase.llaveEntregada)
+                }else if (personajeBase.tieneEspadas && personajeBase.yaHeHablado && personajeBase.espadasEntregada)
                 {
                     controlDialogos.ActivarCartel(textoFinal);
                     cartelMostrado = true;
                 }
-                else if (personajeBase.tieneLlave && personajeBase.yaHeHablado)
+                else if (personajeBase.tieneEspadas && personajeBase.yaHeHablado)
                 {
-                    controlDialogos.ActivarCartel(textosConLlave);
+                    controlDialogos.ActivarCartel(textosConEspadas);
                     cartelMostrado = true;
                 }
                 else{

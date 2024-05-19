@@ -12,6 +12,9 @@ public class MenuComandosScript : MonoBehaviour
     private TMP_InputField inputField;
     private Inventario inventario;
     private GameObject personaje;
+    private UsarEspadasScript usarEspadasScript;
+
+    private PersonajeBase personajeBase;
 
     private void Start()
     {
@@ -23,6 +26,7 @@ public class MenuComandosScript : MonoBehaviour
         }
          // Obtener referencia al script Inventario del personaje
         personaje = GameObject.FindGameObjectWithTag("Player");
+        personajeBase = personaje.GetComponent<PersonajeBase>();
         Debug.Log("personaje detectado");
         if (personaje != null)
         {
@@ -76,6 +80,18 @@ public class MenuComandosScript : MonoBehaviour
         {
             Debug.Log("Cargando situación de la escena...");
             CargarEscena();
+        }
+        else if (inputText == "git merge")
+        {
+            Debug.Log("Intentando realizar git merge...");
+            if (personajeBase.tieneEspadas && personajeBase.cercaDelNpc)
+            {
+                UsarEspadas();
+            }
+            else
+            {
+                Debug.Log("No se puede realizar git merge");
+            }
         }
         else
         {
@@ -160,5 +176,27 @@ public class MenuComandosScript : MonoBehaviour
         {
             Debug.LogWarning("No se encontró una última escena guardada.");
         }
+    }
+    private void UsarEspadas()
+    {
+        // Recorrer las ranuras del inventario para buscar la llave
+        for (int i = 0; i < inventario.ranuras.Length; i++)
+        {
+            if (inventario.estaLleno[i])
+            {
+                GameObject objetoEnRanura = inventario.ranuras[i].transform.GetChild(0).gameObject;
+                if (objetoEnRanura != null && objetoEnRanura.CompareTag("espadas"))
+                {
+                    UsarEspadasScript usarEspadasScript = objetoEnRanura.GetComponent<UsarEspadasScript>();
+                    if (usarEspadasScript != null)
+                    {
+                        usarEspadasScript.Use();
+                        return;
+                    }
+                }
+            }
+        }
+
+        Debug.Log("No se encontró las espadas en el inventario.");
     }
 }

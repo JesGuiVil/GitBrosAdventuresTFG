@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Inventario : MonoBehaviour
 {
-    private GameObject[] ranuras = new GameObject[3];
+    public GameObject[] ranuras = new GameObject[3];
     private GameObject slot1;
     private GameObject slot2;
     private GameObject slot3;
@@ -64,8 +64,8 @@ public class Inventario : MonoBehaviour
         GameObject botonObjeto = Instantiate(objetoPrefab, ranura.transform, false);
         // Asigna la ranura del inventario como padre del botón para que esté dentro de la ranura
         botonObjeto.transform.SetParent(ranura.transform, false);
-        if ( objetoPrefab.CompareTag("key")){
-            personajeBase.tieneLlave=true;
+        if ( objetoPrefab.CompareTag("espadas")){
+            personajeBase.tieneEspadas=true;
         }
     }
 

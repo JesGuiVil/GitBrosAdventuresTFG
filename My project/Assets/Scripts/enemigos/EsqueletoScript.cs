@@ -28,14 +28,14 @@ public class EsqueletoScript : MonoBehaviour
         Vector2 direction = (Antonio.transform.position - transform.position).normalized;
         rb.velocity = direction * speed;
 
-        // Cambiar la dirección del sprite según la posición del jugador
+        // Cambiar la direcciï¿½n del sprite segï¿½n la posiciï¿½n del jugador
         if (direction.x >= 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
         else transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
 
         float distance = Mathf.Abs(Antonio.transform.position.x - transform.position.x);
 
 
-        // Control de la animación
+        // Control de la animaciï¿½n
         if (Health <= 0)
         {
             Animator.SetBool("muerto", true);
@@ -53,7 +53,6 @@ public class EsqueletoScript : MonoBehaviour
         Health -= 1;
         if (Health == 0)
         {
-            Animator.SetBool("muerto", true);
             StartCoroutine(DestruirDespuesDe(0.3f));
         }
 
@@ -62,7 +61,7 @@ public class EsqueletoScript : MonoBehaviour
 
             yield return new WaitForSeconds(duracion);
 
-            // Destruir el GameObject después de la espera
+            // Destruir el GameObject despuï¿½s de la espera
             Destroy(gameObject);
         }
     }

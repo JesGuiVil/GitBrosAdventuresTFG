@@ -16,11 +16,12 @@ public class ControladorScript : MonoBehaviour
     private void Update()
     {
         // Detección de tecla para mostrar/ocultar el cartel y pausar/resumir el juego
-        if (Input.GetKeyDown(KeyCode.BackQuote)) 
+        if (Input.GetKeyDown(KeyCode.Tab)) 
         {
             if (juegoPausado)
             {
                 ResumirJuego();
+                
             }
             else
             {
@@ -32,14 +33,12 @@ public class ControladorScript : MonoBehaviour
 
     private void PausarJuego()
     {
-        Time.timeScale = 0f;
         juegoPausado = true;
         menuComandos.MostrarMenuComandos(); // Mostrar el cartel al pausar el juego
     }
 
     private void ResumirJuego()
     {
-        Time.timeScale = 1f;
         juegoPausado = false;
         menuComandos.OcultarMenuComandos(); // Ocultar el cartel al resumir el juego
     }

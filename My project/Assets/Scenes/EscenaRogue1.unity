@@ -3529,14 +3529,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[0]
-      value: '"No temas, forastero. Soy un simple mensajero... Mi nombre? Ni siquiera
+      value: '"No temas, forastera. Soy un simple mensajero... Mi nombre? Ni siquiera
         yo lo recuerdo, pero todos me llaman Main."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[1]
-      value: '"Por cierto, parece que tus amigos estan en problemas. Puedo echarles
-        una mano si encuentras la llave que ando buscando... Yo estoy muy viejo para
-        estos trotes."'
+      value: '"Por cierto, parece que tus amigos estan en problemas. Si encuentras
+        algo que les pueda ser de utilidad, entregamelo y yo se lo hare llegar. "'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[2]
@@ -3548,11 +3547,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
-      value: "\"Has sido de gran ayuda, forastero. En agradecimiento, te sacar\xE9
-        de este castillo apestoso. Esos goblins deberian ducharse de vez en cuando.\""
+      value: '"Un trato es un trato. Por cierto, por esa trampilla puedes salir de
+        este castillo apestoso. Esos goblins deberian ducharse de vez en cuando."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textosConLlave.arrayTextos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textosConEspadas.arrayTextos.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
@@ -3562,6 +3565,16 @@ PrefabInstance:
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textosConLlave.arrayTextos.Array.data[1]
       value: '"Ejem... quise decir... puedes darmela, por favor??"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textosConEspadas.arrayTextos.Array.data[0]
+      value: '"Parece que has conseguido unas espadas. Hay un amigo tuyo en el desierto
+        al que les vendrian muy bien."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textosConEspadas.arrayTextos.Array.data[1]
+      value: '"Si me las entregas, puedo llevarselas. Eso si, me deberas un favor...
+        hahaha"'
       objectReference: {fileID: 0}
     - target: {fileID: 8177776709438380236, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: m_LocalPosition.x

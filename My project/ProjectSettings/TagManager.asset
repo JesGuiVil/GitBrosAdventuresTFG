@@ -25,6 +25,9 @@ TagManager:
   - llave
   - dialogos
   - Npc
+  - cuchillo
+  - Portal1
+  - Portal2
   layers:
   - Default
   - TransparentFX

@@ -7,12 +7,8 @@ using UnityEngine.SceneManagement;
 public class ControlDialogos : MonoBehaviour
 {
     private Animator animDialogos;
-
-    private Animator animControles;
     private Queue <string> colaDialogos;
     private Textos texto;
-
-
     private PersonajeBase personajeBase;
     [SerializeField] TextMeshProUGUI textoPantalla;
 
@@ -47,7 +43,7 @@ public class ControlDialogos : MonoBehaviour
     public void SiguienteFrase(){
         if(colaDialogos.Count==0){
             cierraCartel();
-            Time.timeScale = 1f;
+            
             if (personajeBase.llaveEntregada)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
@@ -61,6 +57,7 @@ public class ControlDialogos : MonoBehaviour
     public void cierraCartel(){
         animDialogos.SetBool("mostrar",false);
         textoPantalla.text = "";
+        Time.timeScale = 1f;
     }
     
 }

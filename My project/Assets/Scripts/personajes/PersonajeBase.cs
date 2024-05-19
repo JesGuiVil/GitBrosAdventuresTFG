@@ -73,7 +73,7 @@ public class PersonajeBase : MonoBehaviour
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
         if (iniciado){
-                controlDialogos.ActivarCartel(textoInicial);
+            controlDialogos.ActivarCartel(textoInicial);
             if(Input.GetKeyDown(KeyCode.E)){
                 controlDialogos.SiguienteFrase();
                 iniciado=false;

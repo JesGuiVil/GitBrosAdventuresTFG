@@ -6,86 +6,71 @@ using UnityEngine.SceneManagement;
 
 public class ControlControles : MonoBehaviour
 {
-    private Animator animDialogos;
 
     private Animator animControles;
-    private Queue <string> colaDialogos;
-    private Textos texto;
-
-    public Textos controles;
-
+    private Queue <string> colaControles;
+    public Textos texto;
     private PersonajeBase personajeBase;
-    [SerializeField] TextMeshProUGUI textoPantalla;
+    private ControladorScript controladorScript;
     [SerializeField] TextMeshProUGUI textoControles;
     // Start is called before the first frame update
     void Start()
     {
-        animDialogos=gameObject.GetComponent<Animator>();
-        colaDialogos = new Queue<string>();
+        controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
+        animControles=gameObject.GetComponent<Animator>();
+        colaControles = new Queue<string>();
         personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
     }
 
-    public void ActivarCartel (Textos textoObjeto){
-        animDialogos.SetBool("mostrar",true);
-        texto=textoObjeto;
+    public void ActivarCartelGrande (){
+        animControles.SetBool("mostrarGrande",true);
     }
-    public void ActivaTexto(){
-    colaDialogos.Clear();
-    Time.timeScale = 0f;
+    public void ActivaTextoControles(){
+    colaControles.Clear();
 
     // Comprobación de nulidad para texto
     if (texto != null){
         // Comprobación de nulidad para texto.arrayTextos
         if (texto.arrayTextos != null){
             foreach (string textoGuardar in texto.arrayTextos){
-                colaDialogos.Enqueue(textoGuardar);
+                colaControles.Enqueue(textoGuardar);
             }
-            SiguienteFrase();
+            SiguienteFraseControles();
         }    
     }  
+    Time.timeScale = 0f;
     }
 
-    public void SiguienteFrase(){
-        if(colaDialogos.Count==0){
-            cierraCartel();
-            Time.timeScale = 1f;
-            if (personajeBase.llaveEntregada)
-            {
-                SceneManager.LoadScene("EscenaAssassin1");
-            }
-            
-            return;
+    public void SiguienteFraseControles(){
+        if(colaControles.Count==0){
+            CerrarCartelGrande();
         }
-        string fraseActual = colaDialogos.Dequeue();
-        textoPantalla.text=fraseActual;
-    }
-    public void cierraCartel(){
-        animDialogos.SetBool("mostrar",false);
-        textoPantalla.text = "";
+        string fraseActual = colaControles.Dequeue();
+        textoControles.text=fraseActual;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && !controladorScript.juegoPausado)
         {
         // Comprobar si se presiona la tecla 'C'
-        if (animDialogos.GetBool("mostrarGrande"))
+        if (animControles.GetBool("mostrarGrande"))
             {
                 CerrarCartelGrande();
             }
             else
             {
-                animDialogos.SetBool("mostrarGrande", true);
-                Time.timeScale = 0f;
+                animControles.SetBool("mostrarGrande", true);
+                //Time.timeScale = 0f;
             }
         }
     }
     
      public void MostrarTextoControles()
     {
-        if (controles != null && controles.arrayTextos != null && controles.arrayTextos.Length > 0)
+        if (texto != null && texto.arrayTextos != null && texto.arrayTextos.Length > 0)
         {
-            textoControles.text = controles.arrayTextos[0]; // Aquí asumimos que solo quieres mostrar el primer texto de los controles
+            textoControles.text = texto.arrayTextos[0]; // Aquí asumimos que solo quieres mostrar el primer texto de los controles
         }
         else
         {
@@ -96,9 +81,8 @@ public class ControlControles : MonoBehaviour
     // Método para cerrar el cartel grande
     public void CerrarCartelGrande()
     {
-        animDialogos.SetBool("mostrarGrande", false);
+        animControles.SetBool("mostrarGrande", false);
         textoControles.text = "";
         Time.timeScale = 1f;
     }
-    
 }

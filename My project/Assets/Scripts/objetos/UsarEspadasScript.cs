@@ -19,7 +19,6 @@ public class UsarEspadasScript : MonoBehaviour
     {
         if(personajeBase.cercaDelNpc) 
         {
-            personajeBase.espadasEntregada=true;
             Destroy(gameObject);
         }
         

@@ -7,10 +7,11 @@ using UnityEngine.UI;
 public class ControladorScript : MonoBehaviour
 {
     private MenuComandosScript menuComandos;
-
+    private PersonajeBase personajeBase;
     public bool juegoPausado = false;
     private void Start(){
         menuComandos = GameObject.FindGameObjectWithTag("Consola").GetComponent<MenuComandosScript>();
+        
     }
 
     private void Update()

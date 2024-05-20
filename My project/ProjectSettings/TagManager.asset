@@ -29,6 +29,9 @@ TagManager:
   - Portal1
   - Portal2
   - espadas
+  - gameover
+  - pocion
+  - daga
   layers:
   - Default
   - TransparentFX

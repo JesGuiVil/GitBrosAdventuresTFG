@@ -5,17 +5,22 @@ using UnityEngine;
 public class MecanicasRogue1 : MecanicasBase
 {
     [SerializeField] private GameObject enemigoDrop;
+    [SerializeField] private GameObject enemigoDrop2;
+    [SerializeField] private GameObject enemigoDrop3;
     [SerializeField] private GameObject enemigo2;
     [SerializeField] private GameObject enemigo3;
     [SerializeField] private GameObject enemigo4;
     [SerializeField] private GameObject enemigo5;
     [SerializeField] private GameObject enemigo6;
-    [SerializeField] private GameObject pocion;
     [SerializeField] private GameObject drop1;
+    [SerializeField] private GameObject drop2;
+    [SerializeField] private GameObject drop3;
     [SerializeField] private GameObject muro;
     [SerializeField] private GameObject palanca;
 
     private bool haDropado=false;
+    private bool haDropado2=false;
+    private bool haDropado3=false;
     private bool muroDestruido=false;
     // Start is called before the first frame update
     void Start()
@@ -34,6 +39,22 @@ public class MecanicasRogue1 : MecanicasBase
             haDropado=true;
             }
         }
+        if(!haDropado2){
+            if (enemigoDrop2.GetComponent<EnemigoBase>().enemyDead && drop2 != null)
+            {
+            // Instanciar el objeto drop1 en la posición del enemigo1
+            Instantiate(drop2, enemigoDrop2.transform.position, Quaternion.identity);
+            haDropado2=true;
+            }
+        }
+        if(!haDropado3){
+            if (enemigoDrop3.GetComponent<EnemigoBase>().enemyDead && drop3 != null)
+            {
+            // Instanciar el objeto drop1 en la posición del enemigo1
+            Instantiate(drop3, enemigoDrop3.transform.position, Quaternion.identity);
+            haDropado3=true;
+            }
+        }
         if(contadorEnemigos>16 && !muroDestruido){
             Destroy(muro);
             muroDestruido=true;
@@ -44,7 +65,6 @@ public class MecanicasRogue1 : MecanicasBase
             enemigo4.SetActive(true);
             enemigo5.SetActive(true);
             enemigo6.SetActive(true);
-            pocion.SetActive(true);
         }
         
     }

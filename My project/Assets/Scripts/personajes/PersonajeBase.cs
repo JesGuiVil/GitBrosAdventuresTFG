@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PersonajeBase : MonoBehaviour
 {
@@ -50,8 +51,7 @@ public class PersonajeBase : MonoBehaviour
 
     public ControlDialogos controlDialogos;
     public Textos textoInicial;
-
-    private bool iniciado=true;
+    private GameObject gameOver;
     // Start is called before the first frame update
     protected void Start()
     {
@@ -64,7 +64,10 @@ public class PersonajeBase : MonoBehaviour
         collider= GetComponent<Collider2D>();
         controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
         dash = GetComponent<Dash>();
-        controlDialogos = GameObject.FindGameObjectWithTag("dialogos").GetComponent<ControlDialogos>();
+        controlDialogos = ControlDialogos.Instance;
+        gameOver=GameObject.FindGameObjectWithTag("gameover");
+        gameOver.SetActive(false);
+        StartCoroutine(IniciarDialogoConDelay());
     }
     // Update is called once per frame
     protected virtual void Update()
@@ -72,14 +75,7 @@ public class PersonajeBase : MonoBehaviour
               
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
-        if (iniciado){
-            controlDialogos.ActivarCartel(textoInicial);
-            if(Input.GetKeyDown(KeyCode.E)){
-                controlDialogos.SiguienteFrase();
-                iniciado=false;
-            }
-            
-        }
+        
         if(!isDead && !controladorScript.juegoPausado)
         {
             Horizontal = Input.GetAxisRaw("Horizontal");
@@ -100,6 +96,28 @@ public class PersonajeBase : MonoBehaviour
         {
             rigidbody2D.velocity = new Vector2(0f, rigidbody2D.velocity.y);
         }
+        if (isDead && !gameOver.activeSelf)
+        {
+            StartCoroutine(GameOverSequence());
+        }
+    }
+    IEnumerator IniciarDialogoConDelay()
+    {
+        yield return new WaitForSeconds(0.5f); // Añadir un retraso de medio segundo antes de activar el diálogo inicial
+        controlDialogos.ActivarCartel(textoInicial);
+
+        // Espera hasta que se presione la tecla E antes de avanzar al siguiente frase
+        yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.E));
+        controlDialogos.SiguienteFrase();
+        
+    }
+    private IEnumerator GameOverSequence()
+    {
+        yield return new WaitForSeconds(1f); // Espera 1 segundo
+        gameOver.SetActive(true);
+
+        yield return new WaitForSeconds(4f); // Espera 4 segundos después de activar game over
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Reinicia la escena
     }
     private void OnDrawGizmos()
     {

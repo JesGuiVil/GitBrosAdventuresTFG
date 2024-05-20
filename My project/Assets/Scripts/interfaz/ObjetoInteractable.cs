@@ -19,19 +19,7 @@ public class ObjetoInteractable : MonoBehaviour
     void Start()
     {
         personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
-        GameObject dialogos = GameObject.FindGameObjectWithTag("dialogos");
-        if (dialogos != null)
-        {
-            controlDialogos = dialogos.GetComponent<ControlDialogos>();
-            if (controlDialogos == null)
-            {
-                Debug.LogError("ControlDialogos no encontrado en el objeto encontrado por tag.");
-            }
-        }
-        else
-        {
-            Debug.LogError("Objeto con tag 'dialogos' no encontrado.");
-        }
+        controlDialogos = ControlDialogos.Instance;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

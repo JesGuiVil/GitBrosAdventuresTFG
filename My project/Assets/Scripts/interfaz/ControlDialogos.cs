@@ -9,11 +9,15 @@ public class ControlDialogos : MonoBehaviour
     private Animator animDialogos;
     private Queue<string> colaDialogos;
     private Textos texto;
-    private PersonajeBase personajeBase;
     [SerializeField] private TextMeshProUGUI textoPantalla;
 
     // Instancia Singleton de ControlDialogos
     private static ControlDialogos instance;
+    private Rogue rogue; // Person
+
+    private Assassin assassin;
+
+    private Archer archer;
 
     // Propiedad estática para acceder a la instancia Singleton
     public static ControlDialogos Instance
@@ -44,7 +48,21 @@ public class ControlDialogos : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Para que el objeto persista al cargar nuevas escenas
         animDialogos = GetComponent<Animator>();
         colaDialogos = new Queue<string>();
-        personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
+        if (SceneManager.GetActiveScene().name == "EscenaRogue1")
+        {
+            rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+        {
+            assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaArcher1")
+        {
+            archer = GameObject.FindGameObjectWithTag("Player").GetComponent<Archer>();
+
+        }
     }
 
     public void ActivarCartel(Textos textoObjeto)
@@ -78,11 +96,28 @@ public class ControlDialogos : MonoBehaviour
         if (colaDialogos.Count == 0)
         {
             cierraCartel();
-
-            if (personajeBase.espadasEntregada)
+            if (SceneManager.GetActiveScene().name == "EscenaRogue1")
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                if (rogue.espadasEntregada)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+
             }
+            if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+            {
+                if (assassin.cosaEntregada)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
+
+            }
+            if (SceneManager.GetActiveScene().name == "EscenaArcher1")
+            {
+                // por hacer cambio de escena al final del nivel
+
+            }
+            
 
             return;
         }

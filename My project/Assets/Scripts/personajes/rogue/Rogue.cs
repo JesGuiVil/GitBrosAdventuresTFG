@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class Rogue : PersonajeBase
 {
+
+    public bool yaHeHablado = false;
+    public bool espadasEntregada = false;
+
+    public bool tieneEspadas = false;
     protected override void Update()
     {
         // Llama al método Update de la clase base

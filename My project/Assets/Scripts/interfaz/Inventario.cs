@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Inventario : MonoBehaviour
 {
@@ -11,6 +12,11 @@ public class Inventario : MonoBehaviour
     private GameObject slot3;
     public bool[] estaLleno;
     private PersonajeBase personajeBase;
+    private Rogue rogue; // Person
+
+    private Assassin assassin;
+
+    private Archer archer;
     private void Start(){
         slot1=GameObject.FindGameObjectWithTag("Slot1");
         slot2=GameObject.FindGameObjectWithTag("Slot2");
@@ -19,6 +25,21 @@ public class Inventario : MonoBehaviour
         ranuras[1]=slot2;
         ranuras[2]=slot3;
         personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
+        if (SceneManager.GetActiveScene().name == "EscenaRogue1")
+        {
+            rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+        {
+            assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaArcher1")
+        {
+            archer = GameObject.FindGameObjectWithTag("Player").GetComponent<Archer>();
+
+        }
     }
 
     private void Update()
@@ -64,8 +85,25 @@ public class Inventario : MonoBehaviour
         GameObject botonObjeto = Instantiate(objetoPrefab, ranura.transform, false);
         // Asigna la ranura del inventario como padre del botón para que esté dentro de la ranura
         botonObjeto.transform.SetParent(ranura.transform, false);
-        if ( objetoPrefab.CompareTag("espadas")){
-            personajeBase.tieneEspadas=true;
+        if (SceneManager.GetActiveScene().name == "EscenaRogue1")
+        {
+            if (objetoPrefab.CompareTag("espadas"))
+            {
+                rogue.tieneEspadas = true;
+            }
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+        {
+            if (objetoPrefab.CompareTag("espadas"))
+            {
+                assassin.tengoEspadas = true;
+            }
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaArcher1")
+        {
+            //por hacer
         }
     }
 

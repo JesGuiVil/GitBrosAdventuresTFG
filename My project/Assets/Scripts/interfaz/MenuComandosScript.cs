@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using JetBrains.Annotations;
 
 public class MenuComandosScript : MonoBehaviour
 {
@@ -13,11 +14,16 @@ public class MenuComandosScript : MonoBehaviour
     private Inventario inventario;
     private GameObject personaje;
     private UsarEspadasScript usarEspadasScript;
-
+    private Assassin assassin;
     private PersonajeBase personajeBase;
+    public GameObject espadasboton;
+    private Rogue rogue; // Person
 
+    private Archer archer;
     private void Start()
     {
+
+
         inputField = InputComandos.GetComponent<TMP_InputField>();
         if (inputField == null)
         {
@@ -38,7 +44,22 @@ public class MenuComandosScript : MonoBehaviour
             Debug.LogError("No se encontró el objeto del personaje.");
         }
         OcultarMenuComandos();
-        
+        if (SceneManager.GetActiveScene().name == "EscenaRogue1")
+        {
+            rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+        {
+            assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
+
+        }
+        if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+        {
+            archer = GameObject.FindGameObjectWithTag("Player").GetComponent<Archer>();
+
+        }
+
     }
 
     public void MostrarMenuComandos()
@@ -84,13 +105,56 @@ public class MenuComandosScript : MonoBehaviour
         else if (inputText == "git merge")
         {
             Debug.Log("Intentando realizar git merge...");
-            if (personajeBase.tieneEspadas && personajeBase.cercaDelNpc)
+            if (SceneManager.GetActiveScene().name == "EscenaRogue1")
             {
-                UsarEspadas();
+                if (rogue.tieneEspadas && personajeBase.cercaDelNpc)
+                {
+                    rogue.espadasEntregada = true;
+                    UsarEspadas();
+                }
+                else
+                {
+                    Debug.Log("No se puede realizar git merge");
+                }
+
             }
-            else
+            if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
             {
-                Debug.Log("No se puede realizar git merge");
+                if (personajeBase.cercaDelNpc)
+                {
+                    // por hacer
+                }
+                else
+                {
+                    Debug.Log("No se puede realizar git merge");
+                }
+
+            }
+            if (SceneManager.GetActiveScene().name == "EscenaArcher1")
+            {
+                if (personajeBase.cercaDelNpc)
+                {
+                    // por hacer
+                }
+                else
+                {
+                    Debug.Log("No se puede realizar git merge");
+                }
+            }
+            
+
+        }
+        else if (inputText == "git pull")
+        {
+            Debug.Log("Intentando realizar git pull...");
+            if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+            {
+                assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
+                if (!assassin.tengoEspadas)
+                {
+                    inventario.AgregarObjeto(espadasboton);
+                    assassin.tengoEspadas = true;
+                }
             }
         }
         else

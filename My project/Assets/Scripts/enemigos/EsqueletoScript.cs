@@ -27,7 +27,7 @@ public class EsqueletoScript : MonoBehaviour
 
     void Update()
     {
-        if (Antonio == null || enemigoBase.enemyDead || Antonio.transform.position.x >= 230)
+        if (Antonio == null || enemigoBase.enemyDead || Antonio.transform.position.x >= 90)
         {
             rb.velocity = Vector2.zero; // Detener al enemigo
             if (enemigoBase.enemyDead && !isScheduledForDestruction)

@@ -44,10 +44,6 @@ public class PersonajeBase : MonoBehaviour
     public bool isDead = false;
     public bool cercaDelNpc = false;
 
-    public bool yaHeHablado=false;
-    public bool espadasEntregada=false;
-
-    public bool tieneEspadas = false;
 
     public ControlDialogos controlDialogos;
     public Textos textoInicial;

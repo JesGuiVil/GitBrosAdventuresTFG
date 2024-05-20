@@ -10,6 +10,9 @@ public class EsqueletoScript : MonoBehaviour
     private Rigidbody2D rb;
     public float speed; // Velocidad a la que el enemigo se mueve
     private GameObject Antonio; // Referencia al personaje
+    private EnemigoBase enemigoBase; // Referencia al componente EnemigoBase
+    private bool isScheduledForDestruction = false;
+
 
     private void Start()
     {
@@ -18,11 +21,22 @@ public class EsqueletoScript : MonoBehaviour
 
         // Buscar al personaje en la escena
         Antonio = GameObject.FindWithTag("Player");
+
+        enemigoBase = GetComponent<EnemigoBase>();
     }
 
     void Update()
     {
-        if (Antonio == null) return;
+        if (Antonio == null || enemigoBase.enemyDead || Antonio.transform.position.x >= 230)
+        {
+            rb.velocity = Vector2.zero; // Detener al enemigo
+            if (enemigoBase.enemyDead && !isScheduledForDestruction)
+            {
+                isScheduledForDestruction = true;
+                Destroy(gameObject, 4f); // Destruir después de 4 segundos
+            }
+            return;
+        }
 
         // Perseguir al jugador
         Vector2 direction = (Antonio.transform.position - transform.position).normalized;
@@ -33,6 +47,7 @@ public class EsqueletoScript : MonoBehaviour
         else transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
 
         float distance = Mathf.Abs(Antonio.transform.position.x - transform.position.x);
+
 
 
         // Control de la animaci�n
@@ -50,8 +65,7 @@ public class EsqueletoScript : MonoBehaviour
 
     public void Hit()
     {
-        Health -= 1;
-        if (Health == 0)
+        if (enemigoBase.enemyDead)
         {
             StartCoroutine(DestruirDespuesDe(0.3f));
         }

@@ -35,6 +35,10 @@ TagManager:
   - Portal6
   - Portal7
   - Portal8
+  - gameover
+  - pocion
+  - daga
+  - baston
   layers:
   - Default
   - TransparentFX

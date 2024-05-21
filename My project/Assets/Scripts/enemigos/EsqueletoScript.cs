@@ -4,9 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class EsqueletoScript : MonoBehaviour
 {
-    private Animator Animator;
-    public GameObject BulletPrefab;
-    private int Health = 1;
+
+
     private Rigidbody2D rb;
     public float speed; // Velocidad a la que el enemigo se mueve
     private GameObject Antonio; // Referencia al personaje
@@ -16,7 +15,6 @@ public class EsqueletoScript : MonoBehaviour
 
     private void Start()
     {
-        Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
 
         // Buscar al personaje en la escena
@@ -48,35 +46,5 @@ public class EsqueletoScript : MonoBehaviour
 
         float distance = Mathf.Abs(Antonio.transform.position.x - transform.position.x);
 
-
-
-        // Control de la animaci�n
-        if (Health <= 0)
-        {
-            Animator.SetBool("muerto", true);
-        }
-        else
-        {
-            Animator.SetBool("muerto", false);
-        }
-    }
-
-
-
-    public void Hit()
-    {
-        if (enemigoBase.enemyDead)
-        {
-            StartCoroutine(DestruirDespuesDe(0.3f));
-        }
-
-        IEnumerator DestruirDespuesDe(float duracion)
-        {
-
-            yield return new WaitForSeconds(duracion);
-
-            // Destruir el GameObject despu�s de la espera
-            Destroy(gameObject);
-        }
     }
 }

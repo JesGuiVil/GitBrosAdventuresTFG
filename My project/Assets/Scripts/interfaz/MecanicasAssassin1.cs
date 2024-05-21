@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MecanicasAssassin1 : MecanicasBase
 {
+    [SerializeField] private GameObject enemigoDrop;
+    [SerializeField] private GameObject drop1;
+    private bool Dropado = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,14 @@ public class MecanicasAssassin1 : MecanicasBase
     // Update is called once per frame
     void Update()
     {
-        
+        if (!Dropado)
+        {
+            if (enemigoDrop.GetComponent<EnemigoBase>().enemyDead && drop1 != null)
+            {
+                // Instanciar el objeto drop1 en la posición del enemigo1
+                Instantiate(drop1, enemigoDrop.transform.position, Quaternion.identity);
+                Dropado = true;
+            }
+        }
     }
 }

@@ -12,6 +12,7 @@ public class Inventario : MonoBehaviour
     private GameObject slot3;
     public bool[] estaLleno;
     private PersonajeBase personajeBase;
+    private GameObject main;
     private Rogue rogue; // Person
 
     private Assassin assassin;
@@ -33,6 +34,7 @@ public class Inventario : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
         {
             assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
+            main = GameObject.FindGameObjectWithTag("Npc");
 
         }
         if (SceneManager.GetActiveScene().name == "EscenaArcher1")
@@ -98,6 +100,11 @@ public class Inventario : MonoBehaviour
             if (objetoPrefab.CompareTag("espadas"))
             {
                 assassin.tengoEspadas = true;
+            }
+            else if (objetoPrefab.CompareTag("baston"))
+            {
+                assassin.tengoBaston = true;
+                main.GetComponent<SpriteRenderer>().flipX = !main.GetComponent<SpriteRenderer>().flipX;
             }
 
         }

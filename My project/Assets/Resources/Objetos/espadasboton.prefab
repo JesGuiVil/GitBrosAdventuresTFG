@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8619801943295329797}
   - component: {fileID: 6945695412919221074}
   - component: {fileID: 1659601629306375465}
-  - component: {fileID: 4562490424935881982}
+  - component: {fileID: 2359517866409380686}
   m_Layer: 5
   m_Name: espadasboton
   m_TagString: espadas
@@ -120,20 +120,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6945695412919221074}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4562490424935881982}
-        m_TargetAssemblyTypeName: UsarLlaveScript, Assembly-CSharp
-        m_MethodName: Use
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &4562490424935881982
+      m_Calls: []
+--- !u!114 &2359517866409380686
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -142,6 +130,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7320258358506729459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d0dc5b2441d85e4ea2cc6d0114b4670, type: 3}
+  m_Script: {fileID: 11500000, guid: 534985b925d369b47b422588ef5b9077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

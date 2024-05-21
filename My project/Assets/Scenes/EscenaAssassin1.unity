@@ -977,6 +977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main
       objectReference: {fileID: 0}
+    - target: {fileID: 843453806700746116, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: m_TagString
+      value: Npc
+      objectReference: {fileID: 0}
     - target: {fileID: 2341046824729883284, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -995,15 +999,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[0]
-      value: "\"por el sudor de tu frente diria que tambien has sido perseguido por
+      value: '"Por el sudor de tu frente diria que tambien has sido perseguido por
         ese demonio del desierto. Aunque tambien puede ser porque estamos en el desierto
-        en agosto a 43 grados\u2026.\""
+        en agosto a 43 grados..."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[1]
-      value: "\"Bueno, da igual. te ofrezco un trato: te regalo estas espadas, pero
-        a cambio debes recuperar una cosa que he perdido. \xBFque donde esta? pues
-        en las tripas de ese demonio, logicamente. bueno, que? aceptas?"
+      value: '"Bueno, da igual. te ofrezco un trato: te regalo estas espadas, pero
+        a cambio debes traerme una cosa. Que donde esta? pues, seguramente, en las
+        tripas de ese demonio. bueno, que? aceptas?'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.size
@@ -1011,8 +1015,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.data[0]
-      value: "\"a que est\xE1s esperando? a que el demonio se muera de viejo? Date
-        prisa, hombre, que no tengo todo el dia!\""
+      value: '"A que estas esperando? a que el demonio se muera de viejo? Date prisa,
+        hombre, que no tengo todo el dia!"'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.data[1]
@@ -1026,9 +1030,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos3.arrayTextos.Array.data[1]
-      value: "\"ah, ya estas aqui! sin un rasgu\xF1o y en tiempo record. eres un
-        asesino formidable. conseguiste mi baston? damelo, por favor. no es para
-        hacer magia negra ni nada\u2026 es que cojeo un poco"
+      value: "\"ah, ya estas aqui! sin heridas y en tiempo record. eres un asesino
+        formidable. conseguiste el baston? damelo, por favor. no es para hacer magia
+        negra ni nada\u2026 es que cojeo un poco"
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
@@ -1382,11 +1386,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.93
+      value: 268.6
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.75
+      value: 6.4
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2042,7 +2046,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1087039186674031028, guid: 4d6da5147a601f54eba8d6f2656eb9f5, type: 3}
       propertyPath: m_Name
-      value: mecanicasAssasin1 (1)
+      value: mecanicasAssasin1
       objectReference: {fileID: 0}
     - target: {fileID: 1984580385302417390, guid: 4d6da5147a601f54eba8d6f2656eb9f5, type: 3}
       propertyPath: m_LocalPosition.x

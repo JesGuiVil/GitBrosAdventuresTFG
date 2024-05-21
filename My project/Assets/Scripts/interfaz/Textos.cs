@@ -7,6 +7,7 @@ public class Textos
 {
     [TextArea(2,6)]
     public string[] arrayTextos;
+    public bool esTextos3;
 
     // Start is called before the first frame update
     void Start()

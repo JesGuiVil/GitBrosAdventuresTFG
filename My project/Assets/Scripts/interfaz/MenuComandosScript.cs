@@ -284,6 +284,6 @@ public class MenuComandosScript : MonoBehaviour
             }
         }
 
-        Debug.Log("No se encontró las espadas en el inventario.");
+        Debug.Log("No se encontró las baston en el inventario.");
     }
 }

@@ -123,12 +123,12 @@ public class ObjetoInteractable : MonoBehaviour
                         controlDialogos.ActivarCartel(textoFinal);
                         cartelMostrado = true;
                     }
-                    else if (assassin.tengoBaston && assassin.heAblado)
+                    else if (assassin.tengoBaston && assassin.heAblado && assassin.tengoEspadas)
                     {
                         controlDialogos.ActivarCartel(textos3);
                         cartelMostrado = true;
                     }
-                    else if (assassin.tengoEspadas && assassin.heAblado)
+                    else if (assassin.tengoEspadas && assassin.heAblado && !assassin.tengoBaston)
                     {
                         controlDialogos.ActivarCartel(textos2);
                         cartelMostrado = true;

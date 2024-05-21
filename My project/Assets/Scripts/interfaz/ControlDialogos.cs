@@ -16,8 +16,9 @@ public class ControlDialogos : MonoBehaviour
     private Rogue rogue; // Person
 
     private Assassin assassin;
-
+    private GameObject main;
     private Archer archer;
+    private bool mostrandoTextos3 = false;
 
     // Propiedad estática para acceder a la instancia Singleton
     public static ControlDialogos Instance
@@ -56,6 +57,7 @@ public class ControlDialogos : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
         {
             assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
+            main = GameObject.FindGameObjectWithTag("Npc");
 
         }
         if (SceneManager.GetActiveScene().name == "EscenaArcher1")
@@ -69,6 +71,15 @@ public class ControlDialogos : MonoBehaviour
     {
         animDialogos.SetBool("mostrar", true);
         texto = textoObjeto;
+        if (textoObjeto.esTextos3)
+        {
+            mostrandoTextos3 = true;
+        }
+        else
+        {
+            mostrandoTextos3 = false;
+        }
+        
     }
 
     public void ActivaTexto()
@@ -123,6 +134,11 @@ public class ControlDialogos : MonoBehaviour
         }
         string fraseActual = colaDialogos.Dequeue();
         textoPantalla.text = fraseActual;
+        // Ejecutar la acción después de mostrar la primera frase de textos2
+        if (mostrandoTextos3 && colaDialogos.Count == 0)
+        {
+            main.GetComponent<SpriteRenderer>().flipX = !main.GetComponent<SpriteRenderer>().flipX;
+        }   
     }
 
     public void cierraCartel()

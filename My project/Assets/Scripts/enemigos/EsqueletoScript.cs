@@ -25,13 +25,13 @@ public class EsqueletoScript : MonoBehaviour
 
     void Update()
     {
-        if (Antonio == null || enemigoBase.enemyDead || Antonio.transform.position.x >= 90)
+        if (Antonio == null || enemigoBase.enemyDead || Antonio.transform.position.x >= 94)
         {
             rb.velocity = Vector2.zero; // Detener al enemigo
             if (enemigoBase.enemyDead && !isScheduledForDestruction)
             {
                 isScheduledForDestruction = true;
-                Destroy(gameObject, 4f); // Destruir después de 4 segundos
+                Destroy(gameObject, 2f); // Destruir después de 4 segundos
             }
             return;
         }

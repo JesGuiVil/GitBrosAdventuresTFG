@@ -246,11 +246,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 820659506959393312, guid: e71ab0c6df01a31429929a3208192ec2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.46
+      value: 1.28
       objectReference: {fileID: 0}
     - target: {fileID: 820659506959393312, guid: e71ab0c6df01a31429929a3208192ec2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.05
+      value: 12.97
       objectReference: {fileID: 0}
     - target: {fileID: 820659506959393312, guid: e71ab0c6df01a31429929a3208192ec2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -766,6 +766,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textos3.esTextos2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textos3.esTextos3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -804,15 +812,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos3.arrayTextos.Array.data[0]
-      value: "\"la ultima vez que vengo aqui sin sombrilla. como puede tardar tanto
+      value: '"la ultima vez que vengo aqui sin sombrilla. como puede tardar tanto
         ese asesino de pacotilla?. lo que tiene que sufrir uno para conseguir las
-        reliquias de la destruc\u2026\""
+        reliquias de la destruc..."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos3.arrayTextos.Array.data[1]
-      value: "\"ah, ya estas aqui! sin heridas y en tiempo record. eres un asesino
+      value: '"ah, ya estas aqui! sin heridas y en tiempo record. eres un asesino
         formidable. conseguiste el baston? damelo, por favor. no es para hacer magia
-        negra ni nada\u2026 es que cojeo un poco"
+        negra ni nada... es que cojeo un poco."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
@@ -984,11 +992,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 268.6
+      value: -10.82
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.4
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.z

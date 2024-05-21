@@ -99,6 +99,10 @@ public class Inventario : MonoBehaviour
             {
                 assassin.tengoEspadas = true;
             }
+            else if (objetoPrefab.CompareTag("baston"))
+            {
+                assassin.tengoBaston = true;
+            }
 
         }
         if (SceneManager.GetActiveScene().name == "EscenaArcher1")

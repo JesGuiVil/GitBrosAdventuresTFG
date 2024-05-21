@@ -3592,7 +3592,7 @@ PrefabInstance:
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
       value: '"Un trato es un trato. Por cierto, por esa trampilla puedes salir de
-        este castillo apestoso. Esos goblins deberian ducharse de vez en cuando."'
+        esta mazmorra apestosa. Esos goblins deberian ducharse de vez en cuando."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textosConLlave.arrayTextos.Array.size

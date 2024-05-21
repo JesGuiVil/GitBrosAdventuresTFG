@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class UsarEspadasScript : MonoBehaviour
+public class EntregarObjetoScript : MonoBehaviour
 {
     private GameObject player; // Cambié el tipo de variable para hacer referencia al script del jugador
     private PersonajeBase personajeBase;

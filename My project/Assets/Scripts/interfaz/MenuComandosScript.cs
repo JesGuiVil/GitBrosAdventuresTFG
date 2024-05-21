@@ -13,7 +13,7 @@ public class MenuComandosScript : MonoBehaviour
     private TMP_InputField inputField;
     private Inventario inventario;
     private GameObject personaje;
-    private UsarEspadasScript usarEspadasScript;
+    private EntregarObjetoScript entregarObjetoScript;
     private Assassin assassin;
     private PersonajeBase personajeBase;
     public GameObject espadasboton;
@@ -109,8 +109,8 @@ public class MenuComandosScript : MonoBehaviour
             {
                 if (rogue.tieneEspadas && personajeBase.cercaDelNpc)
                 {
-                    rogue.espadasEntregada = true;
                     UsarEspadas();
+                    rogue.espadasEntregada = true;
                 }
                 else
                 {
@@ -120,9 +120,10 @@ public class MenuComandosScript : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
             {
-                if (personajeBase.cercaDelNpc)
+                if (assassin.tengoBaston && personajeBase.cercaDelNpc)
                 {
-                    // por hacer
+                    UsarBaston();
+                    assassin.cosaEntregada = true;
                 }
                 else
                 {
@@ -150,7 +151,7 @@ public class MenuComandosScript : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
             {
                 assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
-                if (!assassin.tengoEspadas)
+                if (!assassin.tengoEspadas && personajeBase.cercaDelNpc)
                 {
                     inventario.AgregarObjeto(espadasboton);
                     assassin.tengoEspadas = true;
@@ -251,10 +252,32 @@ public class MenuComandosScript : MonoBehaviour
                 GameObject objetoEnRanura = inventario.ranuras[i].transform.GetChild(0).gameObject;
                 if (objetoEnRanura != null && objetoEnRanura.CompareTag("espadas"))
                 {
-                    UsarEspadasScript usarEspadasScript = objetoEnRanura.GetComponent<UsarEspadasScript>();
-                    if (usarEspadasScript != null)
+                    EntregarObjetoScript entregarObjetoScript = objetoEnRanura.GetComponent<EntregarObjetoScript>();
+                    if (entregarObjetoScript != null)
                     {
-                        usarEspadasScript.Use();
+                        entregarObjetoScript.Use();
+                        return;
+                    }
+                }
+            }
+        }
+
+        Debug.Log("No se encontró las espadas en el inventario.");
+    }
+    private void UsarBaston()
+    {
+        // Recorrer las ranuras del inventario para buscar la llave
+        for (int i = 0; i < inventario.ranuras.Length; i++)
+        {
+            if (inventario.estaLleno[i])
+            {
+                GameObject objetoEnRanura = inventario.ranuras[i].transform.GetChild(0).gameObject;
+                if (objetoEnRanura != null && objetoEnRanura.CompareTag("baston"))
+                {
+                    EntregarObjetoScript entregarObjetoScript = objetoEnRanura.GetComponent<EntregarObjetoScript>();
+                    if (entregarObjetoScript != null)
+                    {
+                        entregarObjetoScript.Use();
                         return;
                     }
                 }

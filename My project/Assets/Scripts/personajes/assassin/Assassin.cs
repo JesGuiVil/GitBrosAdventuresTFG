@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Assassin : PersonajeBase
 {
     public bool tengoEspadas = false;
+    public bool tengoBaston = false;
     public bool heAblado = false;
     public bool cosaEntregada = false;
     protected override void Update()

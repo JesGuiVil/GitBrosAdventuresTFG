@@ -4,20 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class ObjetoInteractable : MonoBehaviour
 {
-    public Textos textos;
+
     public float distanciaInteraccion = 2f; // Distancia de interacción
     private bool cercaDelObjeto = false;
     private ControlDialogos controlDialogos; // Variable para almacenar el controlador de diálogos
     private bool cartelMostrado = false; // Variable para seguir el estado del cartel
-
+    public Textos textos;
     public Textos textos2;
-
+    public Textos textos3;
     public Textos textoFinal;
-
     private Rogue rogue; // Person
-
     private Assassin assassin;
-
     private Archer archer;
 
     void Start()
@@ -121,9 +118,14 @@ public class ObjetoInteractable : MonoBehaviour
                     {
                         controlDialogos.SiguienteFrase();
                     }
-                    else if (assassin.tengoEspadas && assassin.heAblado && assassin.cosaEntregada)
+                    else if (assassin.tengoBaston && assassin.heAblado && assassin.cosaEntregada)
                     {
                         controlDialogos.ActivarCartel(textoFinal);
+                        cartelMostrado = true;
+                    }
+                    else if (assassin.tengoBaston && assassin.heAblado)
+                    {
+                        controlDialogos.ActivarCartel(textos3);
                         cartelMostrado = true;
                     }
                     else if (assassin.tengoEspadas && assassin.heAblado)

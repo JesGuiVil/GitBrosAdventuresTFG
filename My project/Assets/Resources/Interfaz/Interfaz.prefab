@@ -1756,6 +1756,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7972555020782509352, guid: fa351b8b6fe5bd643b250dbb20a77f05, type: 3}
+      propertyPath: espadasboton
+      value: 
+      objectReference: {fileID: 7320258358506729459, guid: 563d5730afad4b746916049f1f27bc92, type: 3}
+    - target: {fileID: 7972555020782509352, guid: fa351b8b6fe5bd643b250dbb20a77f05, type: 3}
       propertyPath: InputComandos
       value: 
       objectReference: {fileID: 6853944044076996736}

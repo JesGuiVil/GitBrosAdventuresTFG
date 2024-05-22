@@ -917,7 +917,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
-      value: '"final"
+      value: '"Bueno, me largo al bosque a tomar el fresco, que me estoy asando aqui.
+        Tengo que buscarme una tunica transpirable o algo. En fin, volveremos a vernos,
+        hombre del desierto."
 
 '
       objectReference: {fileID: 0}

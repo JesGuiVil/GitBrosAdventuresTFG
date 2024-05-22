@@ -72,7 +72,7 @@ public class PersonajeBase : MonoBehaviour
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
         
-        if(!isDead && !controladorScript.juegoPausado)
+        if(!isDead && !controladorScript.juegoPausado && !controlDialogos.mostrandoCartel)
         {
             Horizontal = Input.GetAxisRaw("Horizontal");
 

@@ -19,6 +19,9 @@ public class ControlDialogos : MonoBehaviour
     private GameObject main;
     private Archer archer;
     private bool mostrandoTextos3 = false;
+    private bool puedeMostrarSiguiente = true;
+
+    public bool mostrandoCartel=false;
 
     // Propiedad estática para acceder a la instancia Singleton
     public static ControlDialogos Instance
@@ -69,6 +72,7 @@ public class ControlDialogos : MonoBehaviour
 
     public void ActivarCartel(Textos textoObjeto)
     {
+        mostrandoCartel=true;
         animDialogos.SetBool("mostrar", true);
         texto = textoObjeto;
         if (textoObjeto.esTextos3)
@@ -134,6 +138,7 @@ public class ControlDialogos : MonoBehaviour
         }
         string fraseActual = colaDialogos.Dequeue();
         textoPantalla.text = fraseActual;
+        StartCoroutine(EsperarAntesDePermitirSiguiente());
         // Ejecutar la acción después de mostrar la primera frase de textos2
         if (mostrandoTextos3 && colaDialogos.Count == 0)
         {
@@ -146,5 +151,17 @@ public class ControlDialogos : MonoBehaviour
         animDialogos.SetBool("mostrar", false);
         textoPantalla.text = "";
         Time.timeScale = 1f;
+        mostrandoCartel=false;
+    }
+    private IEnumerator EsperarAntesDePermitirSiguiente() // Nueva corrutina
+    {
+        puedeMostrarSiguiente = false;
+        yield return new WaitForSecondsRealtime(2f); // Esperar un segundo
+        puedeMostrarSiguiente = true;
+    }
+
+    public bool PuedeMostrarSiguiente() // Nuevo método
+    {
+        return puedeMostrarSiguiente;
     }
 }

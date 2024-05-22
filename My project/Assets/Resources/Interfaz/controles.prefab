@@ -170,10 +170,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   texto:
     arrayTextos:
-    - "A,D: moverte\n  W: saltar\n  ESPACIO: atacar\n  1,2,3: ranuras de inventario\n 
-      TABULADOR: consola git\n\n  Comandos git:\n   git add nombreobjeto (coger objeto)\n  
-      git merge (dar objeto)\n   git pull (recibir objeto)\n   git commit (guardar
-      partida)\n   git restore (cargar partida)"
+    - "  A,D: moverte\n  W: saltar\n  ESPACIO: atacar\n  E: interactuar\n  1,2,3:
+      ranuras de inventario\n  TABULADOR: consola git\n\n  Comandos git:\n   git
+      add nombreobjeto (coger objeto)\n   git merge (dar objeto)\n   git pull (recibir
+      objeto)\n   git commit (guardar partida)\n   git restore (cargar partida)"
+    esTextos3: 0
   textoControles: {fileID: 1847407362052509973}
 --- !u!1001 &8108168051737339010
 PrefabInstance:

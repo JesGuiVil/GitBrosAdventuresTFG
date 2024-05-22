@@ -883,14 +883,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
   textos:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
-  distanciaInteraccion: 2
+    esTextos3: 0
   textos2:
     arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
   textoFinal:
     arrayTextos: []
+    esTextos3: 0
 --- !u!1 &399607426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,14 +1583,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
   textos:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
-  distanciaInteraccion: 2
+    esTextos3: 0
   textos2:
     arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
   textoFinal:
     arrayTextos: []
+    esTextos3: 0
 --- !u!1001 &1249232058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2343,14 +2355,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
   textos:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
-  distanciaInteraccion: 2
+    esTextos3: 0
   textos2:
     arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
   textoFinal:
     arrayTextos: []
+    esTextos3: 0
 --- !u!1001 &1877170552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2668,14 +2686,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
   textos:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
-  distanciaInteraccion: 2
+    esTextos3: 0
   textos2:
     arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
   textoFinal:
     arrayTextos: []
+    esTextos3: 0
 --- !u!1 &2135018178 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6161952789316053399, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
@@ -2693,14 +2717,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
   textos:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
-  distanciaInteraccion: 2
+    esTextos3: 0
   textos2:
     arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
   textoFinal:
     arrayTextos: []
+    esTextos3: 0
 --- !u!1001 &431681583525348930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2874,6 +2904,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Interfaz
       objectReference: {fileID: 0}
+    - target: {fileID: 4673528356344311713, guid: 9d64ce66dfbebf6498243af7df37e3df, type: 3}
+      propertyPath: texto.arrayTextos.Array.data[0]
+      value: "  A,D: moverte\n  W: saltar\n  E: interactuar\n  ESPACIO: atacar\n 
+        SHIFT: habilidad especial\n  1,2,3: ranuras de inventario\n  TAB: consola
+        git\n\n  Comandos git:\n   git add nombreobjeto (coger objeto)\n   git merge
+        (dar objeto)\n   git pull (recibir objeto)\n   git commit (guardar partida)\n  
+        git restore (cargar partida)"
+      objectReference: {fileID: 0}
     - target: {fileID: 8022286612486840184, guid: 9d64ce66dfbebf6498243af7df37e3df, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -3024,11 +3062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7702912103408802909, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.25
+      value: -4.28
       objectReference: {fileID: 0}
     - target: {fileID: 7702912103408802909, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.44
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 7702912103408802909, guid: f30d4b0524094a04fab20b97cbacc84c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3715,14 +3753,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
   textos:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
-  distanciaInteraccion: 2
+    esTextos3: 0
   textos2:
     arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
   textoFinal:
     arrayTextos: []
+    esTextos3: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

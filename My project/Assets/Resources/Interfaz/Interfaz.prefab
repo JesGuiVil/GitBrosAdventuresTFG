@@ -1508,10 +1508,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8072955870422319240, guid: fb32684011639d648ad790b45e3bb7ac, type: 3}
       propertyPath: texto.arrayTextos.Array.data[0]
-      value: "  A,D: moverte\n  W: saltar\n  ESPACIO: atacar\n  1,2,3: ranuras de
-        inventario\n  TABULADOR: consola git\n\n  Comandos git:\n   git add nombreobjeto
-        (coger objeto)\n   git merge (dar objeto)\n   git pull (recibir objeto)\n  
-        git commit (guardar partida)\n   git restore (cargar partida)"
+      value: "  A,D: moverte\n  W: saltar\n  E: interactuar\n  ESPACIO: atacar\n 
+        SHIFT: habilidad especial\n  1,2,3: ranuras de inventario\n  TAB: consola
+        git\n\n  Comandos git:\n   git add nombreobjeto (coger objeto)\n   git merge
+        (dar objeto)\n   git pull (recibir objeto)\n   git commit (guardar partida)\n  
+        git restore (cargar partida)"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -87,7 +87,7 @@ public class ObjetoInteractable : MonoBehaviour
 
         if (cercaDelObjeto && Input.GetKeyDown(KeyCode.E))
         {
-            if (controlDialogos != null)
+            if (controlDialogos != null && controlDialogos.PuedeMostrarSiguiente())
             {
                 if (SceneManager.GetActiveScene().name == "EscenaRogue1")
                 {

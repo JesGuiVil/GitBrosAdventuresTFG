@@ -13,6 +13,8 @@ public class ProyectilEnemigo : MonoBehaviour
     private PersonajeBase personaje;
     private float tiempo = 0;
     private GameObject lanzador;
+    [SerializeField] private AudioClip Explosion;
+    private AudioSource audiosource;
 
     void Start()
     {
@@ -20,7 +22,7 @@ public class ProyectilEnemigo : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
-
+        audiosource = GetComponent<AudioSource>();
         if (direction > 0)
         {
             Vector3 escalaTemp = transform.localScale;
@@ -39,6 +41,7 @@ public class ProyectilEnemigo : MonoBehaviour
         if (tiempo >= tiempoProyectil)
         {
             anim.SetTrigger("Explota");
+            
         }
 
     }
@@ -51,6 +54,7 @@ public class ProyectilEnemigo : MonoBehaviour
             lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
         }
         anim.SetTrigger("Explota");
+        
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -69,6 +73,8 @@ public class ProyectilEnemigo : MonoBehaviour
             }
             boxCollider.enabled = false;
             anim.SetTrigger("Explota");
+            
+
         }
     }
     public void SetLanzador(GameObject Lanzador)
@@ -77,6 +83,16 @@ public class ProyectilEnemigo : MonoBehaviour
     }
     private void Desactivate()
     {
+        StartCoroutine(DelayedDesactivate());
+    }
+
+    private IEnumerator DelayedDesactivate()
+    {
+        yield return new WaitForSeconds(0.8f); // Espera 2 segundos antes de destruir el objeto
         Destroy(gameObject);
+    }
+    public void PlayExplosion()
+    {
+        audiosource.PlayOneShot(Explosion);
     }
 }

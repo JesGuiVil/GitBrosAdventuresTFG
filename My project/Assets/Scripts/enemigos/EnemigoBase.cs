@@ -20,6 +20,16 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private float colliderDistanceDistancia;
     [SerializeField] private Transform puntoProyectil;
     [SerializeField] private GameObject proyectil;
+
+    [SerializeField] private AudioClip Caminar;
+    [SerializeField] private AudioClip Mele;
+    [SerializeField] private AudioClip Distancia;
+    [SerializeField] private AudioClip Explosion;
+    [SerializeField] private AudioClip Hurt;
+    [SerializeField] private AudioClip Morir;
+
+    private AudioSource audiosource;
+
     private Rigidbody2D rb;
     private float baseGravity;
     private float direction;
@@ -36,6 +46,7 @@ public class EnemigoBase : MonoBehaviour
     {
         enemyDead=false;
         vidaEnemigo = maximoVidaEnemigo;
+        audiosource = GetComponent<AudioSource>();
     }
     private void Awake()
     {
@@ -82,7 +93,7 @@ public class EnemigoBase : MonoBehaviour
         if (patrulla != null)
         {
             patrulla.enabled = (!PlayerInSightMelee() && !PlayerInSightDistancia() || personaje.isDead);
-        } 
+        }
     }
     private bool PlayerInSightMelee()
     {
@@ -127,11 +138,14 @@ public class EnemigoBase : MonoBehaviour
         if (vidaEnemigo <= 0)
         {
             enemyDead=true;
+            audiosource.PlayOneShot(Morir);
             anim.SetTrigger("Die");
             gameObject.layer=LayerMask.NameToLayer("playermuerto");
             mecanicasBase.AumentarContadorEnemigos();
         }else{
+            audiosource.PlayOneShot(Hurt);
             anim.SetTrigger("Hurt");
+
         }
 
     }
@@ -150,4 +164,13 @@ public class EnemigoBase : MonoBehaviour
             personaje.RecibirDanio(damageDistancia);
         }
     }
+    public void PlayMeleeAttackSound()
+    {
+        audiosource.PlayOneShot(Mele);
+    }
+    public void PlayDistanciaAttackSound()
+    {
+        audiosource.PlayOneShot(Distancia);
+    }
+
 }

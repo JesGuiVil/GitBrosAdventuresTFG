@@ -115,6 +115,7 @@ MonoBehaviour:
   speed: 3
   idleDuration: 1
   anim: {fileID: 6907262066793859903}
+  caminarClip: {fileID: 8300000, guid: 631f220d68b1fca4da148fdb5d160542, type: 3}
 --- !u!1001 &2741272595894848292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -127,6 +128,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin
       objectReference: {fileID: 0}
+    - target: {fileID: 4543619105846493047, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
+      propertyPath: Hurt
+      value: 
+      objectReference: {fileID: 8300000, guid: 2783e1097f13cc84f8d148f466f112e4, type: 3}
+    - target: {fileID: 4543619105846493047, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
+      propertyPath: Morir
+      value: 
+      objectReference: {fileID: 8300000, guid: 83fac2916041de543ab3de060686b08a, type: 3}
     - target: {fileID: 7806919472634814543, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.33

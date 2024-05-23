@@ -342,11 +342,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.41
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -383,6 +383,10 @@ PrefabInstance:
     - target: {fileID: 8748924804770780481, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_Name
       value: patrullaEsqueleto (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8748924804770780481, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1281,11 +1285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.19
+      value: -10.99
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.79
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1678,6 +1682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: patrullaGoblin
       objectReference: {fileID: 0}
+    - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.241993
@@ -1875,6 +1883,10 @@ PrefabInstance:
     - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_Name
       value: patrullaGoblin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2098,6 +2110,10 @@ PrefabInstance:
     - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_Name
       value: patrullaGoblin (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2386,6 +2402,10 @@ PrefabInstance:
     - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_Name
       value: patrullaGoblin (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2760,6 +2780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: patrullaGoblin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8138133237141131316, guid: e2d9441a714c7434894529840a0dab00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8457567416351080916, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.52
@@ -2906,6 +2930,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.04
       objectReference: {fileID: 0}
+    - target: {fileID: 4942036993605227651, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: Mele
+      value: 
+      objectReference: {fileID: 8300000, guid: ef48ee0308943d148992931f3571e617, type: 3}
     - target: {fileID: 6205261953689942558, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.37
@@ -3135,6 +3163,10 @@ PrefabInstance:
     - target: {fileID: 2551603463008241684, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
       propertyPath: m_Name
       value: Ghost
+      objectReference: {fileID: 0}
+    - target: {fileID: 2551603463008241684, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6778353389084486277, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
       propertyPath: m_LocalPosition.x

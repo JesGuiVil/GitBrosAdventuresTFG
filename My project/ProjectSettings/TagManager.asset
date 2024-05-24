@@ -39,6 +39,10 @@ TagManager:
   - pocion
   - daga
   - baston
+  - Portal9
+  - Portal10
+  - Portal11
+  - Portal12
   layers:
   - Default
   - TransparentFX

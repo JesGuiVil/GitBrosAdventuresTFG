@@ -175,6 +175,8 @@ MonoBehaviour:
       add nombreobjeto (coger objeto)\n   git merge (dar objeto)\n   git pull (recibir
       objeto)\n   git commit (guardar partida)\n   git restore (cargar partida)"
     esTextos3: 0
+  abrircontroles: {fileID: 8300000, guid: c5432e851ed2c6a47a1127af307e1487, type: 3}
+  cerrarcontroles: {fileID: 8300000, guid: c46ee25945264844dbdb0b6b12bba13e, type: 3}
   textoControles: {fileID: 1847407362052509973}
 --- !u!1001 &8108168051737339010
 PrefabInstance:

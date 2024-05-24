@@ -7,8 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class PersonajeBase : MonoBehaviour
 {
-    public float cooldownTimer = Mathf.Infinity;
-    private Dash dash;
     [SerializeField] private float danioCerca;
     [SerializeField] public float cooldownCerca;
     [SerializeField] private float rangeCerca;
@@ -21,6 +19,19 @@ public class PersonajeBase : MonoBehaviour
     [SerializeField] private CapsuleCollider2D capsuleCollider;
     [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject proyectil;
+    [SerializeField] public float vida;
+    [SerializeField] private float maximoVida;
+    [SerializeField] private AudioClip saltar;
+    [SerializeField] private AudioClip correr;
+    [SerializeField] private AudioClip habilidad;
+    [SerializeField] private AudioClip daño;
+    [SerializeField] private AudioClip muerte;
+    [SerializeField] private AudioClip ataque1;
+    [SerializeField] public AudioClip ataque2;
+    public AudioSource audioSource;
+    private AudioSource correrAudioSource;
+    public float cooldownTimer = Mathf.Infinity;
+    private Dash dash;
     private ControladorScript controladorScript;
     private EnemigoBase enemigo;
     private PalancaBase palanca;
@@ -37,8 +48,6 @@ public class PersonajeBase : MonoBehaviour
     private bool estaAgua = false;
     private bool IsJumping;
     private Collider2D collider;
-    [SerializeField] public float vida;
-    [SerializeField] private float maximoVida;
     private GameObject BarraVida;
     private BarraVidaScript barraVida;
     public bool isDead = false;
@@ -63,40 +72,75 @@ public class PersonajeBase : MonoBehaviour
         controlDialogos = ControlDialogos.Instance;
         gameOver=GameObject.FindGameObjectWithTag("gameover");
         gameOver.SetActive(false);
+        audioSource = GetComponent<AudioSource>();
+        correrAudioSource = gameObject.AddComponent<AudioSource>();
         StartCoroutine(IniciarDialogoConDelay());
     }
     // Update is called once per frame
     protected virtual void Update()
     {
-              
         cooldownTimer += Time.deltaTime;
         CheckGrounded();
-        
-        if(!isDead && !controladorScript.juegoPausado && !controlDialogos.mostrandoCartel)
+
+        if (!isDead && !controladorScript.juegoPausado && !controlDialogos.mostrandoCartel)
         {
             Horizontal = Input.GetAxisRaw("Horizontal");
-
             tiempoJuego += Time.deltaTime;
 
-            if (Horizontal < 0.0f) transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
-            else if (Horizontal > 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+            if (Horizontal < 0.0f)
+                transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
+            else if (Horizontal > 0.0f)
+                transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+
+            // Reproducir el sonido de correr si está en el suelo, se está moviendo horizontalmente y no está ya reproduciéndose
+            if (Grounded && Horizontal != 0.0f && (!correrAudioSource.isPlaying || correrAudioSource.clip != correr))
+            {
+                correrAudioSource.clip = correr;
+                correrAudioSource.loop = true;
+                correrAudioSource.pitch = 2.0f;
+                correrAudioSource.Play();
+            }
+            // Detener el sonido de correr si no se está moviendo horizontalmente o no está en el suelo
+            else if ((!Grounded || Horizontal == 0.0f) && correrAudioSource.isPlaying && correrAudioSource.clip == correr)
+            {
+                correrAudioSource.Stop();
+                correrAudioSource.pitch = 1.0f;
+            }
 
             animator.SetBool("running", Horizontal != 0.0f);
 
             if (Input.GetKeyDown(KeyCode.W) && Grounded && !estaAgua && !dash.IsDashing)
             {
+                // Detener el sonido de correr antes de saltar
+                if (correrAudioSource.isPlaying && correrAudioSource.clip == correr)
+                {
+                    correrAudioSource.Stop();
+                    correrAudioSource.pitch = 1.0f;
+                }
+
                 Jump();
+                audioSource.PlayOneShot(saltar);
             }
         }
         else
         {
             rigidbody2D.velocity = new Vector2(0f, rigidbody2D.velocity.y);
+
+            // Detener el sonido de correr si el juego está pausado o se muestra un cartel
+            if (correrAudioSource.isPlaying && correrAudioSource.clip == correr)
+            {
+                correrAudioSource.Stop();
+                correrAudioSource.pitch = 1.0f;
+            }
         }
+
         if (isDead && !gameOver.activeSelf)
         {
             StartCoroutine(GameOverSequence());
         }
     }
+
+
     IEnumerator IniciarDialogoConDelay()
     {
         yield return new WaitForSeconds(0.5f); // Añadir un retraso de medio segundo antes de activar el diálogo inicial
@@ -109,7 +153,7 @@ public class PersonajeBase : MonoBehaviour
     }
     private IEnumerator GameOverSequence()
     {
-        yield return new WaitForSeconds(1f); // Espera 1 segundo
+        yield return new WaitForSeconds(2f); // Espera 1 segundo
         gameOver.SetActive(true);
 
         yield return new WaitForSeconds(4f); // Espera 4 segundos después de activar game over
@@ -256,6 +300,7 @@ public class PersonajeBase : MonoBehaviour
         barraVida.CambiarVidaActual(vida);
         if(vida>0)  {
             animator.SetTrigger("Hurt");
+            audioSource.PlayOneShot(daño);
         }
         if (vida<=0){
             Morir();
@@ -276,6 +321,7 @@ public class PersonajeBase : MonoBehaviour
     {
         isDead = true;
         animator.SetTrigger("Muerte");
+        audioSource.PlayOneShot(muerte);
         gameObject.layer=LayerMask.NameToLayer("playermuerto");
     }
     public void ataqueDistancia(){
@@ -287,7 +333,7 @@ public class PersonajeBase : MonoBehaviour
    
 
     public void ataqueCerca(){
-        
+        audioSource.PlayOneShot(ataque1);
         RaycastHit2D hitEnemigo = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z),0, Vector2.left, 0, enemyLayer);
         RaycastHit2D hitPalanca = Physics2D.BoxCast(capsuleCollider.bounds.center + transform.right * rangeCerca * transform.localScale.x * colliderDistanceCerca,new Vector3(capsuleCollider.bounds.size.x * rangeCerca, capsuleCollider.bounds.size.y/2, capsuleCollider.bounds.size.z),0, Vector2.left, 0, palancaLayer);
         if (hitEnemigo.collider != null)

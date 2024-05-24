@@ -18,12 +18,13 @@ public class MenuComandosScript : MonoBehaviour
     private PersonajeBase personajeBase;
     public GameObject espadasboton;
     private Rogue rogue; // Person
-
+    private AudioSource audioSourceComandos;
+    [SerializeField] public AudioClip coger;
     private Archer archer;
     private void Start()
     {
 
-
+        audioSourceComandos=gameObject.GetComponent<AudioSource>();
         inputField = InputComandos.GetComponent<TMP_InputField>();
         if (inputField == null)
         {
@@ -176,6 +177,7 @@ public class MenuComandosScript : MonoBehaviour
             if (inventario != null && inventario.AgregarObjeto(objetoPrefab))
             {
                 // Objeto agregado al inventario con éxito
+                audioSourceComandos.PlayOneShot(coger);
                 Debug.Log("Objeto recogido con éxito: " + objeto);
                 Destroy(objetoARecoger); // Destruir el objeto del juego después de agregarlo al inventario
                 objetoARecoger = null; // Limpiar el objeto recogido

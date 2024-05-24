@@ -21,6 +21,7 @@ public class UsarCuchilloScript : MonoBehaviour
             {
                 personajeScript.animator.SetTrigger("ataquedistancia");
                 personajeScript.cooldownTimer = 0f;
+                personajeScript.audioSource.PlayOneShot(personajeScript.ataque2);
             }
     }
 }

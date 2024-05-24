@@ -16,10 +16,12 @@ public class ObjetoInteractable : MonoBehaviour
     private Rogue rogue; // Person
     private Assassin assassin;
     private Archer archer;
+    private ControladorScript controladorScript;
 
     void Start()
     {
         controlDialogos = ControlDialogos.Instance;
+        controladorScript = GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
         if (SceneManager.GetActiveScene().name == "EscenaRogue1")
         {
             rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
@@ -85,7 +87,7 @@ public class ObjetoInteractable : MonoBehaviour
     {
         // Verificar si el jugador está cerca y ha pulsado la tecla "E"
 
-        if (cercaDelObjeto && Input.GetKeyDown(KeyCode.E))
+        if (cercaDelObjeto && Input.GetKeyDown(KeyCode.E) && !controladorScript.juegoPausado)
         {
             if (controlDialogos != null && controlDialogos.PuedeMostrarSiguiente())
             {

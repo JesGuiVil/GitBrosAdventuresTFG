@@ -14,7 +14,9 @@ public class ControlDialogos : MonoBehaviour
     // Instancia Singleton de ControlDialogos
     private static ControlDialogos instance;
     private Rogue rogue; // Person
-
+    private AudioSource audioSourceDialogos;
+    [SerializeField] private AudioClip abrir;
+    [SerializeField] private AudioClip cerrar;
     private Assassin assassin;
     private GameObject main;
     private Archer archer;
@@ -52,6 +54,7 @@ public class ControlDialogos : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Para que el objeto persista al cargar nuevas escenas
         animDialogos = GetComponent<Animator>();
         colaDialogos = new Queue<string>();
+        audioSourceDialogos=GetComponent<AudioSource>();
         if (SceneManager.GetActiveScene().name == "EscenaRogue1")
         {
             rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
@@ -73,7 +76,9 @@ public class ControlDialogos : MonoBehaviour
     public void ActivarCartel(Textos textoObjeto)
     {
         mostrandoCartel=true;
+        audioSourceDialogos.PlayOneShot(abrir);
         animDialogos.SetBool("mostrar", true);
+
         texto = textoObjeto;
         if (textoObjeto.esTextos3)
         {
@@ -111,6 +116,7 @@ public class ControlDialogos : MonoBehaviour
         if (colaDialogos.Count == 0)
         {
             cierraCartel();
+            audioSourceDialogos.PlayOneShot(cerrar);
             if (SceneManager.GetActiveScene().name == "EscenaRogue1")
             {
                 if (rogue.espadasEntregada)

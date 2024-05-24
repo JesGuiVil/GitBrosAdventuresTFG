@@ -14,9 +14,9 @@ public class Inventario : MonoBehaviour
     private PersonajeBase personajeBase;
     private GameObject main;
     private Rogue rogue; // Person
-
+    private AudioSource audioSourceInventario;
+    [SerializeField] public AudioClip consumirObjeto;
     private Assassin assassin;
-
     private Archer archer;
     private void Start(){
         slot1=GameObject.FindGameObjectWithTag("Slot1");
@@ -26,6 +26,7 @@ public class Inventario : MonoBehaviour
         ranuras[1]=slot2;
         ranuras[2]=slot3;
         personajeBase = GameObject.FindGameObjectWithTag("Player").GetComponent<PersonajeBase>();
+        audioSourceInventario = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
         if (SceneManager.GetActiveScene().name == "EscenaRogue1")
         {
             rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
@@ -132,6 +133,7 @@ public class Inventario : MonoBehaviour
                     {
                     // Si el objeto es consumible, marcar la ranura como vacía
                         estaLleno[indiceRanura] = false;
+                        audioSourceInventario.PlayOneShot(consumirObjeto);
                     }
                 }
                 // Simular el evento OnClick del botón

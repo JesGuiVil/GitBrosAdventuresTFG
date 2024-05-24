@@ -8,10 +8,13 @@ public class PalancaBase : MonoBehaviour
 
     public bool isActivated = false;
     private Animator animator;
+    private AudioSource audioSourcePalanca;
+    [SerializeField] private AudioClip activar;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        audioSourcePalanca = gameObject.GetComponent<AudioSource>();
     }
 
     public void ActivatePalanca()
@@ -23,7 +26,8 @@ public class PalancaBase : MonoBehaviour
             // Desactivar el muro
             muro.SetActive(false);
             isActivated=true;
+            audioSourcePalanca.PlayOneShot(activar);
         }
-        
     }
+        
 }

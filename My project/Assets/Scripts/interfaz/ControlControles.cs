@@ -11,6 +11,9 @@ public class ControlControles : MonoBehaviour
     private Queue <string> colaControles;
     public Textos texto;
     private ControladorScript controladorScript;
+    private AudioSource audioSourceControles;
+    [SerializeField] private AudioClip abrircontroles;
+    [SerializeField] private AudioClip cerrarcontroles;
     [SerializeField] TextMeshProUGUI textoControles;
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class ControlControles : MonoBehaviour
         controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
         animControles=gameObject.GetComponent<Animator>();
         colaControles = new Queue<string>();
+        audioSourceControles=gameObject.GetComponent<AudioSource>();
     }
 
     public void ActivarCartelGrande (){
@@ -54,10 +58,12 @@ public class ControlControles : MonoBehaviour
         // Comprobar si se presiona la tecla 'C'
         if (animControles.GetBool("mostrarGrande"))
             {
+                audioSourceControles.PlayOneShot(cerrarcontroles);
                 CerrarCartelGrande();
             }
             else
             {
+                audioSourceControles.PlayOneShot(abrircontroles);
                 animControles.SetBool("mostrarGrande", true);
                 //Time.timeScale = 0f;
             }

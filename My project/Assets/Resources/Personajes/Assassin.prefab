@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aea8401cd902c44c097dab798cb28961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownTimer: Infinity
   danioCerca: 25
   cooldownCerca: 0.5
   rangeCerca: 1.16
@@ -118,15 +117,32 @@ MonoBehaviour:
   capsuleCollider: {fileID: 1652650252256980135}
   firepoint: {fileID: 0}
   proyectil: {fileID: 0}
+  vida: 100
+  maximoVida: 100
+  saltar: {fileID: 0}
+  correr: {fileID: 0}
+  habilidad: {fileID: 0}
+  "da\xF1o": {fileID: 0}
+  muerte: {fileID: 0}
+  ataque1: {fileID: 0}
+  ataque2: {fileID: 0}
+  audioSource: {fileID: 0}
+  cooldownTimer: Infinity
   Speed: 7
   JumpForce: 700
   tiempoJuego: 0.0026863
   Gravedad: -21
   animator: {fileID: 770619409810178161}
-  vida: 100
-  maximoVida: 100
-  barraVida: {fileID: 0}
   isDead: 0
+  cercaDelNpc: 0
+  controlDialogos: {fileID: 0}
+  textoInicial:
+    arrayTextos: []
+    esTextos3: 0
+  tengoEspadas: 0
+  tengoBaston: 0
+  heAblado: 0
+  cosaEntregada: 0
 --- !u!50 &6842199964296235809
 Rigidbody2D:
   serializedVersion: 4
@@ -227,3 +243,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   estaLleno: 000000
+  consumirObjeto: {fileID: 8300000, guid: 9cab13c48f2e8d941ba826b158e04a19, type: 3}

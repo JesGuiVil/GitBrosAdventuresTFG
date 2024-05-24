@@ -401,6 +401,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4601789993570174233, guid: 02ec2e715e94f34468a018f54e5bc9b1, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c5c00be36b982ea45bd42bd5da0e2bdb, type: 3}
     - target: {fileID: 5822473133760629288, guid: 02ec2e715e94f34468a018f54e5bc9b1, type: 3}
       propertyPath: m_Name
       value: Interfaz
@@ -508,11 +512,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3977945090821725841, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.47
+      value: 32.82
       objectReference: {fileID: 0}
     - target: {fileID: 3977945090821725841, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.44
+      value: 4.39
       objectReference: {fileID: 0}
     - target: {fileID: 3977945090821725841, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
       propertyPath: m_LocalPosition.z

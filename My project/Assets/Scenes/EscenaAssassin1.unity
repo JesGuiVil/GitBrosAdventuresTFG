@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Esqueleto (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 60391050655626839, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6861452127627669853, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
       propertyPath: alturaDistancia
       value: 3.2
@@ -211,6 +215,10 @@ PrefabInstance:
     - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: m_Name
       value: patrullaSeta (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1631602753637858514, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: speed
@@ -300,6 +308,103 @@ MonoBehaviour:
   dashForce: 20
   TimeCanDash: 1
   animator: {fileID: 0}
+  dashSound: {fileID: 8300000, guid: dc8d0d306f694a2469b35383758f32cf, type: 3}
+--- !u!82 &230977188
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230977173}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &306588264
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,7 +447,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.2
+      value: 1.13
       objectReference: {fileID: 0}
     - target: {fileID: 8270000325490511199, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -582,6 +687,10 @@ PrefabInstance:
     - target: {fileID: 60391050655626839, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
       propertyPath: m_Name
       value: Esqueleto (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 60391050655626839, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6861452127627669853, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
       propertyPath: alturaDistancia
@@ -1162,6 +1271,10 @@ PrefabInstance:
       value: 1.16
       objectReference: {fileID: 0}
     - target: {fileID: 4216437040145977399, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 230977188}
+    - target: {fileID: 4216437040145977399, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: cooldownCerca
       value: 0.5
       objectReference: {fileID: 0}
@@ -1213,11 +1326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.99
+      value: -11.16
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.83
+      value: 1.77
       objectReference: {fileID: 0}
     - target: {fileID: 6576049264724022575, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1294,6 +1407,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6882973721080325056, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 230977181}
+    - targetCorrespondingSourceObject: {fileID: 6882973721080325056, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 230977188}
   m_SourcePrefab: {fileID: 100100000, guid: 3c3d58da7c5f4ed4a871434aa21684cc, type: 3}
 --- !u!1001 &1024493112
 PrefabInstance:
@@ -1387,6 +1503,10 @@ PrefabInstance:
     - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: m_Name
       value: patrullaSeta (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1631602753637858514, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: speed
@@ -1524,6 +1644,10 @@ PrefabInstance:
     - target: {fileID: 60391050655626839, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
       propertyPath: m_Name
       value: Esqueleto (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 60391050655626839, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6861452127627669853, guid: b907968c41f81df4aa8b5de3b52e81fb, type: 3}
       propertyPath: alturaDistancia
@@ -2100,6 +2224,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: patrullaSeta (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1631602753637858514, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: speed
       value: 3
@@ -2168,6 +2296,10 @@ PrefabInstance:
     - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: m_Name
       value: patrullaSeta (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1631602753637858514, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: speed
@@ -2391,6 +2523,10 @@ PrefabInstance:
     - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: m_Name
       value: patrullaSeta (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1631602753637858514, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: speed
@@ -2626,6 +2762,10 @@ PrefabInstance:
     - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: m_Name
       value: patrullaSeta
+      objectReference: {fileID: 0}
+    - target: {fileID: 955578171423339000, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1631602753637858514, guid: afc9436f9f10c2e4192ab0c5cb4cec89, type: 3}
       propertyPath: speed
@@ -2930,6 +3070,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: patrullaEsqueleto
       objectReference: {fileID: 0}
+    - target: {fileID: 8748924804770780481, guid: eb28a5643917a95498d4fd535a26176e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2995,6 +3139,11 @@ PrefabInstance:
 --- !u!1 &3719817795157097458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2551603463008241684, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+  m_PrefabInstance: {fileID: 4280715538670372423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &3719817795157097460 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 493515687952326402, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
   m_PrefabInstance: {fileID: 4280715538670372423}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3945051232582199384
@@ -3127,12 +3276,28 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1521687955719317117, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2551603463008241684, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
       propertyPath: m_Name
       value: Ghost
       objectReference: {fileID: 0}
     - target: {fileID: 2551603463008241684, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036632371014063406, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: Morir
+      value: 
+      objectReference: {fileID: 8300000, guid: 20c07ab5e110f5b4783b6016f0e84794, type: 3}
+    - target: {fileID: 6036632371014063406, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: volar
+      value: 
+      objectReference: {fileID: 8300000, guid: bd5b426eb648d9140bcfc487f9faf6da, type: 3}
+    - target: {fileID: 6778353389084486277, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6778353389084486277, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
@@ -3175,6 +3340,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6878431357488492326, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: Hurt
+      value: 
+      objectReference: {fileID: 8300000, guid: ceb7d3b9dde92d240b69fc699f54bff7, type: 3}
+    - target: {fileID: 6878431357488492326, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: Mele
+      value: 
+      objectReference: {fileID: 8300000, guid: 17dfc7f6e0ba01f489428d35bdf3c090, type: 3}
+    - target: {fileID: 6878431357488492326, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: Morir
+      value: 
+      objectReference: {fileID: 8300000, guid: 20c07ab5e110f5b4783b6016f0e84794, type: 3}
+    - target: {fileID: 6878431357488492326, guid: 18154f72685693c44bb8a6cd4520c46f, type: 3}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 3719817795157097460}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -120,12 +120,12 @@ MonoBehaviour:
   proyectil: {fileID: 0}
   vida: 100
   maximoVida: 100
-  saltar: {fileID: 0}
-  correr: {fileID: 0}
+  saltar: {fileID: 8300000, guid: 44235dc18ac65e745a9621754b378f33, type: 3}
+  correr: {fileID: 8300000, guid: 580d38e20e2c99e4a943bfa6b367e23e, type: 3}
   habilidad: {fileID: 0}
-  "da\xF1o": {fileID: 0}
-  muerte: {fileID: 0}
-  ataque1: {fileID: 0}
+  "da\xF1o": {fileID: 8300000, guid: 09ae99e86b8c326478ae625e38745d6b, type: 3}
+  muerte: {fileID: 8300000, guid: 20c07ab5e110f5b4783b6016f0e84794, type: 3}
+  ataque1: {fileID: 8300000, guid: f280b811bfbe3f944bd3b46dd3f248e1, type: 3}
   ataque2: {fileID: 0}
   audioSource: {fileID: 0}
   cooldownTimer: Infinity

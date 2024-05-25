@@ -26,9 +26,9 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private AudioClip Distancia;
     [SerializeField] private AudioClip Explosion;
     [SerializeField] private AudioClip Hurt;
-    [SerializeField] private AudioClip Morir;
+    [SerializeField] public AudioClip Morir;
 
-    private AudioSource audiosource;
+    public AudioSource audiosource;
     private bool debeAndar;
     private Rigidbody2D rb;
     private float baseGravity;
@@ -179,6 +179,4 @@ public class EnemigoBase : MonoBehaviour
     {
         audiosource.PlayOneShot(Distancia);
     }
-    
-
 }

@@ -15,13 +15,17 @@ public class Dash : MonoBehaviour
     private bool isDashing;
     private bool canDash = true;
     public bool IsDashing => isDashing;
-    // Update is called once per frame
+
+    [SerializeField] private AudioClip dashSound; // Sonido del dash
+    private AudioSource audioSource; // Referencia al AudioSource
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         personaje = GetComponent<PersonajeBase>();
         baseGravity = rb.gravityScale;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -29,6 +33,7 @@ public class Dash : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift)&& canDash)
         {
             animator.SetTrigger("Dash");
+            audioSource.PlayOneShot(dashSound); // Reproduce el sonido del dash
             StartCoroutine(miDash());
         }
     }

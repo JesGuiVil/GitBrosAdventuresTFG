@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5190636051069466480}
   - component: {fileID: 6972302335479917122}
   - component: {fileID: 5841940087685973438}
+  - component: {fileID: 6952934935251628062}
   m_Layer: 8
   m_Name: proyectilRogue
   m_TagString: Untagged
@@ -196,3 +197,15 @@ MonoBehaviour:
   velocidad: 5
   direction: 1
   tiempoProyectil: 5
+--- !u!114 &6952934935251628062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2855421066467106689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2741dfa461c572943af440b5023f0537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

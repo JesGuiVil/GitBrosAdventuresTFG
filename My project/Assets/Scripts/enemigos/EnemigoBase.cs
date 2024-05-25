@@ -7,7 +7,7 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private float vidaEnemigo;
     [SerializeField] private float maximoVidaEnemigo;
     private Animator anim;
-    public bool enemyDead;
+    public bool enemyDead=false;
     [SerializeField] private float attackCooldownMelee;
     [SerializeField] private float rangeMelee;
     [SerializeField] private float damageMelee;
@@ -21,7 +21,7 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private Transform puntoProyectil;
     [SerializeField] private GameObject proyectil;
 
-    [SerializeField] private AudioClip Caminar;
+    [SerializeField] public AudioClip Caminar;
     [SerializeField] private AudioClip Mele;
     [SerializeField] private AudioClip Distancia;
     [SerializeField] private AudioClip Explosion;
@@ -29,7 +29,7 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] private AudioClip Morir;
 
     private AudioSource audiosource;
-
+    private bool debeAndar;
     private Rigidbody2D rb;
     private float baseGravity;
     private float direction;
@@ -44,7 +44,6 @@ public class EnemigoBase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyDead=false;
         vidaEnemigo = maximoVidaEnemigo;
         audiosource = GetComponent<AudioSource>();
     }
@@ -92,10 +91,18 @@ public class EnemigoBase : MonoBehaviour
         }
         if (patrulla != null)
         {
-            patrulla.enabled = (!PlayerInSightMelee() && !PlayerInSightDistancia() || personaje.isDead);
+            debeAndar= (!PlayerInSightMelee() && !PlayerInSightDistancia() || personaje.isDead);
+            if (debeAndar==true)
+            {
+                patrulla.enabled=true;
+            }else{
+                patrulla.StopWalkingSound();
+                patrulla.enabled=false;
+            }
+            
         }
     }
-    private bool PlayerInSightMelee()
+    public bool PlayerInSightMelee()
     {
         RaycastHit2D hitMelee = Physics2D.BoxCast(boxCollider.bounds.center + transform.right * rangeMelee * transform.localScale.x * colliderDistanceMelee,new Vector3(boxCollider.bounds.size.x * rangeMelee, boxCollider.bounds.size.y, boxCollider.bounds.size.z),0, Vector2.left, 0, playerLayer);
        
@@ -105,7 +112,7 @@ public class EnemigoBase : MonoBehaviour
         }
         return hitMelee.collider != null;
     }
-    private bool PlayerInSightDistancia()
+    public bool PlayerInSightDistancia()
     {
         Vector3 center = boxCollider.bounds.center;
         center.y += posicionDistancia;
@@ -172,5 +179,6 @@ public class EnemigoBase : MonoBehaviour
     {
         audiosource.PlayOneShot(Distancia);
     }
+    
 
 }

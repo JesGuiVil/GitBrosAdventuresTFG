@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4385104921588978570}
   - component: {fileID: 1370744751024916451}
   - component: {fileID: 8561652026448192774}
+  - component: {fileID: 2870464379029524420}
   m_Layer: 13
   m_Name: bomba
   m_TagString: Untagged
@@ -294,3 +295,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2870464379029524420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315030916604102233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2741dfa461c572943af440b5023f0537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

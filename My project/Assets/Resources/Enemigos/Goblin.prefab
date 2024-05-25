@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8777923206197805083}
   - component: {fileID: 4543619105846493047}
   - component: {fileID: 3123098713203773204}
+  - component: {fileID: -5072285129347340715}
   m_Layer: 6
   m_Name: Goblin
   m_TagString: Enemigo
@@ -241,12 +242,12 @@ MonoBehaviour:
   colliderDistanceDistancia: 0.29
   puntoProyectil: {fileID: 5020035391335659998}
   proyectil: {fileID: 315030916604102233, guid: 92094347b50c57d4889191b4778587c2, type: 3}
-  Caminar: {fileID: 0}
+  Caminar: {fileID: 8300000, guid: 631f220d68b1fca4da148fdb5d160542, type: 3}
   Mele: {fileID: 8300000, guid: ef48ee0308943d148992931f3571e617, type: 3}
   Distancia: {fileID: 8300000, guid: f5eb90bffe3eed14a82a9dbd2e11fd59, type: 3}
   Explosion: {fileID: 8300000, guid: 15a4362421bf90c4a94b746644f6abcc, type: 3}
-  Hurt: {fileID: 0}
-  Morir: {fileID: 0}
+  Hurt: {fileID: 8300000, guid: ceb7d3b9dde92d240b69fc699f54bff7, type: 3}
+  Morir: {fileID: 8300000, guid: 83fac2916041de543ab3de060686b08a, type: 3}
   boxCollider: {fileID: 8447116262293769152}
   playerLayer:
     serializedVersion: 2
@@ -262,7 +263,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -347,3 +348,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-5072285129347340715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4328068373549828169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2741dfa461c572943af440b5023f0537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

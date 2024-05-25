@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 4653540430525938724}
   - component: {fileID: 4684537206845410353}
   - component: {fileID: 8285588489548290866}
+  - component: {fileID: 7107658439513031516}
   m_Layer: 3
   m_Name: Archer
   m_TagString: Player
@@ -261,4 +262,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688b75f770d87354aaff2299d36cbf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ranuras:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   estaLleno: 000000
+  consumirObjeto: {fileID: 0}
+--- !u!114 &7107658439513031516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8869663977289347593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d760abbf68d8943b9a23012c13072b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 10

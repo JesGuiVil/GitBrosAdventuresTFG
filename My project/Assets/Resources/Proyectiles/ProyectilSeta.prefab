@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7552603746064956456}
   - component: {fileID: 8971344397113226255}
   - component: {fileID: 2459565261847331547}
+  - component: {fileID: 1428583575177479499}
   m_Layer: 13
   m_Name: ProyectilSeta
   m_TagString: Untagged
@@ -196,3 +197,16 @@ MonoBehaviour:
   velocidad: 2
   direction: 1
   tiempoProyectil: 5
+  Explosion: {fileID: 0}
+--- !u!114 &1428583575177479499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161129190304532518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2741dfa461c572943af440b5023f0537, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

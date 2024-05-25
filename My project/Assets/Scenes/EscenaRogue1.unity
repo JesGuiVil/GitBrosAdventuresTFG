@@ -208,6 +208,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goblin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4328068373549828169, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4543619105846493047, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
       propertyPath: rangeMelee
       value: 1
@@ -398,6 +402,10 @@ PrefabInstance:
     - target: {fileID: 4328068373549828169, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
       propertyPath: m_Name
       value: Goblin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328068373549828169, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4543619105846493047, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
       propertyPath: rangeMelee
@@ -1508,6 +1516,10 @@ PrefabInstance:
     - target: {fileID: 4328068373549828169, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
       propertyPath: m_Name
       value: Goblin
+      objectReference: {fileID: 0}
+    - target: {fileID: 4328068373549828169, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4543619105846493047, guid: a782b723bc77469409112b9b8d71ae2b, type: 3}
       propertyPath: Caminar
@@ -2885,6 +2897,10 @@ PrefabInstance:
     - target: {fileID: 1027799654336437582, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802804782973006931, guid: e2d9441a714c7434894529840a0dab00, type: 3}
+      propertyPath: audioSourceCaminar
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7420790855349003540, guid: e2d9441a714c7434894529840a0dab00, type: 3}
       propertyPath: m_LocalPosition.x

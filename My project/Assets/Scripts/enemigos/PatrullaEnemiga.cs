@@ -14,40 +14,21 @@ public class PatrullaEnemiga : MonoBehaviour
     private bool movingLeft;
     [SerializeField] private Animator anim;
     private EnemigoBase enemigoScript;
-
     private AudioSource audioSource;
-
-    [SerializeField] private AudioClip caminarClip;
+    private bool isWalking = false;
 
     // Start is called before the first frame update
     private void Start()
     {
-        // Ensure audioSource is set and caminarClip is assigned
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
-        if (caminarClip != null)
-        {
-            audioSource.clip = caminarClip;
-        }
-        else
-        {
-            Debug.LogWarning("No caminarClip assigned to the patrol script.");
-        }
-    }
-    private void MoveInDirection(int _direction)
-    {
-        idleTimer = 0;
-        anim.SetBool("Movimiento", true);
-        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, initScale.y, initScale.z);
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,enemy.position.y, enemy.position.z);
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
     private void OnDisable()
     {
         anim.SetBool("Movimiento", false);
         StopWalkingSound();
     }
+    
+    
     private void Update()
     {
         if(!enemigoScript.enemyDead){
@@ -70,50 +51,50 @@ public class PatrullaEnemiga : MonoBehaviour
                 {
                     DirectionChange();
                 }
-            }
-
-            if (anim.GetBool("Movimiento"))
-            {
-                PlayWalkingSound();
-            }
-            else
-            {
-                StopWalkingSound();
-            }
-        }
-        
-    }
-    private void PlayWalkingSound()
-    {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.clip = caminarClip;
-            audioSource.Play();
-            audioSource.pitch = 2.0f;
+            }   
         }
     }
-
-    private void StopWalkingSound()
+    
+    private void MoveInDirection(int _direction)
     {
-        if (audioSource.isPlaying)
+        idleTimer = 0;
+        anim.SetBool("Movimiento", true);
+        enemy.localScale = new Vector3(Mathf.Abs(initScale.x) * _direction, initScale.y, initScale.z);
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,enemy.position.y, enemy.position.z);
+        if (!isWalking && !enemigoScript.PlayerInSightMelee() && !enemigoScript.PlayerInSightDistancia())
         {
-            audioSource.Stop();
-            audioSource.pitch = 1.0f;
+            StartWalkingSound();
         }
     }
     private void DirectionChange()
     {
         anim.SetBool("Movimiento", false);
+        StopWalkingSound();
         anim.ResetTrigger("ataqueDistancia");
 
         idleTimer += Time.deltaTime;
         if(idleTimer > idleDuration)
         movingLeft = !movingLeft;
     }
+    private void StartWalkingSound()
+    {
+        if (!isWalking) // Si no está caminando actualmente
+        {
+            isWalking = true;
+            audioSource.clip = enemigoScript.Caminar;
+            audioSource.pitch = 2.0f;
+            audioSource.Play();
+        }
+    }
+
+    public void StopWalkingSound()
+    {
+        isWalking = false;
+        audioSource.Stop();
+    }
     private void Awake()
     {
         enemigoScript = GetComponentInChildren<EnemigoBase>();
         initScale = enemy.localScale;
-        audioSource = enemigoScript.GetComponent<AudioSource>();
     }
 }

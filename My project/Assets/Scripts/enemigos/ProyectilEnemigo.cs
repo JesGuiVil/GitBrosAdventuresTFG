@@ -15,6 +15,7 @@ public class ProyectilEnemigo : MonoBehaviour
     private GameObject lanzador;
     [SerializeField] private AudioClip Explosion;
     private AudioSource audiosource;
+    private Rigidbody2D rb;
 
     void Start()
     {
@@ -23,6 +24,10 @@ public class ProyectilEnemigo : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         personaje = player.GetComponent<PersonajeBase>();
         audiosource = GetComponent<AudioSource>();
+        if(gameObject.name.Contains("bomba")){
+            rb = GetComponent<Rigidbody2D>();
+        }
+       
         if (direction > 0)
         {
             Vector3 escalaTemp = transform.localScale;
@@ -40,8 +45,13 @@ public class ProyectilEnemigo : MonoBehaviour
         tiempo += Time.deltaTime;
         if (tiempo >= tiempoProyectil)
         {
+            hit = true;
             anim.SetTrigger("Explota");
-            
+            boxCollider.enabled = false;
+            if(gameObject.name.Contains("bomba")){   
+                rb.isKinematic = true; // Cambiar el Rigidbody2D a Kinematic
+                rb.velocity = Vector2.zero; // Detener cualquier movimiento residual
+            }
         }
 
     }
@@ -54,6 +64,11 @@ public class ProyectilEnemigo : MonoBehaviour
             lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
         }
         anim.SetTrigger("Explota");
+        boxCollider.enabled = false;
+        if(gameObject.name.Contains("bomba")){  
+            rb.isKinematic = true; // Cambiar el Rigidbody2D a Kinematic
+            rb.velocity = Vector2.zero; // Detener cualquier movimiento residual
+        }
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -73,6 +88,10 @@ public class ProyectilEnemigo : MonoBehaviour
             }
             boxCollider.enabled = false;
             anim.SetTrigger("Explota");
+            if(gameObject.name.Contains("bomba")){   
+                rb.isKinematic = true; // Cambiar el Rigidbody2D a Kinematic
+                rb.velocity = Vector2.zero; // Detener cualquier movimiento residual
+            }
             
 
         }
@@ -83,12 +102,6 @@ public class ProyectilEnemigo : MonoBehaviour
     }
     private void Desactivate()
     {
-        StartCoroutine(DelayedDesactivate());
-    }
-
-    private IEnumerator DelayedDesactivate()
-    {
-        yield return new WaitForSeconds(0.8f); // Espera 2 segundos antes de destruir el objeto
         Destroy(gameObject);
     }
     public void PlayExplosion()

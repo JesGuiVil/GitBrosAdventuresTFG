@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1652650252256980135}
   - component: {fileID: 770619409810178161}
   - component: {fileID: 6910281875066787343}
+  - component: {fileID: 1088826834864121370}
   m_Layer: 3
   m_Name: Assassin
   m_TagString: Player
@@ -244,3 +245,16 @@ MonoBehaviour:
   - {fileID: 0}
   estaLleno: 000000
   consumirObjeto: {fileID: 8300000, guid: 9cab13c48f2e8d941ba826b158e04a19, type: 3}
+--- !u!114 &1088826834864121370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6882973721080325056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d760abbf68d8943b9a23012c13072b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 10

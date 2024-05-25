@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8528072022882290168}
   - component: {fileID: 3165284696965553995}
   - component: {fileID: 8043414325655380468}
+  - component: {fileID: 7824599720448034458}
   m_Layer: 3
   m_Name: Rogue
   m_TagString: Player
@@ -407,6 +408,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7824599720448034458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034055849511804416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d760abbf68d8943b9a23012c13072b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 10
 --- !u!1 &6636902822095792636
 GameObject:
   m_ObjectHideFlags: 0

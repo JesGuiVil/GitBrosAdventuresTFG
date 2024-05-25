@@ -13,9 +13,11 @@ public class ProyectilEnemigo : MonoBehaviour
     private PersonajeBase personaje;
     private float tiempo = 0;
     private GameObject lanzador;
-    [SerializeField] private AudioClip Explosion;
+    [SerializeField] private AudioClip hitaudio;
+    [SerializeField] private AudioClip proyectilaudio;
     private AudioSource audiosource;
     private Rigidbody2D rb;
+    
 
     void Start()
     {
@@ -34,6 +36,10 @@ public class ProyectilEnemigo : MonoBehaviour
             escalaTemp.x *= -1;
             transform.localScale = escalaTemp;
         }
+        // Reproducir el sonido del proyectil en bucle
+        audiosource.clip = proyectilaudio;
+        audiosource.loop = true;
+        audiosource.Play();
     }
     // Update is called once per frame
     void Update()
@@ -46,6 +52,8 @@ public class ProyectilEnemigo : MonoBehaviour
         if (tiempo >= tiempoProyectil)
         {
             hit = true;
+            audiosource.loop = false;
+            audiosource.Stop();
             anim.SetTrigger("Explota");
             boxCollider.enabled = false;
             if(gameObject.name.Contains("bomba")){   
@@ -63,6 +71,8 @@ public class ProyectilEnemigo : MonoBehaviour
         {
             lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
         }
+        audiosource.loop = false;
+        audiosource.Stop();
         anim.SetTrigger("Explota");
         boxCollider.enabled = false;
         if(gameObject.name.Contains("bomba")){  
@@ -87,6 +97,8 @@ public class ProyectilEnemigo : MonoBehaviour
                 lanzador.GetComponent<EnemigoBase>().DamageDistanciaPlayer();
             }
             boxCollider.enabled = false;
+            audiosource.loop = false;
+            audiosource.Stop();
             anim.SetTrigger("Explota");
             if(gameObject.name.Contains("bomba")){   
                 rb.isKinematic = true; // Cambiar el Rigidbody2D a Kinematic
@@ -106,6 +118,6 @@ public class ProyectilEnemigo : MonoBehaviour
     }
     public void PlayExplosion()
     {
-        audiosource.PlayOneShot(Explosion);
+        audiosource.PlayOneShot(hitaudio);
     }
 }

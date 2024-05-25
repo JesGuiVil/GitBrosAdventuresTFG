@@ -82,6 +82,7 @@ public class PatrullaEnemiga : MonoBehaviour
         {
             isWalking = true;
             audioSource.clip = enemigoScript.Caminar;
+            audioSource.loop=true;
             audioSource.pitch = 2.0f;
             audioSource.Play();
         }

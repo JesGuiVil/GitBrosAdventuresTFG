@@ -24,7 +24,6 @@ public class EnemigoBase : MonoBehaviour
     [SerializeField] public AudioClip Caminar;
     [SerializeField] private AudioClip Mele;
     [SerializeField] private AudioClip Distancia;
-    [SerializeField] private AudioClip Explosion;
     [SerializeField] private AudioClip Hurt;
     [SerializeField] private AudioClip Morir;
 

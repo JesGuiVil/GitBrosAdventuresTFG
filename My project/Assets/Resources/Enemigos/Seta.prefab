@@ -211,12 +211,11 @@ MonoBehaviour:
   colliderDistanceDistancia: 0.197
   puntoProyectil: {fileID: 184295064206625848}
   proyectil: {fileID: 7161129190304532518, guid: d22132a3cd18a0b45b5d7da7c26f04bb, type: 3}
-  Caminar: {fileID: 0}
-  Mele: {fileID: 0}
-  Distancia: {fileID: 0}
-  Explosion: {fileID: 0}
-  Hurt: {fileID: 0}
-  Morir: {fileID: 0}
+  Caminar: {fileID: 8300000, guid: 24eb822958341d247bb6834a8fabc03a, type: 3}
+  Mele: {fileID: 8300000, guid: 372898e0dfe01ef4a8d060f894cbea5d, type: 3}
+  Distancia: {fileID: 8300000, guid: 188a19c354d0bd0418c229e601bca05d, type: 3}
+  Hurt: {fileID: 8300000, guid: a7e5cefa3c1231a43b0119eb8e11039d, type: 3}
+  Morir: {fileID: 8300000, guid: 4897ba652d2beb14e942aa265806b38e, type: 3}
   boxCollider: {fileID: 2721153150654508738}
   playerLayer:
     serializedVersion: 2

@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class AudioDistanceCulling : MonoBehaviour
 {
-    public float maxDistance = 10f;  // La distancia máxima a la que se escucharán los sonidos
+    [SerializeField] public float maxDistance;  // La distancia máxima a la que se escucharán los sonidos
+    private float maxDistanceSquared; // Distancia máxima al cuadrado
     private GameObject player;
     private List<AudioSource> audioSources = new List<AudioSource>();
 
@@ -14,25 +15,36 @@ public class AudioDistanceCulling : MonoBehaviour
         if (player == null)
         {
             Debug.LogError("No se encontró un GameObject con la etiqueta 'Player' en la escena.");
+            enabled = false;
+            return;
         }
+
+        maxDistanceSquared = maxDistance * maxDistance;
+        Debug.Log("Max Distance Squared: " + maxDistanceSquared);
     }
 
     void Update()
     {
         if (player != null)
         {
+            Vector2 playerPosition = player.transform.position;  // Obtener la posición del jugador en 2D
             foreach (AudioSource audioSource in audioSources)
             {
-                if (audioSource != null) // Asegúrate de que el AudioSource no sea nulo
+                if (audioSource != null)
                 {
-                    // Calcula la distancia entre el player y el objeto con el AudioSource
-                    float distance = Vector3.Distance(player.transform.position, audioSource.transform.position);
+                    // Obtener la posición del GameObject que contiene el AudioSource en 2D
+                    Vector2 audioSourcePosition = audioSource.gameObject.transform.position;  
+                    // Calcula la distancia al cuadrado entre el player y el objeto con el AudioSource (solo X e Y)
+                    float distanceSquared = (playerPosition - audioSourcePosition).sqrMagnitude;
+
+                    Debug.Log("Distance Squared: " + distanceSquared + " | Audio Source: " + audioSource.name);
 
                     // Habilita o deshabilita el AudioSource basado en la distancia
-                    if (distance <= maxDistance)
+                    if (distanceSquared <= maxDistanceSquared)
                     {
                         if (!audioSource.isPlaying)
                         {
+                            Debug.Log("Playing Audio Source: " + audioSource.name);
                             audioSource.Play();
                         }
                     }
@@ -40,6 +52,7 @@ public class AudioDistanceCulling : MonoBehaviour
                     {
                         if (audioSource.isPlaying)
                         {
+                            Debug.Log("Stopping Audio Source: " + audioSource.name);
                             audioSource.Stop();
                         }
                     }
@@ -50,18 +63,19 @@ public class AudioDistanceCulling : MonoBehaviour
 
     public void RegisterAudioSource(AudioSource audioSource)
     {
-        if (!audioSources.Contains(audioSource))
+        if (audioSource != null && !audioSources.Contains(audioSource))
         {
             audioSources.Add(audioSource);
+            Debug.Log("Registered Audio Source: " + audioSource.name);
         }
     }
 
     public void UnregisterAudioSource(AudioSource audioSource)
     {
-        if (audioSources.Contains(audioSource))
+        if (audioSource != null && audioSources.Contains(audioSource))
         {
             audioSources.Remove(audioSource);
+            Debug.Log("Unregistered Audio Source: " + audioSource.name);
         }
     }
 }
-

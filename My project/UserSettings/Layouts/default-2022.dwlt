@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Game
+=======
+  m_Title: Hierarchy
+>>>>>>> aardi64
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +123,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 109
+=======
+  controlID: 173
+>>>>>>> aardi64
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -314,7 +322,11 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
+<<<<<<< HEAD
   m_LastSelectedObjectID: 28918
+=======
+  m_LastSelectedObjectID: 44406
+>>>>>>> aardi64
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -386,9 +398,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 14}
+<<<<<<< HEAD
       m_SelectedIDs: 56f8ffff
       m_LastClickedID: -1962
       m_ExpandedIDs: 28f9ffff
+=======
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: f8c5feff4c16ffff7e17ffff1e3dffffdac6fffff6c6ffff36c7ffff1afbffff
+>>>>>>> aardi64
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -781,9 +799,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 7.859287, y: 20.460802, z: 2.122701}
     speed: 2
     m_Value: {x: 7.859287, y: 20.460802, z: 2.122701}
+=======
+    m_Target: {x: 113.22254, y: 7.621749, z: 0.12900728}
+    speed: 2
+    m_Value: {x: 961.13446, y: 538.2285, z: -2}
+>>>>>>> aardi64
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -833,9 +857,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
     m_Target: 24.858818
     speed: 2
     m_Value: 24.858818
+=======
+    m_Target: 15.834015
+    speed: 2
+    m_Value: 1.592977
+>>>>>>> aardi64
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1007,6 +1037,7 @@ MonoBehaviour:
     - {fileID: 6136031249327639706, guid: 14ea0fbb4f2299f40b3da2fecea29d7c, type: 2}
     - {fileID: 5972353238153627081, guid: d6ff9c9b78fea984d88813f227645352, type: 2}
     - {fileID: -2968873314670461807, guid: 220f9f558e82d9647b5b2379911614d6, type: 2}
+    - {fileID: -1189764329130116529, guid: 8f2b855b90a63094a80b201c10bb00b9, type: 2}
     m_ValueSerializationHelper:
     - e00: 0.70624375
       e01: 0
@@ -1216,10 +1247,32 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
+<<<<<<< HEAD
   m_AnimatorController: {fileID: 9100000, guid: cb99315510788e24081db95c82f60ea8, type: 2}
   m_BreadCrumbs:
   - m_Target: {fileID: -8084479437495844336, guid: cb99315510788e24081db95c82f60ea8, type: 2}
+=======
+  m_AnimatorController: {fileID: 9100000, guid: 995ea5a1bd78741a9bc864ce5b26bc62, type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: -85998204014969113, guid: 995ea5a1bd78741a9bc864ce5b26bc62, type: 2}
+>>>>>>> aardi64
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1277,7 +1330,11 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/Sounds/soniditos2
+=======
+    - Assets/Resources/Personajes
+>>>>>>> aardi64
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1285,16 +1342,27 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/Sounds/soniditos2
+=======
+  - Assets/Resources/Personajes
+>>>>>>> aardi64
   m_LastFoldersGridSize: 96
   m_LastProjectPath: K:\DAMSegundo\GitBrosAdventure\My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 335}
     m_SelectedIDs: 427d0000
     m_LastClickedID: 32066
     m_ExpandedIDs: 00000000e47c0000e67c0000e87c0000ea7c0000ec7c0000ee7c0000f07c0000f27c0000f47c0000f67c000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 300}
+    m_SelectedIDs: 8c790000
+    m_LastClickedID: 31116
+    m_ExpandedIDs: 000000003c7900003e79000040790000427900004479000046790000487900004a7900004c7900004e790000507900005279000054790000567900007e7900009a790000188c000000ca9a3b
+>>>>>>> aardi64
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1322,7 +1390,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000e47c0000e67c0000e87c0000ea7c0000ec7c0000ee7c0000f07c0000f27c0000f47c0000f67c0000
+=======
+    m_ExpandedIDs: 000000003c7900003e79000040790000427900004479000046790000487900004a7900004c7900004e79000050790000527900005479000056790000
+>>>>>>> aardi64
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1419,7 +1491,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 918
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

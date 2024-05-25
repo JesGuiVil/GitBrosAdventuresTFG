@@ -85,6 +85,13 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: PlayMeleeAttackSound
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 1cc638d3ecec24c488f66232a479734c, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.33333334
     functionName: DamageMeleePlayer
     data: 

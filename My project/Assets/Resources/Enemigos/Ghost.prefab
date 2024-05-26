@@ -226,7 +226,7 @@ MonoBehaviour:
   puntoProyectil: {fileID: 0}
   proyectil: {fileID: 0}
   Caminar: {fileID: 8300000, guid: bd5b426eb648d9140bcfc487f9faf6da, type: 3}
-  Mele: {fileID: 8300000, guid: 17dfc7f6e0ba01f489428d35bdf3c090, type: 3}
+  Mele: {fileID: 8300000, guid: f250d0e8b490a7a4b8506885a581f81b, type: 3}
   Distancia: {fileID: 0}
   Hurt: {fileID: 8300000, guid: 2f0d6d3f1ac2b1b41bf079953d3c8823, type: 3}
   Morir: {fileID: 8300000, guid: 2427df3595667d34a95a51b041e2ce45, type: 3}

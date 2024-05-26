@@ -193,6 +193,7 @@ GameObject:
   - component: {fileID: 4426518693839407369}
   - component: {fileID: 6831922979283230720}
   - component: {fileID: 7284966207662858048}
+  - component: {fileID: 1247103102026858547}
   m_Layer: 0
   m_Name: baston
   m_TagString: baston
@@ -336,3 +337,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62864a255502ed4e9a692fdb41549b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1247103102026858547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4188550631307689503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
+  textos:
+    arrayTextos:
+    - '"Seguro que existe un comando git que me permita coger este objeto."'
+    esTextos3: 0
+  textos2:
+    arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
+  textoFinal:
+    arrayTextos: []
+    esTextos3: 0

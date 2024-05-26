@@ -52,8 +52,12 @@ public class PatrullaEnemiga : MonoBehaviour
                     DirectionChange();
                 }
             }   
+        }else
+        {
+            audioSource.Stop();
         }
     }
+    
     
     private void MoveInDirection(int _direction)
     {

@@ -130,7 +130,7 @@ MonoBehaviour:
   vida: 0
   maximoVida: 100
   saltar: {fileID: 8300000, guid: 2b27242e4eec44f4a93a767927334556, type: 3}
-  correr: {fileID: 8300000, guid: 5a6f191d0d2ade447a96dfcc93144381, type: 3}
+  correr: {fileID: 8300000, guid: 571fea5bbaa9d50418c7f6bcd2083bcc, type: 3}
   habilidad: {fileID: 0}
   "da\xF1o": {fileID: 8300000, guid: a5efebc64bc083346b0174574cde5e80, type: 3}
   muerte: {fileID: 8300000, guid: 932b12c0fe06d1842b1fa8575fe868b9, type: 3}
@@ -312,6 +312,7 @@ MonoBehaviour:
   dashForce: 20
   TimeCanDash: 1
   animator: {fileID: 0}
+  dashSound: {fileID: 0}
 --- !u!82 &8043414325655380468
 AudioSource:
   m_ObjectHideFlags: 0

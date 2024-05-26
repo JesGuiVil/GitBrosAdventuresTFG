@@ -2674,7 +2674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6161952789316053399, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2683,6 +2683,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6161952789316053399, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1838181002}
+    - targetCorrespondingSourceObject: {fileID: 9112542372597304076, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}
 --- !u!1 &1838180997 stripped
 GameObject:
@@ -3686,11 +3689,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1334062972019782053, guid: 1ab39e88aab02fb4e8107f581af10079, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -3.54
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 1334062972019782053, guid: 1ab39e88aab02fb4e8107f581af10079, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.41
+      value: -0.39
       objectReference: {fileID: 0}
     - target: {fileID: 1334062972019782053, guid: 1ab39e88aab02fb4e8107f581af10079, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

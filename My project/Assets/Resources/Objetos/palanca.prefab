@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2723818563065904601}
   - component: {fileID: 2249360965017011071}
   - component: {fileID: -1122690395342167789}
+  - component: {fileID: 2258751452129448528}
   m_Layer: 0
   m_Name: palanca
   m_TagString: llave
@@ -255,3 +256,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2258751452129448528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942585315283607944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
+  textos:
+    arrayTextos:
+    - '"Si golpeo esta palanca puede que active algun mecanismo."'
+    esTextos3: 0
+  textos2:
+    arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
+  textoFinal:
+    arrayTextos: []
+    esTextos3: 0

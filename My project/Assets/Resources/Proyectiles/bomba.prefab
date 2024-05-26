@@ -198,7 +198,7 @@ MonoBehaviour:
   velocidad: 1.5
   direction: 1
   tiempoProyectil: 3
-  hitaudio: {fileID: 8300000, guid: 04cf1e3e626856845a636381e62b4cbc, type: 3}
+  hitaudio: {fileID: 8300000, guid: fe6c94242fdc29f49965b2f599d0bb37, type: 3}
   proyectilaudio: {fileID: 8300000, guid: a3cc6b9301caaee4f942922d65cbc274, type: 3}
 --- !u!82 &8561652026448192774
 AudioSource:

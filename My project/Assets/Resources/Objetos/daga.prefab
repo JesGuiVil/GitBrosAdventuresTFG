@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 222949974658755751}
   - component: {fileID: 2608257960234659124}
   - component: {fileID: 6417650785286109482}
+  - component: {fileID: 362780374995506573}
   m_Layer: 0
   m_Name: daga
   m_TagString: daga
@@ -134,6 +135,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62864a255502ed4e9a692fdb41549b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &362780374995506573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2943317816922239391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
+  textos:
+    arrayTextos:
+    - '"Seguro que existe un comando git que me permita coger este objeto."'
+    esTextos3: 0
+  textos2:
+    arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
+  textoFinal:
+    arrayTextos: []
+    esTextos3: 0
 --- !u!1 &3229394170157216959
 GameObject:
   m_ObjectHideFlags: 0

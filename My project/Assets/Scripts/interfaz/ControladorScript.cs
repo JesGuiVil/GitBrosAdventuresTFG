@@ -18,7 +18,6 @@ public class ControladorScript : MonoBehaviour
 
     private void Update()
     {
-        // Detección de tecla para mostrar/ocultar el cartel y pausar/resumir el juego
         if (Input.GetKeyDown(KeyCode.Tab))
         {
             if (menuComandos.EstaMostrando())

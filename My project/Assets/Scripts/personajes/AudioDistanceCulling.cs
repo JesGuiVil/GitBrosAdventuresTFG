@@ -7,6 +7,7 @@ public class AudioDistanceCulling : MonoBehaviour
     private float maxDistanceSquared; // Distancia máxima al cuadrado
     private GameObject player;
     private List<AudioSource> audioSources = new List<AudioSource>();
+    private ControladorScript controlador;
 
     void Start()
     {
@@ -19,11 +20,42 @@ public class AudioDistanceCulling : MonoBehaviour
             return;
         }
 
+        // Encuentra el objeto que contiene el ControladorScript
+        controlador = FindObjectOfType<ControladorScript>();
+        if (controlador == null)
+        {
+            Debug.LogError("No se encontró un objeto con ControladorScript en la escena.");
+            enabled = false;
+            return;
+        }
+
         maxDistanceSquared = maxDistance * maxDistance;
-        Debug.Log("Max Distance Squared: " + maxDistanceSquared);
     }
 
     void Update()
+    {
+        if (controlador.juegoPausado)
+        {
+            StopAllAudio();
+        }
+        else
+        {
+            UpdateAudioSources();
+        }
+    }
+
+    void StopAllAudio()
+    {
+        foreach (AudioSource audioSource in audioSources)
+        {
+            if (audioSource != null && audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
+    }
+
+    void UpdateAudioSources()
     {
         if (player != null)
         {
@@ -37,14 +69,11 @@ public class AudioDistanceCulling : MonoBehaviour
                     // Calcula la distancia al cuadrado entre el player y el objeto con el AudioSource (solo X e Y)
                     float distanceSquared = (playerPosition - audioSourcePosition).sqrMagnitude;
 
-                    Debug.Log("Distance Squared: " + distanceSquared + " | Audio Source: " + audioSource.name);
-
                     // Habilita o deshabilita el AudioSource basado en la distancia
                     if (distanceSquared <= maxDistanceSquared)
                     {
                         if (!audioSource.isPlaying)
                         {
-                            Debug.Log("Playing Audio Source: " + audioSource.name);
                             audioSource.Play();
                         }
                     }
@@ -52,7 +81,6 @@ public class AudioDistanceCulling : MonoBehaviour
                     {
                         if (audioSource.isPlaying)
                         {
-                            Debug.Log("Stopping Audio Source: " + audioSource.name);
                             audioSource.Stop();
                         }
                     }

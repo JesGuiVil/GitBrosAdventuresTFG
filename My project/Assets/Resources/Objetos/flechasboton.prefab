@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4726309415595534323}
   - component: {fileID: -8931023355595616272}
   m_Layer: 0
-  m_Name: flechaboton
+  m_Name: flechasboton
   m_TagString: daga
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

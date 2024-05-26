@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 1702522935703354891}
   - component: {fileID: 3591667568284531684}
   - component: {fileID: 2723818563065904601}
-  - component: {fileID: 2249360965017011071}
   - component: {fileID: -1122690395342167789}
+  - component: {fileID: -342784532016999698}
   m_Layer: 0
   m_Name: Cofre
-  m_TagString: llave
+  m_TagString: Cofre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,21 +144,6 @@ CircleCollider2D:
   m_Offset: {x: 0.01139608, y: -0.07407512}
   serializedVersion: 2
   m_Radius: 0.1651729
---- !u!114 &2249360965017011071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2942585315283607944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5e999771286b4d44b2a4eeb622c73a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  muro: {fileID: 0}
-  isActivated: 0
-  activar: {fileID: 8300000, guid: 68e7f3556f19abf489ea46f1677d6438, type: 3}
 --- !u!82 &-1122690395342167789
 AudioSource:
   m_ObjectHideFlags: 0
@@ -255,3 +240,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-342784532016999698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942585315283607944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ccaf398dbb2d6649abbe1f8ee455b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abierto: 0
+  abrir: {fileID: 8300000, guid: 68e7f3556f19abf489ea46f1677d6438, type: 3}
+  objeto: {fileID: 6161952789316053399, guid: 1d7c9fd8fdce9e94d85c7fc1af7fc1d0, type: 3}

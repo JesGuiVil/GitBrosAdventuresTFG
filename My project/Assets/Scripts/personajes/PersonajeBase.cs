@@ -52,8 +52,7 @@ public class PersonajeBase : MonoBehaviour
     private BarraVidaScript barraVida;
     public bool isDead = false;
     public bool cercaDelNpc = false;
-
-
+    public bool cercaDelCofre = false;
     public ControlDialogos controlDialogos;
     public Textos textoInicial;
     private GameObject gameOver;
@@ -188,6 +187,10 @@ public class PersonajeBase : MonoBehaviour
         else if (collision.CompareTag("Npc"))
         {   
             cercaDelNpc = true;
+        }
+        else if (collision.CompareTag("Cofre"))
+        {   
+            cercaDelCofre = true;
         }
         else
         {

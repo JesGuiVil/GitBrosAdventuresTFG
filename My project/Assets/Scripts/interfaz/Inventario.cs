@@ -135,6 +135,10 @@ public class Inventario : MonoBehaviour
                         estaLleno[indiceRanura] = false;
                         audioSourceInventario.PlayOneShot(consumirObjeto);
                     }
+                    else if(tagObjeto == "Llave")
+                    {
+                        estaLleno[indiceRanura] = false;
+                    }
                 }
                 // Simular el evento OnClick del botón
                 boton.onClick.Invoke();

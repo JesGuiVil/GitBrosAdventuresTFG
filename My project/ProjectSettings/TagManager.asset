@@ -43,6 +43,8 @@ TagManager:
   - Portal10
   - Portal11
   - Portal12
+  - flechas
+  - Cofre
   layers:
   - Default
   - TransparentFX

@@ -147,14 +147,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d55171751212d4bbe8135a70ace136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanciaInteraccion: 2
   textos:
     arrayTextos:
-    - '"debe haber un comando git que me permita coger este objeto"'
-  distanciaInteraccion: 2
-  textosConEspadas:
+    - '"Seguro que existe un comando git que me permita coger este objeto."'
+    esTextos3: 0
+  textos2:
     arrayTextos: []
+    esTextos3: 0
+  textos3:
+    arrayTextos: []
+    esTextos3: 0
   textoFinal:
     arrayTextos: []
+    esTextos3: 0
 --- !u!1 &9112542372597304076
 GameObject:
   m_ObjectHideFlags: 0

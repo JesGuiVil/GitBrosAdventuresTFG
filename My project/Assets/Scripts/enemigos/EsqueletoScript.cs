@@ -4,68 +4,58 @@ using UnityEngine.SceneManagement;
 
 public class EsqueletoScript : MonoBehaviour
 {
-
-
     private Rigidbody2D rb;
     public float speed; // Velocidad a la que el enemigo se mueve
-    private GameObject Antonio; // Referencia al personaje
+    private GameObject Player; // Referencia al personaje
     private EnemigoBase enemigoBase; // Referencia al componente EnemigoBase
-    private bool isScheduledForDestruction = false;
-
-    [SerializeField] private AudioClip volar; // Clip de sonido para volar
-    [SerializeField] private AudioClip Morir;
     private AudioSource audioSource; // Referencia al componente AudioSource
+    public float followDistance = 3f; // Distancia a la que el enemigo debe quedarse del jugador
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
         // Buscar al personaje en la escena
-        Antonio = GameObject.FindWithTag("Player");
-
+        Player = GameObject.FindWithTag("Player");
         enemigoBase = GetComponent<EnemigoBase>();
-
         audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
-        audioSource.clip = volar;
-        audioSource.loop = true; // Hacer que el sonido se repita mientras el enemigo se mueve
+        audioSource.loop = true;
+        audioSource.volume = 2f;
+        audioSource.clip = enemigoBase.Caminar; // Hacer que el sonido se repita mientras el enemigo se mueve
+        audioSource.Play();
     }
 
     void Update()
     {
-        if (Antonio == null || enemigoBase.enemyDead || Antonio.transform.position.x >= 94)
+        if (Player == null || enemigoBase.enemyDead || Player.transform.position.x >= 94)
         {
             rb.velocity = Vector2.zero; // Detener al enemigo
-            if (enemigoBase.enemyDead && !isScheduledForDestruction)
+            if (enemigoBase.enemyDead)
             {
-                audioSource.PlayOneShot(Morir);
-                isScheduledForDestruction = true;
-                Destroy(gameObject, 2f); // Destruir después de 4 segundos
+                audioSource.loop = false;
+                Destroy(gameObject, 2f); // Destruir después de 2 segundos
             }
-            if (audioSource.isPlaying)
-            {
-                audioSource.Stop();
-            }
+
             return;
         }
 
-        // Perseguir al jugador
-        Vector2 direction = (Antonio.transform.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        // Calcular la distancia entre el enemigo y el jugador
+        float distance = Player.transform.position.x - transform.position.x;
 
-        if (!audioSource.isPlaying)
+        // Si el enemigo está demasiado lejos, acercarse al jugador
+        if (Mathf.Abs(distance) > followDistance)
         {
-            audioSource.Play();
+            Vector2 direction = (Player.transform.position - transform.position).normalized;
+            rb.velocity = direction * speed;
+
+            // Cambiar la dirección del sprite según la posición del jugador
+            if (direction.x >= 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
+            else transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
         }
-
-        // Cambiar la direcci�n del sprite seg�n la posici�n del jugador
-        if (direction.x >= 0.0f) transform.localScale = new Vector3(4.0f, 4.0f, 4.0f);
-        else transform.localScale = new Vector3(-4.0f, 4.0f, 4.0f);
-
-        float distance = Mathf.Abs(Antonio.transform.position.x - transform.position.x);
-
+        else
+        {
+            // Detener al enemigo si está dentro de la distancia de seguimiento
+            rb.velocity = Vector2.zero;
+        }
     }
 }

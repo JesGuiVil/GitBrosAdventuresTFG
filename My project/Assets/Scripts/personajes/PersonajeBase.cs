@@ -97,14 +97,12 @@ public class PersonajeBase : MonoBehaviour
             {
                 correrAudioSource.clip = correr;
                 correrAudioSource.loop = true;
-                correrAudioSource.pitch = 2.0f;
                 correrAudioSource.Play();
             }
             // Detener el sonido de correr si no se está moviendo horizontalmente o no está en el suelo
             else if ((!Grounded || Horizontal == 0.0f) && correrAudioSource.isPlaying && correrAudioSource.clip == correr)
             {
                 correrAudioSource.Stop();
-                correrAudioSource.pitch = 1.0f;
             }
 
             animator.SetBool("running", Horizontal != 0.0f);
@@ -115,7 +113,6 @@ public class PersonajeBase : MonoBehaviour
                 if (correrAudioSource.isPlaying && correrAudioSource.clip == correr)
                 {
                     correrAudioSource.Stop();
-                    correrAudioSource.pitch = 1.0f;
                 }
 
                 Jump();
@@ -130,7 +127,6 @@ public class PersonajeBase : MonoBehaviour
             if (correrAudioSource.isPlaying && correrAudioSource.clip == correr)
             {
                 correrAudioSource.Stop();
-                correrAudioSource.pitch = 1.0f;
             }
         }
 

@@ -267,7 +267,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   estaLleno: 000000
-  consumirObjeto: {fileID: 0}
+  consumirObjeto: {fileID: 8300000, guid: 9cab13c48f2e8d941ba826b158e04a19, type: 3}
 --- !u!114 &7107658439513031516
 MonoBehaviour:
   m_ObjectHideFlags: 0

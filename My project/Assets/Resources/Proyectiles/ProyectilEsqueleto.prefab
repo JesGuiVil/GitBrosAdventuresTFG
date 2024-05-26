@@ -125,7 +125,8 @@ MonoBehaviour:
   velocidad: 2
   direction: 1
   tiempoProyectil: 5
-  Explosion: {fileID: 8300000, guid: dc8d0d306f694a2469b35383758f32cf, type: 3}
+  hitaudio: {fileID: 8300000, guid: f2201e3070979954da9a094d451485f2, type: 3}
+  proyectilaudio: {fileID: 8300000, guid: d4b896c48e33b1f4381dc693166042ed, type: 3}
 --- !u!61 &5934998903378491517
 BoxCollider2D:
   m_ObjectHideFlags: 0

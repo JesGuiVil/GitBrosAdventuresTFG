@@ -197,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4.7
+  followDistance: 1
 --- !u!114 &6878431357488492326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,12 +225,12 @@ MonoBehaviour:
   colliderDistanceDistancia: 0
   puntoProyectil: {fileID: 0}
   proyectil: {fileID: 0}
-  Caminar: {fileID: 0}
-  Mele: {fileID: 0}
+  Caminar: {fileID: 8300000, guid: bd5b426eb648d9140bcfc487f9faf6da, type: 3}
+  Mele: {fileID: 8300000, guid: 17dfc7f6e0ba01f489428d35bdf3c090, type: 3}
   Distancia: {fileID: 0}
-  Explosion: {fileID: 0}
-  Hurt: {fileID: 0}
-  Morir: {fileID: 0}
+  Hurt: {fileID: 8300000, guid: 2f0d6d3f1ac2b1b41bf079953d3c8823, type: 3}
+  Morir: {fileID: 8300000, guid: 2427df3595667d34a95a51b041e2ce45, type: 3}
+  audiosource: {fileID: 0}
   boxCollider: {fileID: 8342984661704424530}
   playerLayer:
     serializedVersion: 2

@@ -6,71 +6,75 @@ using UnityEngine.SceneManagement;
 
 public class ControlControles : MonoBehaviour
 {
-
     private Animator animControles;
-    private Queue <string> colaControles;
+    private Queue<string> colaControles;
     public Textos texto;
     private ControladorScript controladorScript;
     private AudioSource audioSourceControles;
     [SerializeField] private AudioClip abrircontroles;
     [SerializeField] private AudioClip cerrarcontroles;
     [SerializeField] TextMeshProUGUI textoControles;
-    // Start is called before the first frame update
+
     void Start()
     {
-        controladorScript=GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
-        animControles=gameObject.GetComponent<Animator>();
+        controladorScript = GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
+        animControles = gameObject.GetComponent<Animator>();
         colaControles = new Queue<string>();
-        audioSourceControles=gameObject.GetComponent<AudioSource>();
+        audioSourceControles = gameObject.GetComponent<AudioSource>();
     }
 
-    public void ActivarCartelGrande (){
-        animControles.SetBool("mostrarGrande",true);
+    public void ActivarCartelGrande()
+    {
+        animControles.SetBool("mostrarGrande", true);
     }
-    public void ActivaTextoControles(){
-    colaControles.Clear();
 
-    // Comprobación de nulidad para texto
-    if (texto != null){
-        // Comprobación de nulidad para texto.arrayTextos
-        if (texto.arrayTextos != null){
-            foreach (string textoGuardar in texto.arrayTextos){
+    public void ActivaTextoControles()
+    {
+        colaControles.Clear();
+
+        if (texto != null && texto.arrayTextos != null)
+        {
+            foreach (string textoGuardar in texto.arrayTextos)
+            {
                 colaControles.Enqueue(textoGuardar);
             }
             SiguienteFraseControles();
-        }    
-    }  
-    Time.timeScale = 0f;
+        }
+
+        controladorScript.PausarJuego();
     }
 
-    public void SiguienteFraseControles(){
-        if(colaControles.Count==0){
+    public void SiguienteFraseControles()
+    {
+        if (colaControles.Count == 0)
+        {
             CerrarCartelGrande();
+            return;
         }
+
         string fraseActual = colaControles.Dequeue();
-        textoControles.text=fraseActual;
+        textoControles.text = fraseActual;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C) && !controladorScript.juegoPausado)
+        if (Input.GetKeyDown(KeyCode.C))
         {
-        // Comprobar si se presiona la tecla 'C'
-        if (animControles.GetBool("mostrarGrande"))
+            if (animControles.GetBool("mostrarGrande"))
             {
                 audioSourceControles.PlayOneShot(cerrarcontroles);
                 CerrarCartelGrande();
             }
-            else
+            else if (!controladorScript.juegoPausado) // Note that I corrected this to match the previously suggested 'JuegoPausado' property
             {
                 audioSourceControles.PlayOneShot(abrircontroles);
                 animControles.SetBool("mostrarGrande", true);
-                //Time.timeScale = 0f;
+                
             }
         }
     }
-    
-     public void MostrarTextoControles()
+
+    public void MostrarTextoControles()
     {
         if (texto != null && texto.arrayTextos != null && texto.arrayTextos.Length > 0)
         {
@@ -82,11 +86,10 @@ public class ControlControles : MonoBehaviour
         }
     }
 
-    // Método para cerrar el cartel grande
     public void CerrarCartelGrande()
     {
         animControles.SetBool("mostrarGrande", false);
         textoControles.text = "";
-        Time.timeScale = 1f;
+        controladorScript.DespausarJuego();
     }
 }

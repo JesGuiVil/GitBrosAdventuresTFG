@@ -15,11 +15,14 @@ public class ProyectilPersonaje : MonoBehaviour
     private PalancaBase palanca;
     private float tiempo = 0;
     private GameObject lanzador;
+    [SerializeField] private AudioClip hitaudio;
+    private AudioSource audiosource;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        audiosource = GetComponent<AudioSource>();
         if (direction < 0)
         {
             Vector3 escalaTemp = transform.localScale;
@@ -68,5 +71,9 @@ public class ProyectilPersonaje : MonoBehaviour
     private void Desactivate()
     {
         Destroy(gameObject);
+    }
+    public void PlayImpacto()
+    {
+        audiosource.PlayOneShot(hitaudio);
     }
 }

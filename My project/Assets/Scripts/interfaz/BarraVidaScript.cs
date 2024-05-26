@@ -5,13 +5,10 @@ using UnityEngine.UI;
 public class BarraVidaScript : MonoBehaviour
 {
     private Slider slider;
-    
-    
     private void Start()
     {
         
     }
-
     public void CambiarVidaMaxima(float vidaMaxima){
         slider.maxValue=vidaMaxima;
     }

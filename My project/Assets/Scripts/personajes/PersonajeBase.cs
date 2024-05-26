@@ -97,6 +97,12 @@ public class PersonajeBase : MonoBehaviour
             {
                 correrAudioSource.clip = correr;
                 correrAudioSource.loop = true;
+                if (SceneManager.GetActiveScene().name == "EscenaRogue1")
+                {
+                    correrAudioSource.pitch=1f;
+                }else{
+                    correrAudioSource.pitch=2f;  
+                }
                 correrAudioSource.Play();
             }
             // Detener el sonido de correr si no se está moviendo horizontalmente o no está en el suelo

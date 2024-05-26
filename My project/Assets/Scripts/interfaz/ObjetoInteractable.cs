@@ -56,7 +56,7 @@ public class ObjetoInteractable : MonoBehaviour
             cercaDelObjeto = false;
             if (controlDialogos != null && cartelMostrado)
             {
-                controlDialogos.cierraCartel();
+                controlDialogos.CierraCartel();
                 cartelMostrado = false;
             }
         }
@@ -76,7 +76,7 @@ public class ObjetoInteractable : MonoBehaviour
             cercaDelObjeto = false;
             if (controlDialogos != null && cartelMostrado)
             {
-                controlDialogos.cierraCartel();
+                controlDialogos.CierraCartel();
                 cartelMostrado = false;
             }
         }
@@ -87,85 +87,89 @@ public class ObjetoInteractable : MonoBehaviour
     {
         // Verificar si el jugador está cerca y ha pulsado la tecla "E"
 
-        if (cercaDelObjeto && Input.GetKeyDown(KeyCode.E) && !controladorScript.juegoPausado)
+        if (cercaDelObjeto && Input.GetKeyDown(KeyCode.E))
         {
-            if (controlDialogos != null && controlDialogos.PuedeMostrarSiguiente())
+            if(!controladorScript.juegoPausado || (controladorScript.juegoPausado && cartelMostrado))
             {
-                if (SceneManager.GetActiveScene().name == "EscenaRogue1")
+                if (controlDialogos != null && controlDialogos.PuedeMostrarSiguiente())
                 {
-                    if (cartelMostrado)
+                    if (SceneManager.GetActiveScene().name == "EscenaRogue1")
                     {
-                        controlDialogos.SiguienteFrase();
+                        if (cartelMostrado)
+                        {
+                            controlDialogos.SiguienteFrase();
+                        }
+                        else if (rogue.tieneEspadas && rogue.yaHeHablado && rogue.espadasEntregada)
+                        {
+                            controlDialogos.ActivarCartel(textoFinal);
+                            cartelMostrado = true;
+                        }
+                        else if (rogue.tieneEspadas && rogue.yaHeHablado)
+                        {
+                            controlDialogos.ActivarCartel(textos2);
+                            cartelMostrado = true;
+                        }
+                        else
+                        {
+                            controlDialogos.ActivarCartel(textos);
+                            cartelMostrado = true;
+                            rogue.yaHeHablado = true;
+                        }
                     }
-                    else if (rogue.tieneEspadas && rogue.yaHeHablado && rogue.espadasEntregada)
+                    if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
                     {
-                        controlDialogos.ActivarCartel(textoFinal);
-                        cartelMostrado = true;
+                        if (cartelMostrado)
+                        {
+                            controlDialogos.SiguienteFrase();
+                        }
+                        else if (assassin.tengoBaston && assassin.heAblado && assassin.cosaEntregada)
+                        {
+                            controlDialogos.ActivarCartel(textoFinal);
+                            cartelMostrado = true;
+                        }
+                        else if (assassin.tengoBaston && assassin.heAblado && assassin.tengoEspadas)
+                        {
+                            controlDialogos.ActivarCartel(textos3);
+                            cartelMostrado = true;
+                        }
+                        else if (assassin.tengoEspadas && assassin.heAblado && !assassin.tengoBaston)
+                        {
+                            controlDialogos.ActivarCartel(textos2);
+                            cartelMostrado = true;
+                        }
+                        else
+                        {
+                            controlDialogos.ActivarCartel(textos);
+                            cartelMostrado = true;
+                            assassin.heAblado = true;
+                        }
                     }
-                    else if (rogue.tieneEspadas && rogue.yaHeHablado)
+                    if (SceneManager.GetActiveScene().name == "EscenaArcher1")
                     {
-                        controlDialogos.ActivarCartel(textos2);
-                        cartelMostrado = true;
-                    }
-                    else
-                    {
-                        controlDialogos.ActivarCartel(textos);
-                        cartelMostrado = true;
-                        rogue.yaHeHablado = true;
-                    }
-                }
-                if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
-                {
-                    if (cartelMostrado)
-                    {
-                        controlDialogos.SiguienteFrase();
-                    }
-                    else if (assassin.tengoBaston && assassin.heAblado && assassin.cosaEntregada)
-                    {
-                        controlDialogos.ActivarCartel(textoFinal);
-                        cartelMostrado = true;
-                    }
-                    else if (assassin.tengoBaston && assassin.heAblado && assassin.tengoEspadas)
-                    {
-                        controlDialogos.ActivarCartel(textos3);
-                        cartelMostrado = true;
-                    }
-                    else if (assassin.tengoEspadas && assassin.heAblado && !assassin.tengoBaston)
-                    {
-                        controlDialogos.ActivarCartel(textos2);
-                        cartelMostrado = true;
-                    }
-                    else
-                    {
-                        controlDialogos.ActivarCartel(textos);
-                        cartelMostrado = true;
-                        assassin.heAblado = true;
-                    }
-                }
-                if (SceneManager.GetActiveScene().name == "EscenaArcher1")
-                {
-                    if (cartelMostrado)
-                    {
-                        controlDialogos.SiguienteFrase();
-                    }
-                    else if (archer.tengoAlgo && archer.Ablado && archer.algoEntregada)
-                    {
-                        controlDialogos.ActivarCartel(textoFinal);
-                        cartelMostrado = true;
-                    }
-                    else if (archer.tengoAlgo && archer.Ablado)
-                    {
-                        controlDialogos.ActivarCartel(textos2);
-                        cartelMostrado = true;
-                    }
-                    else
-                    {
-                        controlDialogos.ActivarCartel(textos);
-                        cartelMostrado = true;
-                        archer.Ablado = true;
+                        if (cartelMostrado)
+                        {
+                            controlDialogos.SiguienteFrase();
+                        }
+                        else if (archer.tengoAlgo && archer.Ablado && archer.algoEntregada)
+                        {
+                            controlDialogos.ActivarCartel(textoFinal);
+                            cartelMostrado = true;
+                        }
+                        else if (archer.tengoAlgo && archer.Ablado)
+                        {
+                            controlDialogos.ActivarCartel(textos2);
+                            cartelMostrado = true;
+                        }
+                        else
+                        {
+                            controlDialogos.ActivarCartel(textos);
+                            cartelMostrado = true;
+                            archer.Ablado = true;
+                        }
                     }
                 }
             }
+            
         }
     }
 }

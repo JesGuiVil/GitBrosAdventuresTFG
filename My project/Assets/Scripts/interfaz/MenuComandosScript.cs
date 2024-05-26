@@ -21,65 +21,68 @@ public class MenuComandosScript : MonoBehaviour
     private AudioSource audioSourceComandos;
     [SerializeField] public AudioClip coger;
     private Archer archer;
+    private bool mostrandoMenu = false;
+    private ControladorScript controladorScript;
+
     private void Start()
     {
-
-        audioSourceComandos=gameObject.GetComponent<AudioSource>();
+        audioSourceComandos = gameObject.GetComponent<AudioSource>();
         inputField = InputComandos.GetComponent<TMP_InputField>();
         if (inputField == null)
         {
             Debug.LogError("No se encontró el TMP_InputField en el hijo InputComandos.");
             return;
         }
-         // Obtener referencia al script Inventario del personaje
+        
         personaje = GameObject.FindGameObjectWithTag("Player");
         personajeBase = personaje.GetComponent<PersonajeBase>();
-        Debug.Log("personaje detectado");
+        controladorScript = GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
+        
         if (personaje != null)
         {
             inventario = personaje.GetComponent<Inventario>();
-            Debug.Log("inventario detectado");
         }
         else
         {
             Debug.LogError("No se encontró el objeto del personaje.");
         }
+
         OcultarMenuComandos();
+
         if (SceneManager.GetActiveScene().name == "EscenaRogue1")
         {
             rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
-
         }
         if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
         {
             assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
-
         }
-        if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
+        if (SceneManager.GetActiveScene().name == "EscenaArcher1")
         {
             archer = GameObject.FindGameObjectWithTag("Player").GetComponent<Archer>();
-
         }
-
     }
 
     public void MostrarMenuComandos()
     {
         transform.localScale = new Vector3(1.5f, 1.5f, 2f);
         InputComandos.SetActive(true);
-        // Limpiar y activar el InputField
         inputField.text = "";
         inputField.ActivateInputField();
-        Time.timeScale = 0f;
+        mostrandoMenu = true;
     }
 
     public void OcultarMenuComandos()
     {
         transform.localScale = Vector3.zero;
         InputComandos.SetActive(false);
-        // Desactivar el InputField
         inputField.DeactivateInputField();
-        Time.timeScale = 1f;
+        mostrandoMenu = false;
+    }
+
+    public bool EstaMostrando()
+    {
+        return mostrandoMenu;
     }
 
     public void SetInputField(string inputText)
@@ -117,7 +120,6 @@ public class MenuComandosScript : MonoBehaviour
                 {
                     Debug.Log("No se puede realizar git merge");
                 }
-
             }
             if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
             {
@@ -130,7 +132,6 @@ public class MenuComandosScript : MonoBehaviour
                 {
                     Debug.Log("No se puede realizar git merge");
                 }
-
             }
             if (SceneManager.GetActiveScene().name == "EscenaArcher1")
             {
@@ -143,8 +144,6 @@ public class MenuComandosScript : MonoBehaviour
                     Debug.Log("No se puede realizar git merge");
                 }
             }
-            
-
         }
         else if (inputText == "git pull")
         {
@@ -169,18 +168,15 @@ public class MenuComandosScript : MonoBehaviour
     private void RecogerObjeto(string objeto)
     {
         Debug.Log("Intentando recoger objeto: " + objeto);
-        // Verificar si el jugador está sobre el objeto y el nombre coincide
         if (objetoARecoger != null && objetoARecoger.tag == objeto)
         {
-             
             GameObject objetoPrefab = ObtenerPrefab(objetoARecoger.tag);
             if (inventario != null && inventario.AgregarObjeto(objetoPrefab))
             {
-                // Objeto agregado al inventario con éxito
                 audioSourceComandos.PlayOneShot(coger);
                 Debug.Log("Objeto recogido con éxito: " + objeto);
-                Destroy(objetoARecoger); // Destruir el objeto del juego después de agregarlo al inventario
-                objetoARecoger = null; // Limpiar el objeto recogido
+                Destroy(objetoARecoger);
+                objetoARecoger = null;
             }
             else
             {
@@ -195,17 +191,14 @@ public class MenuComandosScript : MonoBehaviour
 
     public void SetRecogerObjeto(GameObject objeto)
     {
-        objetoARecoger = objeto; // Almacenar el objeto que se va a recoger
+        objetoARecoger = objeto;
         Debug.Log("Objeto a recoger asignado: " + objeto.name);
     }
 
     private GameObject ObtenerPrefab(string tagObjeto)
     {
-        // Construir la ruta relativa al prefab correspondiente al tag del objeto con el sufijo "boton"
         string rutaPrefab = "Objetos/" + tagObjeto + "boton";
-        GameObject prefab = Resources.Load<GameObject>(rutaPrefab); // Buscar en la carpeta Resources
-
-        // Si se encontró el prefab, devolverlo
+        GameObject prefab = Resources.Load<GameObject>(rutaPrefab);
         if (prefab != null)
         {
             return prefab;
@@ -216,27 +209,20 @@ public class MenuComandosScript : MonoBehaviour
             return null;
         }
     }
+
     private void GuardarEscena()
     {
-        // Obtener el nombre de la escena actual
         string nombreEscenaActual = SceneManager.GetActiveScene().name;
-
-        // Guardar el nombre de la escena actual en PlayerPrefs
         PlayerPrefs.SetString("UltimaEscenaGuardada", nombreEscenaActual);
-
         Debug.Log("Escena actual guardada: " + nombreEscenaActual);
-
     }
+
     private void CargarEscena()
     {
-        // Obtener el nombre de la última escena guardada desde PlayerPrefs
         string nombreUltimaEscenaGuardada = PlayerPrefs.GetString("UltimaEscenaGuardada", "");
-
         if (!string.IsNullOrEmpty(nombreUltimaEscenaGuardada))
         {
-            // Cargar la última escena guardada
             SceneManager.LoadScene(nombreUltimaEscenaGuardada);
-
             Debug.Log("Cargando última escena guardada: " + nombreUltimaEscenaGuardada);
         }
         else
@@ -244,9 +230,9 @@ public class MenuComandosScript : MonoBehaviour
             Debug.LogWarning("No se encontró una última escena guardada.");
         }
     }
+
     private void UsarEspadas()
     {
-        // Recorrer las ranuras del inventario para buscar la llave
         for (int i = 0; i < inventario.ranuras.Length; i++)
         {
             if (inventario.estaLleno[i])
@@ -263,12 +249,11 @@ public class MenuComandosScript : MonoBehaviour
                 }
             }
         }
-
         Debug.Log("No se encontró las espadas en el inventario.");
     }
+
     private void UsarBaston()
     {
-        // Recorrer las ranuras del inventario para buscar la llave
         for (int i = 0; i < inventario.ranuras.Length; i++)
         {
             if (inventario.estaLleno[i])
@@ -285,7 +270,6 @@ public class MenuComandosScript : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log("No se encontró las baston en el inventario.");
+        Debug.Log("No se encontró el baston en el inventario.");
     }
 }

@@ -8,41 +8,55 @@ public class ControladorScript : MonoBehaviour
 {
     private MenuComandosScript menuComandos;
     private PersonajeBase personajeBase;
-    public bool juegoPausado = false;
-    private void Start(){
+    private int contadorPausas = 0;
+    public bool juegoPausado => contadorPausas > 0;
+
+    private void Start()
+    {
         menuComandos = GameObject.FindGameObjectWithTag("Consola").GetComponent<MenuComandosScript>();
-        
     }
 
     private void Update()
     {
         // Detección de tecla para mostrar/ocultar el cartel y pausar/resumir el juego
-        if (Input.GetKeyDown(KeyCode.Tab)) 
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
-            if (juegoPausado)
+            if (menuComandos.EstaMostrando())
             {
-                ResumirJuego();
-                
+                menuComandos.OcultarMenuComandos();
+                DespausarJuego();
             }
             else
             {
                 PausarJuego();
+                menuComandos.MostrarMenuComandos();
             }
         }
-        
     }
 
-    private void PausarJuego()
+    public void PausarJuego()
     {
-        juegoPausado = true;
-        menuComandos.MostrarMenuComandos(); // Mostrar el cartel al pausar el juego
+        contadorPausas++;
+        if (contadorPausas == 1)
+        {
+            Time.timeScale = 0;
+            Debug.Log("Juego pausado");
+        }
     }
 
-    private void ResumirJuego()
+    public void DespausarJuego()
     {
-        juegoPausado = false;
-        menuComandos.OcultarMenuComandos(); // Ocultar el cartel al resumir el juego
+        if (contadorPausas > 0)
+        {
+            contadorPausas--;
+            if (contadorPausas == 0)
+            {
+                Time.timeScale = 1;
+                Debug.Log("Juego despausado");
+            }
+        }
     }
+
     public void cambiarEscena(int indice)
     {
         SceneManager.LoadScene(indice);

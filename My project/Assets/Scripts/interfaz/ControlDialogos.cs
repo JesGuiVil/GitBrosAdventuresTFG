@@ -22,8 +22,9 @@ public class ControlDialogos : MonoBehaviour
     private Archer archer;
     private bool mostrandoTextos3 = false;
     private bool puedeMostrarSiguiente = true;
+    private ControladorScript controladorScript;
 
-    public bool mostrandoCartel=false;
+    public bool mostrandoCartel = false;
 
     // Propiedad estática para acceder a la instancia Singleton
     public static ControlDialogos Instance
@@ -54,28 +55,27 @@ public class ControlDialogos : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Para que el objeto persista al cargar nuevas escenas
         animDialogos = GetComponent<Animator>();
         colaDialogos = new Queue<string>();
-        audioSourceDialogos=GetComponent<AudioSource>();
+        audioSourceDialogos = GetComponent<AudioSource>();
+        controladorScript = GameObject.FindGameObjectWithTag("Controlador").GetComponent<ControladorScript>();
+
         if (SceneManager.GetActiveScene().name == "EscenaRogue1")
         {
             rogue = GameObject.FindGameObjectWithTag("Player").GetComponent<Rogue>();
-
         }
         if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
         {
             assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
             main = GameObject.FindGameObjectWithTag("Npc");
-
         }
         if (SceneManager.GetActiveScene().name == "EscenaArcher1")
         {
             archer = GameObject.FindGameObjectWithTag("Player").GetComponent<Archer>();
-
         }
     }
 
     public void ActivarCartel(Textos textoObjeto)
     {
-        mostrandoCartel=true;
+        mostrandoCartel = true;
         audioSourceDialogos.PlayOneShot(abrir);
         animDialogos.SetBool("mostrar", true);
 
@@ -94,7 +94,7 @@ public class ControlDialogos : MonoBehaviour
     public void ActivaTexto()
     {
         colaDialogos.Clear();
-        Time.timeScale = 0f;
+        controladorScript.PausarJuego();
 
         // Comprobación de nulidad para texto
         if (texto != null)
@@ -115,7 +115,7 @@ public class ControlDialogos : MonoBehaviour
     {
         if (colaDialogos.Count == 0)
         {
-            cierraCartel();
+            CierraCartel();
             audioSourceDialogos.PlayOneShot(cerrar);
             if (SceneManager.GetActiveScene().name == "EscenaRogue1")
             {
@@ -123,7 +123,6 @@ public class ControlDialogos : MonoBehaviour
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
-
             }
             if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
             {
@@ -131,42 +130,39 @@ public class ControlDialogos : MonoBehaviour
                 {
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
-
             }
             if (SceneManager.GetActiveScene().name == "EscenaArcher1")
             {
                 // por hacer cambio de escena al final del nivel
-
             }
-            
-
             return;
         }
         string fraseActual = colaDialogos.Dequeue();
         textoPantalla.text = fraseActual;
         StartCoroutine(EsperarAntesDePermitirSiguiente());
-        // Ejecutar la acción después de mostrar la primera frase de textos2
+        // Ejecutar la acción después de mostrar la primera frase de textos3
         if (mostrandoTextos3 && colaDialogos.Count == 0)
         {
             main.GetComponent<SpriteRenderer>().flipX = !main.GetComponent<SpriteRenderer>().flipX;
         }   
     }
 
-    public void cierraCartel()
+    public void CierraCartel()
     {
         animDialogos.SetBool("mostrar", false);
         textoPantalla.text = "";
-        Time.timeScale = 1f;
-        mostrandoCartel=false;
+        controladorScript.DespausarJuego();
+        mostrandoCartel = false;
     }
-    private IEnumerator EsperarAntesDePermitirSiguiente() // Nueva corrutina
+
+    private IEnumerator EsperarAntesDePermitirSiguiente()
     {
         puedeMostrarSiguiente = false;
-        yield return new WaitForSecondsRealtime(2f); // Esperar un segundo
+        yield return new WaitForSecondsRealtime(2f);
         puedeMostrarSiguiente = true;
     }
 
-    public bool PuedeMostrarSiguiente() // Nuevo método
+    public bool PuedeMostrarSiguiente()
     {
         return puedeMostrarSiguiente;
     }

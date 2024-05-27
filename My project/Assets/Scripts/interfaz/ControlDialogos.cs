@@ -23,7 +23,7 @@ public class ControlDialogos : MonoBehaviour
     private bool mostrandoTextos3 = false;
     private bool puedeMostrarSiguiente = true;
     private ControladorScript controladorScript;
-
+    private bool seHaGirado=false;
     public bool mostrandoCartel = false;
 
     // Propiedad estática para acceder a la instancia Singleton
@@ -141,9 +141,10 @@ public class ControlDialogos : MonoBehaviour
         textoPantalla.text = fraseActual;
         StartCoroutine(EsperarAntesDePermitirSiguiente());
         // Ejecutar la acción después de mostrar la primera frase de textos3
-        if (mostrandoTextos3 && colaDialogos.Count == 0)
+        if (mostrandoTextos3 && colaDialogos.Count == 0 && !seHaGirado)
         {
             main.GetComponent<SpriteRenderer>().flipX = !main.GetComponent<SpriteRenderer>().flipX;
+            seHaGirado=true;
         }   
     }
 

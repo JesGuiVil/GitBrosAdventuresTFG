@@ -10,6 +10,7 @@ public class ObjetoInteractable : MonoBehaviour
     private ControlDialogos controlDialogos; // Variable para almacenar el controlador de diálogos
     private bool cartelMostrado = false; // Variable para seguir el estado del cartel
     public Textos textos;
+    public Textos textos1;
     public Textos textos2;
     public Textos textos3;
     public Textos textoFinal;
@@ -99,21 +100,30 @@ public class ObjetoInteractable : MonoBehaviour
                         {
                             controlDialogos.SiguienteFrase();
                         }
-                        else if (rogue.tieneEspadas && rogue.yaHeHablado && rogue.espadasEntregada)
+                        else if (rogue.tieneEspadas && rogue.yaHeHablado && rogue.espadasEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textoFinal);
                             cartelMostrado = true;
                         }
-                        else if (rogue.tieneEspadas && rogue.yaHeHablado)
+                        else if (rogue.yaHeHablado && rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textos2);
                             cartelMostrado = true;
                         }
-                        else
+                        else if (rogue.yaHeHablado && !rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc"))
+                        {
+                            controlDialogos.ActivarCartel(textos1);
+                            cartelMostrado = true;
+                        }
+                        else if (!rogue.yaHeHablado && !rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textos);
                             cartelMostrado = true;
                             rogue.yaHeHablado = true;
+                        }
+                        else{
+                            controlDialogos.ActivarCartel(textos);
+                            cartelMostrado = true;
                         }
                     }
                     if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
@@ -122,27 +132,38 @@ public class ObjetoInteractable : MonoBehaviour
                         {
                             controlDialogos.SiguienteFrase();
                         }
-                        else if (assassin.tengoBaston && assassin.heAblado && assassin.cosaEntregada)
+                        else if (assassin.heAblado && assassin.tengoEspadas && assassin.tengoBaston && assassin.cosaEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textoFinal);
                             cartelMostrado = true;
                         }
-                        else if (assassin.tengoBaston && assassin.heAblado && assassin.tengoEspadas)
+                        else if (assassin.heAblado && assassin.tengoEspadas && assassin.tengoBaston && !assassin.cosaEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textos3);
                             cartelMostrado = true;
                         }
-                        else if (assassin.tengoEspadas && assassin.heAblado && !assassin.tengoBaston)
+                        else if (assassin.heAblado && assassin.tengoEspadas && !assassin.tengoBaston && !assassin.cosaEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textos2);
                             cartelMostrado = true;
                         }
-                        else
+                        else if (assassin.heAblado && !assassin.tengoEspadas && !assassin.tengoBaston && !assassin.cosaEntregada && gameObject.CompareTag("Npc"))
+                        {
+                            controlDialogos.ActivarCartel(textos1);
+                            cartelMostrado = true;
+                        }
+                        else if (!assassin.heAblado && !assassin.tengoEspadas && !assassin.tengoBaston && !assassin.cosaEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textos);
                             cartelMostrado = true;
                             assassin.heAblado = true;
                         }
+                        else
+                        {
+                            controlDialogos.ActivarCartel(textos);
+                            cartelMostrado = true;
+                        }
+                        
                     }
                     if (SceneManager.GetActiveScene().name == "EscenaArcher1")
                     {
@@ -150,21 +171,31 @@ public class ObjetoInteractable : MonoBehaviour
                         {
                             controlDialogos.SiguienteFrase();
                         }
-                        else if (archer.tengoAlgo && archer.Ablado && archer.algoEntregada)
+                        else if (archer.Ablado && archer.tengoAlgo && archer.algoEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textoFinal);
                             cartelMostrado = true;
                         }
-                        else if (archer.tengoAlgo && archer.Ablado)
+                        else if (archer.Ablado && archer.tengoAlgo && !archer.algoEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textos2);
                             cartelMostrado = true;
+                        }
+                        else if (archer.Ablado && !archer.tengoAlgo && !archer.algoEntregada && gameObject.CompareTag("Npc"))
+                        {
+                            controlDialogos.ActivarCartel(textos1);
+                            cartelMostrado = true;
+                        }
+                        else if (!archer.Ablado && !archer.tengoAlgo && !archer.algoEntregada && gameObject.CompareTag("Npc"))
+                        {
+                            controlDialogos.ActivarCartel(textos);
+                            cartelMostrado = true;
+                            archer.Ablado = true;
                         }
                         else
                         {
                             controlDialogos.ActivarCartel(textos);
                             cartelMostrado = true;
-                            archer.Ablado = true;
                         }
                     }
                 }

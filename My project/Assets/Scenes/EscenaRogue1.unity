@@ -1106,6 +1106,9 @@ MonoBehaviour:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
     esTextos3: 0
+  textos1:
+    arrayTextos: []
+    esTextos3: 0
   textos2:
     arrayTextos: []
     esTextos3: 0
@@ -1900,6 +1903,9 @@ MonoBehaviour:
   textos:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
+    esTextos3: 0
+  textos1:
+    arrayTextos: []
     esTextos3: 0
   textos2:
     arrayTextos: []
@@ -2709,6 +2715,9 @@ MonoBehaviour:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
     esTextos3: 0
+  textos1:
+    arrayTextos: []
+    esTextos3: 0
   textos2:
     arrayTextos: []
     esTextos3: 0
@@ -3060,6 +3069,9 @@ MonoBehaviour:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
     esTextos3: 0
+  textos1:
+    arrayTextos: []
+    esTextos3: 0
   textos2:
     arrayTextos: []
     esTextos3: 0
@@ -3090,6 +3102,9 @@ MonoBehaviour:
   textos:
     arrayTextos:
     - "\"Debe haber algun comando GIT que me permita a\xF1adir este objeto a mi inventario\""
+    esTextos3: 0
+  textos1:
+    arrayTextos: []
     esTextos3: 0
   textos2:
     arrayTextos: []
@@ -3992,6 +4007,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textos1.arrayTextos.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -4002,8 +4021,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[1]
-      value: '"Por cierto, parece que tus amigos estan en problemas. Si encuentras
-        algo que les pueda ser de utilidad, entregamelo y yo se lo hare llegar. "'
+      value: '"Por que iba a tener un ibuprofeno un brujo malvad..ejem.. un mensajero?
+        Vete por ahi, anda. No tengo tiempo para tonterias."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos.arrayTextos.Array.data[2]
@@ -4014,9 +4033,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textos1.arrayTextos.Array.data[0]
+      value: '"Aun sigues dando vueltas como pollo sin cabeza? para ser una picara
+        no pareces muy ingeniosa. Te dare una pista, porque vaya tela..."'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textos1.arrayTextos.Array.data[1]
+      value: '"A veces, lo que parece una trampa mortal puede ser la puerta a nuevos
+        descubrimientos. Aunque otras veces es simplemente una trampa. HAHAHA"'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.data[0]
-      value: '"Parece que has conseguido unas espadas. Hay un amigo tuyo en el desierto
-        al que les vendrian muy bien."'
+      value: '"Parece que has conseguido unas espadas. Tu amigo del desierto parece
+        estar en apuros. Esas espadas le vendrian muy bien."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.data[1]
@@ -4025,8 +4054,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
-      value: '"Un trato es un trato. Por cierto, por esa trampilla puedes salir de
-        esta mazmorra apestosa. Esos goblins deberian ducharse de vez en cuando."'
+      value: '"Recuerda, Un trato es un trato. Por cierto, por esa trampilla puedes
+        salir de esta mazmorra apestosa. Esos goblins deberian ducharse de vez en
+        cuando."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textosConLlave.arrayTextos.Array.size
@@ -4153,6 +4183,9 @@ MonoBehaviour:
   textos:
     arrayTextos:
     - '"Debe haber algun mecanismo que me permita cruzar al otro lado"'
+    esTextos3: 0
+  textos1:
+    arrayTextos: []
     esTextos3: 0
   textos2:
     arrayTextos: []

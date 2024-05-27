@@ -941,6 +941,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textos1.arrayTextos.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -965,9 +969,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
+      propertyPath: textos1.arrayTextos.Array.data[0]
+      value: "\"Venga hombre, observalas! con sus empu\xF1aduras doradas, sus hojas
+        brillantes... solo por matar un simple demonio infernal de nada. no te baitean?\""
+      objectReference: {fileID: 0}
+    - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.data[0]
       value: '"A que estas esperando? a que el demonio se muera de viejo? Date prisa,
-        hombre, que no tengo todo el dia!"'
+        hombre, que no tengo toda la noche!"'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos2.arrayTextos.Array.data[1]
@@ -975,9 +984,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos3.arrayTextos.Array.data[0]
-      value: '"la ultima vez que vengo aqui sin sombrilla. como puede tardar tanto
-        ese asesino de pacotilla?. lo que tiene que sufrir uno para conseguir las
-        reliquias de la destruc..."'
+      value: '"como puede tardar tanto ese asesino de pacotilla? decian que en el
+        desierto hacia frio por la noche. lo que tiene que sufrir uno para conseguir
+        las reliquias de la destruc..."'
       objectReference: {fileID: 0}
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textos3.arrayTextos.Array.data[1]
@@ -988,7 +997,7 @@ PrefabInstance:
     - target: {fileID: 4747019352326838074, guid: fd01ecb41ec376d45ac4be3e4acffbc5, type: 3}
       propertyPath: textoFinal.arrayTextos.Array.data[0]
       value: '"Bueno, me largo al bosque a tomar el fresco, que me estoy asando aqui.
-        Tengo que buscarme una tunica transpirable o algo. En fin, volveremos a vernos,
+        No me quiero imaginar a las tres de la tarde. En fin, volveremos a vernos,
         hombre del desierto."
 
 '

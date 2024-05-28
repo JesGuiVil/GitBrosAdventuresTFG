@@ -90,8 +90,6 @@ public class ObjetoInteractable : MonoBehaviour
 
     void Update()
     {
-        // Verificar si el jugador está cerca y ha pulsado la tecla "E"
-
         if (cercaDelObjeto && Input.GetKeyDown(KeyCode.E))
         {
             if(!controladorScript.juegoPausado || (controladorScript.juegoPausado && cartelMostrado))

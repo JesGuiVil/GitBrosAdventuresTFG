@@ -164,7 +164,25 @@ public class MenuComandosScript : MonoBehaviour
         }
         inputField.text = "";
     }
-
+    public void SetRecogerObjeto(GameObject objeto)
+    {
+        objetoARecoger = objeto;
+        Debug.Log("Objeto a recoger asignado: " + objeto.name);
+    }
+    private GameObject ObtenerPrefab(string tagObjeto)
+    {
+        string rutaPrefab = "Objetos/" + tagObjeto + "boton";
+        GameObject prefab = Resources.Load<GameObject>(rutaPrefab);
+        if (prefab != null)
+        {
+            return prefab;
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró el prefab para el objeto con el tag: " + tagObjeto);
+            return null;
+        }
+    }
     private void RecogerObjeto(string objeto)
     {
         Debug.Log("Intentando recoger objeto: " + objeto);
@@ -189,26 +207,7 @@ public class MenuComandosScript : MonoBehaviour
         }
     }
 
-    public void SetRecogerObjeto(GameObject objeto)
-    {
-        objetoARecoger = objeto;
-        Debug.Log("Objeto a recoger asignado: " + objeto.name);
-    }
-
-    private GameObject ObtenerPrefab(string tagObjeto)
-    {
-        string rutaPrefab = "Objetos/" + tagObjeto + "boton";
-        GameObject prefab = Resources.Load<GameObject>(rutaPrefab);
-        if (prefab != null)
-        {
-            return prefab;
-        }
-        else
-        {
-            Debug.LogWarning("No se encontró el prefab para el objeto con el tag: " + tagObjeto);
-            return null;
-        }
-    }
+    
 
     private void GuardarEscena()
     {
@@ -222,6 +221,7 @@ public class MenuComandosScript : MonoBehaviour
         string nombreUltimaEscenaGuardada = PlayerPrefs.GetString("UltimaEscenaGuardada", "");
         if (!string.IsNullOrEmpty(nombreUltimaEscenaGuardada))
         {
+            controladorScript.DespausarJuego();
             SceneManager.LoadScene(nombreUltimaEscenaGuardada);
             Debug.Log("Cargando última escena guardada: " + nombreUltimaEscenaGuardada);
         }
@@ -251,7 +251,6 @@ public class MenuComandosScript : MonoBehaviour
         }
         Debug.Log("No se encontró las espadas en el inventario.");
     }
-
     private void UsarBaston()
     {
         for (int i = 0; i < inventario.ranuras.Length; i++)

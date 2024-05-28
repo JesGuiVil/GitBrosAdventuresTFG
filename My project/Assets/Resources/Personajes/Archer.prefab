@@ -167,7 +167,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 6359414422858948630}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 03c53f2372b874b4abaca9ab76ea7023, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -444,6 +444,7 @@ MonoBehaviour:
   animator: {fileID: 5118357277034666784}
   isDead: 0
   cercaDelNpc: 0
+  cercaDelCofre: 0
   controlDialogos: {fileID: 0}
   textoInicial:
     arrayTextos:

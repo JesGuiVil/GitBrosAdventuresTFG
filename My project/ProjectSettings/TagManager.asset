@@ -47,6 +47,7 @@ TagManager:
   - Cofre
   - pinchos
   - pocionverde
+  - libro
   layers:
   - Default
   - TransparentFX

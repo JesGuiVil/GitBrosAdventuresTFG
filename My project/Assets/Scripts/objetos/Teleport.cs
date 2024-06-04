@@ -21,7 +21,11 @@ public class Teleport : MonoBehaviour
         { "Portal5", "Portal6"},
         { "Portal6", "Portal5"},
         { "Portal7", "Portal8"},
-        { "Portal8", "Portal7"}
+        { "Portal8", "Portal7"},
+        { "Portal9", "Portal10"},
+        { "Portal10", "Portal9"},
+        { "Portal11", "Portal12"},
+        { "Portal12", "Portal11"}
     };
 
     // Start is called before the first frame update

@@ -45,6 +45,8 @@ TagManager:
   - Portal12
   - flechas
   - Cofre
+  - pinchos
+  - pocionverde
   layers:
   - Default
   - TransparentFX

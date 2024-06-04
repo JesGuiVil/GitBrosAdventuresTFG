@@ -6,7 +6,9 @@ public class MecanicasArcher1 : MecanicasBase
 {
     [SerializeField] private GameObject enemigoDrop;
     [SerializeField] private GameObject drop1;
+    [SerializeField] private GameObject muro;
     private bool Dropado = false;
+    private bool muroDestruido = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +29,10 @@ public class MecanicasArcher1 : MecanicasBase
                
             }
         }
-        
-        
+        if (contadorEnemigos>3 && !muroDestruido)
+        {
+            Destroy(muro);
+            muroDestruido = true;
+        }
     }
 }

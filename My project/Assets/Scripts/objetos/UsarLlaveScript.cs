@@ -13,18 +13,42 @@ public class UsarLlaveScript : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null)
+        {
+            Debug.LogError("No se encontró ningún objeto con el tag 'Player'");
+            return;
+        }
+
         personajeBase = player.GetComponent<PersonajeBase>();
+        if (personajeBase == null)
+        {
+            Debug.LogError("El objeto 'Player' no tiene el componente 'PersonajeBase'");
+            return;
+        }
         cofreScript= GameObject.FindGameObjectWithTag("Cofre").GetComponent<CofreScript>();
+        if (cofreScript == null)
+        {
+            Debug.LogError("El objeto 'Cofre' no tiene el componente 'CofreScript'");
+        }
     }
 
     public void Use()
     {
-        if(personajeBase.cercaDelCofre) 
+        if(personajeBase != null && personajeBase.cercaDelCofre) 
         {
-            cofreScript.ActivateCofre();
-            Destroy(gameObject);
-            
+            if (cofreScript != null)
+            {
+                cofreScript.ActivateCofre();
+                Destroy(gameObject);
+            }
+            else
+            {
+                Debug.LogError("El componente 'CofreScript' no está asignado correctamente.");
+            }
         }
-        
+        else
+        {
+            Debug.LogWarning("El personaje no está cerca del cofre o 'personajeBase' no está asignado.");            
+        }
     }
 }

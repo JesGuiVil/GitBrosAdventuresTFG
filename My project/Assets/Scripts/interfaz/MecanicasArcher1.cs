@@ -29,7 +29,7 @@ public class MecanicasArcher1 : MecanicasBase
                
             }
         }
-        if (contadorEnemigos>8 && !muroDestruido)
+        if (contadorEnemigos>7 && !muroDestruido)
         {
             Destroy(muro);
             muroDestruido = true;

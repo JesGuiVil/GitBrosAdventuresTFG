@@ -102,34 +102,34 @@ public class ObjetoInteractable : MonoBehaviour
                         {
                             controlDialogos.SiguienteFrase();
                         }
-                        else if (rogue.tieneEspadas && rogue.yaHeHablado && rogue.espadasEntregada && gameObject.CompareTag("Npc"))
+                        else if (rogue.yaHeHablado && pistas && rogue.tieneEspadas &&  pedidas && rogue.espadasEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textoFinal);
                             cartelMostrado = true;
                         }
-                        else if (rogue.yaHeHablado && rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") && pedidas)
+                        else if (rogue.yaHeHablado && pistas && rogue.tieneEspadas && pedidas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos4);
                             cartelMostrado = true;
                         }
-                        else if (rogue.yaHeHablado && rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") && !pedidas)
+                        else if (rogue.yaHeHablado && pistas && rogue.tieneEspadas && !pedidas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos3);
                             cartelMostrado = true;
                             pedidas=true;
                         }
-                        else if (rogue.yaHeHablado && !rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") && pistas)
+                        else if (rogue.yaHeHablado && pistas && !rogue.tieneEspadas && !pedidas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos2);
                             cartelMostrado = true;
                         }
-                        else if (rogue.yaHeHablado && !rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") && !pistas)
+                        else if (rogue.yaHeHablado && !pistas && !rogue.tieneEspadas && !pedidas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos1);
                             cartelMostrado = true;
                             pistas=true;
                         }
-                        else if (!rogue.yaHeHablado && !rogue.tieneEspadas && !rogue.espadasEntregada && gameObject.CompareTag("Npc"))
+                        else if (!rogue.yaHeHablado && !pistas && !rogue.tieneEspadas && !pedidas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos);
                             cartelMostrado = true;
@@ -138,7 +138,6 @@ public class ObjetoInteractable : MonoBehaviour
                         else{
                             controlDialogos.ActivarCartel(textos);
                             cartelMostrado = true;
-                            rogue.yaHeHablado = true;
                         }
                     }
                     if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
@@ -232,7 +231,6 @@ public class ObjetoInteractable : MonoBehaviour
                         {
                             controlDialogos.ActivarCartel(textos);
                             cartelMostrado = true;
-                            archer.Ablado = true;
                         }
                     }
                 }

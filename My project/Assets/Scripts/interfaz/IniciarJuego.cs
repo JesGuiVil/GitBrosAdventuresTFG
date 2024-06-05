@@ -8,10 +8,16 @@ public class IniciarJuego : MonoBehaviour
     void Update()
     {
         // Verificar si se presiona la tecla "E"
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "EscenaInicial" )
         {
             // Cargar la escena especificada
             SceneManager.LoadScene("EscenaRogue1");
         }
+        else if (Input.GetKeyDown(KeyCode.E) && SceneManager.GetActiveScene().name == "EscenaFinal" )
+        {
+            // Cargar la escena especificada
+            SceneManager.LoadScene("MenuInicial");
+        }
+        
     }
 }

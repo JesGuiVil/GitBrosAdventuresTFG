@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4624358639657064057}
   m_Layer: 5
   m_Name: llaveboton
-  m_TagString: Consumible
+  m_TagString: llave
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

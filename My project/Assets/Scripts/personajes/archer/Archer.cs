@@ -7,6 +7,8 @@ public class Archer : PersonajeBase
     public bool tengoAlgo = false;
     public bool Ablado = false;
     public bool algoEntregada = false;
+    public bool tengoLlave = false;
+    public bool tengopocion = false;
 
     protected override void Update()
     {

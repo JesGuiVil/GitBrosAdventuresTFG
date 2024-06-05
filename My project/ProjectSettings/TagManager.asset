@@ -48,6 +48,7 @@ TagManager:
   - pinchos
   - pocionverde
   - libro
+  - brebaje
   layers:
   - Default
   - TransparentFX
@@ -63,7 +64,7 @@ TagManager:
   - suelo
   - agua
   - proyectilEnemigo
-  - 
+  - portal
   - 
   - 
   - 

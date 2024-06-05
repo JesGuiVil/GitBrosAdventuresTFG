@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EscenaArcher1.unity
     guid: 54edbfc14aa491445812dc4f0638c9ad
+  - enabled: 1
+    path: Assets/Scenes/EscenaFinal.unity
+    guid: cf111ee27fb441a47ada8be72a925883
   - enabled: 0
     path: Assets/Scenes/Enemigos.unity
     guid: 40ceec5bba00e1542be56f27a7e71de6

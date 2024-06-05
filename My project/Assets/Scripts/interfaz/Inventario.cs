@@ -111,7 +111,18 @@ public class Inventario : MonoBehaviour
         }
         if (SceneManager.GetActiveScene().name == "EscenaArcher1")
         {
-            //por hacer
+            if (objetoPrefab.CompareTag("llave"))
+            {
+                archer.tengoLlave = true;
+            }
+            else if (objetoPrefab.CompareTag("brebaje"))
+            {
+                archer.tengopocion = true;
+            }
+            else if (objetoPrefab.CompareTag("libro"))
+            {
+                archer.tengoAlgo = true;
+            }
         }
     }
 
@@ -135,7 +146,11 @@ public class Inventario : MonoBehaviour
                         estaLleno[indiceRanura] = false;
                         audioSourceInventario.PlayOneShot(consumirObjeto);
                     }
-                    else if(tagObjeto == "Llave")
+                    else if(tagObjeto == "llave")
+                    {
+                        estaLleno[indiceRanura] = false;
+                    }
+                    else if(tagObjeto == "brebaje")
                     {
                         estaLleno[indiceRanura] = false;
                     }

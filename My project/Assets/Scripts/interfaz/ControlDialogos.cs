@@ -133,7 +133,10 @@ public class ControlDialogos : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "EscenaArcher1")
             {
-                // por hacer cambio de escena al final del nivel
+                if (archer.algoEntregada)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                }
             }
             return;
         }

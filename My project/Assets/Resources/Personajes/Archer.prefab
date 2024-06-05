@@ -428,13 +428,13 @@ MonoBehaviour:
   proyectil: {fileID: 2855421066467106689, guid: 65a006070540e4db3b69cef51268461b, type: 3}
   vida: 100
   maximoVida: 100
-  saltar: {fileID: 0}
-  correr: {fileID: 0}
+  saltar: {fileID: 8300000, guid: 933a0ce5e6049b04fbe82b7b8c791baf, type: 3}
+  correr: {fileID: 8300000, guid: 3e2b19b6f9ec6d04995e4bcbb1c87610, type: 3}
   habilidad: {fileID: 0}
-  "da\xF1o": {fileID: 0}
-  muerte: {fileID: 0}
-  ataque1: {fileID: 0}
-  ataque2: {fileID: 0}
+  "da\xF1o": {fileID: 8300000, guid: d4cf9c418a1f60940be78310c45f4555, type: 3}
+  muerte: {fileID: 8300000, guid: 5d142d3a186fd644da47d4f7fdd499b9, type: 3}
+  ataque1: {fileID: 8300000, guid: 8913ae5d09897ad4c9f315533e36153e, type: 3}
+  ataque2: {fileID: 8300000, guid: 4542846ecd8afa1458c6bc127658208c, type: 3}
   audioSource: {fileID: 0}
   cooldownTimer: Infinity
   Speed: 7
@@ -455,6 +455,8 @@ MonoBehaviour:
   tengoAlgo: 0
   Ablado: 0
   algoEntregada: 0
+  tengoLlave: 0
+  tengopocion: 0
 --- !u!82 &7672924929928616919
 AudioSource:
   m_ObjectHideFlags: 0

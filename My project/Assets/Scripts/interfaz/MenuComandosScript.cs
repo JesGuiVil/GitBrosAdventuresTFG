@@ -135,9 +135,10 @@ public class MenuComandosScript : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "EscenaArcher1")
             {
-                if (personajeBase.cercaDelNpc)
+                if (archer.tengoAlgo && personajeBase.cercaDelNpc)
                 {
-                    // por hacer
+                    UsarLibro();
+                    archer.algoEntregada = true;
                 }
                 else
                 {
@@ -270,5 +271,25 @@ public class MenuComandosScript : MonoBehaviour
             }
         }
         Debug.Log("No se encontró el baston en el inventario.");
+    }
+    private void UsarLibro()
+    {
+        for (int i = 0; i < inventario.ranuras.Length; i++)
+        {
+            if (inventario.estaLleno[i])
+            {
+                GameObject objetoEnRanura = inventario.ranuras[i].transform.GetChild(0).gameObject;
+                if (objetoEnRanura != null && objetoEnRanura.CompareTag("libro"))
+                {
+                    EntregarObjetoScript entregarObjetoScript = objetoEnRanura.GetComponent<EntregarObjetoScript>();
+                    if (entregarObjetoScript != null)
+                    {
+                        entregarObjetoScript.Use();
+                        return;
+                    }
+                }
+            }
+        }
+        Debug.Log("No se encontró el libro en el inventario.");
     }
 }

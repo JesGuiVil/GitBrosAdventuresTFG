@@ -206,7 +206,11 @@ public class PersonajeBase : MonoBehaviour
         if (collision.CompareTag("Npc"))
         {   
             cercaDelNpc = false;
-        }  
+        }
+        else if (collision.CompareTag("Cofre"))
+        {   
+            cercaDelCofre = false;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

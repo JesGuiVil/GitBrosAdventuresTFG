@@ -93,6 +93,7 @@ public class Inventario : MonoBehaviour
             if (objetoPrefab.CompareTag("espadas"))
             {
                 rogue.tieneEspadas = true;
+                rogue.pistas=true;
             }
 
         }
@@ -114,6 +115,7 @@ public class Inventario : MonoBehaviour
             if (objetoPrefab.CompareTag("llave"))
             {
                 archer.tengoLlave = true;
+                archer.Ablado=true;
             }
             else if (objetoPrefab.CompareTag("brebaje"))
             {

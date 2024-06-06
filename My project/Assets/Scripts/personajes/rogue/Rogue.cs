@@ -7,6 +7,8 @@ public class Rogue : PersonajeBase
 {
 
     public bool yaHeHablado = false;
+    public bool pistas= false;
+    public bool pedidas= false;
     public bool espadasEntregada = false;
 
     public bool tieneEspadas = false;

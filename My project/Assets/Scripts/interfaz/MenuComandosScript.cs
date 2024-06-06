@@ -111,7 +111,7 @@ public class MenuComandosScript : MonoBehaviour
             Debug.Log("Intentando realizar git merge...");
             if (SceneManager.GetActiveScene().name == "EscenaRogue1")
             {
-                if (rogue.tieneEspadas && personajeBase.cercaDelNpc)
+                if (rogue.tieneEspadas && personajeBase.cercaDelNpc && rogue.yaHeHablado && rogue.pedidas)
                 {
                     UsarEspadas();
                     rogue.espadasEntregada = true;
@@ -123,7 +123,7 @@ public class MenuComandosScript : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
             {
-                if (assassin.tengoBaston && personajeBase.cercaDelNpc)
+                if (assassin.tengoBaston && personajeBase.cercaDelNpc && assassin.heAblado && assassin.pedido)
                 {
                     UsarBaston();
                     assassin.cosaEntregada = true;
@@ -135,7 +135,7 @@ public class MenuComandosScript : MonoBehaviour
             }
             if (SceneManager.GetActiveScene().name == "EscenaArcher1")
             {
-                if (archer.tengoAlgo && personajeBase.cercaDelNpc)
+                if (archer.tengoAlgo && personajeBase.cercaDelNpc && archer.Ablado && archer.yapedido)
                 {
                     UsarLibro();
                     archer.algoEntregada = true;
@@ -152,7 +152,7 @@ public class MenuComandosScript : MonoBehaviour
             if (SceneManager.GetActiveScene().name == "EscenaAssassin1")
             {
                 assassin = GameObject.FindGameObjectWithTag("Player").GetComponent<Assassin>();
-                if (!assassin.tengoEspadas && personajeBase.cercaDelNpc)
+                if (!assassin.tengoEspadas && personajeBase.cercaDelNpc && assassin.heAblado)
                 {
                     inventario.AgregarObjeto(espadasboton);
                     assassin.tengoEspadas = true;

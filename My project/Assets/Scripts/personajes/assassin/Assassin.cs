@@ -9,6 +9,7 @@ public class Assassin : PersonajeBase
     public bool tengoBaston = false;
     public bool heAblado = false;
     public bool cosaEntregada = false;
+    public bool pedido = false;
     protected override void Update()
     {
         base.Update();

@@ -100,23 +100,23 @@ public class ObjetoInteractable : MonoBehaviour
                         {
                             controlDialogos.SiguienteFrase();
                         }
-                        else if (rogue.yaHeHablado && pistas && rogue.tieneEspadas && rogue.espadasEntregada && gameObject.CompareTag("Npc"))
+                        else if (rogue.yaHeHablado && rogue.pistas && rogue.tieneEspadas && rogue.espadasEntregada && gameObject.CompareTag("Npc"))
                         {
                             controlDialogos.ActivarCartel(textoFinal);
                             cartelMostrado = true;
                         }
-                        else if (rogue.yaHeHablado && pistas && rogue.tieneEspadas && rogue.pedidas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") )
+                        else if (rogue.yaHeHablado && rogue.pistas && rogue.tieneEspadas && rogue.pedidas && !rogue.espadasEntregada && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos4);
                             cartelMostrado = true;
                         }
-                        else if (rogue.yaHeHablado && pistas && rogue.tieneEspadas && !rogue.pedidas && gameObject.CompareTag("Npc") )
+                        else if (rogue.yaHeHablado && rogue.pistas && rogue.tieneEspadas && !rogue.pedidas && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos3);
                             cartelMostrado = true;
                             rogue.pedidas=true;
                         }
-                        else if (rogue.yaHeHablado && pistas && !rogue.tieneEspadas && gameObject.CompareTag("Npc") )
+                        else if (rogue.yaHeHablado && rogue.pistas && !rogue.tieneEspadas && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos2);
                             cartelMostrado = true;
@@ -127,7 +127,7 @@ public class ObjetoInteractable : MonoBehaviour
                             cartelMostrado = true;
                             rogue.pistas=true;
                         }
-                        else if (!rogue.yaHeHablado && !pistas && gameObject.CompareTag("Npc") )
+                        else if (!rogue.yaHeHablado && !rogue.pistas && gameObject.CompareTag("Npc") )
                         {
                             controlDialogos.ActivarCartel(textos);
                             cartelMostrado = true;
